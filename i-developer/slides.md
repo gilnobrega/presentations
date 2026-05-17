@@ -113,9 +113,13 @@ section: Core Concepts
 layout: center
 class: text-center
 section: First Law
+separator: false
 ---
 
 # The First Law
+
+<br/>
+
 "A robot may not <span v-click class="animated-bold-word">injure</span> a human being or, through inaction, allow a human being to come to <span v-after class="animated-bold-word">harm</span>."
 
 ---
@@ -350,11 +354,14 @@ class: text-center
 layout: center
 class: text-center
 section: Second Law
+separator: false
 ---
 
 # The Second Law
 
-"A robot must obey the orders given it by human beings except where such orders would conflict with the First Law."
+<br/>
+
+"A robot must obey the <span v-click class="animated-bold-word">orders</span> given it by human beings except where such orders would conflict with the First Law."
 
 ---
 layout: center
@@ -459,11 +466,14 @@ How much specific, actionable guidance the user has provided in their prompts. H
 layout: center
 class: text-center
 section: Third Law
+separator: false
 ---
 
 # The Third Law
 
-"A robot must protect its own existence as long as such protection does not conflict with the First or Second Law."
+<br/>
+
+"A robot must <span v-click class="animated-bold-word">protect its own existence</span> as long as such protection does not conflict with the First or Second Law."
 
 ---
 layout: center
