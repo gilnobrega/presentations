@@ -357,29 +357,19 @@ section: Second Law
 separator: false
 ---
 
-# The Second Law
+## The Second Law<span v-click="2" class="expand-text"><span>, **Reinterpreted**</span></span>
 
 <br/>
 
-"A robot must obey the <span v-click class="animated-bold-word">orders</span> given it by human beings except where such orders would conflict with the First Law."
+"A robot must obey the <span v-click="1" class="animated-bold-word">orders</span> given it by human beings except where such orders would conflict with the First Law."
 
----
-layout: center
-class: text-center
-separator: false
----
+<v-click at="2">
 
-## The Second Law<span v-click class="expand-text"><span>, **Reinterpreted**</span></span>
-
-<br/>
-
-"A robot must obey the orders given it by human beings except where such orders would conflict with the First Law."
-
-<v-after>
 <br/>
 
 **You should have agency over the AI tools you use, not the other way around. Except when your orders could harm users.**
-</v-after>
+
+</v-click>
 
 ---
 layout: default
@@ -469,29 +459,19 @@ section: Third Law
 separator: false
 ---
 
-# The Third Law
+## The Third Law<span v-click="2" class="expand-text"><span>, **Reinterpreted**</span></span>
 
 <br/>
 
-"A robot must <span v-click class="animated-bold-word">protect its own existence</span> as long as such protection does not conflict with the First or Second Law."
+"A robot must <span v-click="1" class="animated-bold-word">protect its own existence</span> as long as such protection does not conflict with the First or Second Law."
 
----
-layout: center
-class: text-center
-separator: false
----
+<v-click at="2">
 
-## The Third Law<span v-click class="expand-text"><span>, **Reinterpreted**</span></span>
-
-<br/>
-
-"A robot must protect its own existence as long as such protection does not conflict with the First or Second Law."
-
-<v-after>
 <br/>
 
 **The output of AI tools must deserve to exist in the long term. As long as it does not harm the user and it reflects the intentions of the software engineer.**
-</v-after>
+
+</v-click>
 
 ---
 layout: default
