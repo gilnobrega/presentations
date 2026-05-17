@@ -2,33 +2,70 @@
 theme: default
 title: I, Developer
 info: Asimov's Laws for the AI-coding era
+author: Gil Nobrega
 class: text-center
+layout: cover
+transition: slide-left
+background: images/cover.png
+clickAnimation: fade
+aspectRatio: 16/9
+canvasWidth: 980
 ---
 
 # I, Developer
 Asimov's Laws for the AI-coding era
 
-By Gil Nobrega (@gilnobre_ga)
-
 ---
-layout: default
+layout: two-cols-header
 ---
 
-# Short intro
+# Intro
+
+::left::
+
+### Gil Nobrega
+
+Flutter Developer <img src="/images/flutter-logo.svg" class="inline h-6 align-middle ml-1" />
+
+<v-click>
+
+Senior Mobile Engineer @ <img src="/images/tide-logo.png" class="inline h-6 align-middle ml-1" />
+
+</v-click>
+
+<v-click>
+
+##### Where to find me
+
+<Item><carbon:logo-github /></Item> [gilnobrega](https://github.com/gilnobrega)<br/>
+
+<Item><carbon:logo-linkedin /></Item> [gilnobrega](https://linkedin.com/in/gilnobrega)<br/>
+
+<Item><carbon:logo-twitter /></Item>  [gilnobre_ga](https://x.com/gilnobre_ga)<br/>
+ </v-click>
+
+::right::
+
+<v-click at="-1">
+<img src="/images/tide-app-hero.jpg" class="rounded-xl shadow-lg border border-white/10" />
+</v-click>
 
 ---
-layout: default
+layout: quote
 ---
 
 # From Science Fiction to Reality
 
 **First Law**
+
 A robot may not injure a human being or, through inaction, allow a human being to come to harm.
 
 **Second Law**
+
 A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.
 
 **Third Law**
+
 A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
 
 ---
