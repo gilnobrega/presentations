@@ -38,9 +38,7 @@ Senior Mobile Engineer @ <img src="/images/tide-logo.png" class="inline h-6 alig
 ##### Where to find me
 
 <Item><carbon:logo-github /></Item> [gilnobrega](https://github.com/gilnobrega)<br/>
-
 <Item><carbon:logo-linkedin /></Item> [gilnobrega](https://linkedin.com/in/gilnobrega)<br/>
-
 <Item><carbon:logo-twitter /></Item>  [gilnobre_ga](https://x.com/gilnobre_ga)<br/>
  </v-click>
 
@@ -52,12 +50,15 @@ Senior Mobile Engineer @ <img src="/images/tide-logo.png" class="inline h-6 alig
 
 ---
 layout: robot-laws
+clickAnimation: right
 ---
 
 ::header::
 # From Science Fiction to Reality
 
 ::default::
+
+<v-clicks every="2">
 
 ### First Law
 A robot may not injure a human being or, through inaction, allow a human being to come to harm.
@@ -67,6 +68,7 @@ A robot must obey the orders given it by human beings except where such orders w
 
 ### Third Law
 A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
+</v-clicks>
 
 ::right::
 <img src="https://upload.wikimedia.org/wikipedia/en/8/8e/I_Robot_-_Runaround.jpg" alt="I, Robot Cover" />
