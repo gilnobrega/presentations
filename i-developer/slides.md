@@ -108,17 +108,128 @@ layout: center
 # Who is this for?
 
 ---
-layout: default
+layout: center
 section: Core Concepts
 ---
 
 # Core Concepts
+<span v-click>⚠️ Oversimplification ahead</span>
 
-* LLM
-* Reinforcement Learning
-* Tool-calling
-* MCP
-* Agent
+---
+layout: default
+section: Core Concepts
+---
+
+# LLMs
+Large Language Models
+
+<img src="https://cdsassets.apple.com/live/7WUAS350/images/ios/ios-26-iphone-17-pro-messages-predictive-text-options.png" alt="iPhone Predictive Text" class=" m-auto h-100 no-shadow"/>
+
+---
+layout: default
+section: Core Concepts
+---
+
+# Reinforcement Learning
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUhqBV95kpeIt36ZU1l7y_5-GytbRbZBd_Mw&s" alt="Dog handing paw" class=" m-auto h-100 no-shadow"/>
+
+---
+layout: default
+section: Core Concepts
+---
+
+# Tool Calling
+
+<div></div>
+
+<v-switch>
+  <template #1>
+
+## 2+2
+
+  </template>
+  <template #2>
+
+## $\sqrt{28}$
+
+  </template>
+  <template #3>
+
+<img src="https://m.media-amazon.com/images/I/61TP9vwlWrL._AC_UF1000,1000_QL80_.jpg" alt="Casio Calculator" class="m-auto h-100 no-shadow" />
+
+  </template>
+</v-switch>
+
+---
+layout: two-cols-header
+section: Core Concepts
+---
+
+# MCP
+Model Context Protocol
+
+::left::
+<v-click>
+Before 
+
+<div class="flex justify-center mt-6">
+
+```mermaid{theme: 'neutral', scale: 0.55}
+flowchart TD
+    %% Styling
+    classDef layer fill:#fdfdfd,stroke:#d1d5db,stroke-width:2px,color:#1f2937,font-size:16px,rx:8px,ry:8px
+    classDef custom fill:#fee2e2,stroke:#ef4444,stroke-width:2px,color:#7f1d1d,font-size:15px,stroke-dasharray: 4 4,rx:8px,ry:8px
+
+    %% Nodes
+    LLM["<b>LLM Layer</b><br/>Gemini"]:::layer
+    Client["<b>Client Layer</b><br/>Cursor"]:::layer
+    
+    %% The Fragmented Bridge
+    CustomCode["<b>Custom Tool Implementation</b><br/>Bespoke Gemini-to-Calculator Logic"]:::custom
+
+    Server["<b>Calculator Engine</b>"]:::layer
+    Tools["<b>Exposed Tools</b><br/>Sum, Division, Square Root"]:::layer
+
+    %% Flow
+    LLM <--> Client
+    Client <--> CustomCode
+    CustomCode <--> Server
+    Server <--> Tools
+```
+</div>
+</v-click>
+
+::right::
+<v-click>
+After
+
+<div class="flex justify-center mt-6">
+
+```mermaid{theme: 'neutral', scale: 0.55}
+flowchart TD
+    %% Define professional styling classes
+    classDef layer fill:#fdfdfd,stroke:#d1d5db,stroke-width:2px,color:#1f2937,font-size:16px,rx:8px,ry:8px
+    classDef mcp fill:#e0f2fe,stroke:#0284c7,stroke-width:3px,color:#0f172a,font-size:17px,font-weight:bold,rx:25px,ry:25px
+
+    %% Composite Nodes (Maximum vertical efficiency)
+    LLMs["<b>LLM Layer</b><br/>Gemini, Claude, GPT"]:::layer
+    Clients["<b>Client Layer</b><br/>Cursor, Antigravity, Codex"]:::layer
+    MCP["<b>Model Context Protocol</b>"]:::mcp
+    
+    %% Updated to show 1 Server and its specific tools
+    Servers["<b>Calculator MCP Server</b>"]:::layer
+    Tools["<b>Exposed Tools</b><br/>Sum, Division, Square Root"]:::layer
+
+    %% Bidirectional Flow 
+    LLMs <-.-> Clients
+    Clients <==> MCP
+    MCP <==> Servers
+    Servers <--> Tools
+```
+
+</div>
+</v-click>
 
 ---
 layout: center
