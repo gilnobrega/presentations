@@ -136,9 +136,11 @@ layout: default
 
 # Definition of Harm
 
+<div class="hidden"></div>
+
 "Because if we can use our design systems to speed up meaningful work, standardise things to a high quality, and scale the things we actually want to reproduce - then the reverse is also true.
 
-It means that we can also use our design systems to speed up problematic work, standardise things to a poor quality, and scale things we don't want to reproduce.
+It means that we can also use our design systems to **speed up problematic work, standardise things to a poor quality, and scale things we don't want to reproduce**.
 
 In other words, not only is this work not inherently valuable, it's also not inherently harmless."
 
