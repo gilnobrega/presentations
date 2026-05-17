@@ -6,7 +6,7 @@ author: Gil Nobrega
 layout: cover
 transition: slide-left
 background: images/cover.png
-clickAnimation: fade
+clickAnimation: fade-in
 aspectRatio: 16/9
 canvasWidth: 980
 ---
@@ -190,20 +190,25 @@ separator: false
 </v-after>
 
 ---
-layout: default
+layout: dos-donts
 ---
 
 # Handling User Data
 
-**❌ Don't**
+::dont::
 * Grant write-access to Production data
 * Store logs of conversations with PII
 
-**✅ Do**
+::do::
 * Grant access to lower environment with fake data
 * Limit Production access to read-only (if you really have to)
 * Erase logs of conversations with PII
 * Opt out of model training
+
+::right::
+<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
+  Image Placeholder
+</div>
 
 ---
 layout: default
