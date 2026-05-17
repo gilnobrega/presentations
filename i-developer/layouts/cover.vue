@@ -6,6 +6,10 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  separator: {
+    type: Boolean,
+    default: true,
+  },
 })
 
 const backgroundStyle = computed(() => {
@@ -35,7 +39,7 @@ const backgroundStyle = computed(() => {
         <div class="slide-title">
           <slot />
         </div>
-        <div class="w-full h-2 bg-[#3b82f6] mt-8 rounded-full"></div>
+        <div v-if="separator" class="w-full h-2 bg-[#3b82f6] mt-8 rounded-full"></div>
       </div>
     </div>
   </div>

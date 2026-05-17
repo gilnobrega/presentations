@@ -170,13 +170,16 @@ layout: default
 ---
 layout: center
 class: text-center
+separator: false
 ---
 
-# The First Law, Reinterpreted
+## The First Law, **Reinterpreted**
+
+<br/>
 
 "A robot may not injure a human being or, through inaction, allow a human being to come to harm."
 
-<br>
+<br/>
 
 **"AI tools and their byproducts must not harm the immediate or end users, directly or indirectly."**
 

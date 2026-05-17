@@ -175,3 +175,26 @@ body {
 .slidev-layout.center a {
   color: #3b82f6;
 }
+
+/* Default Layout */
+.slidev-layout.default h1 {
+  display: block;
+  margin: 0 0 2rem 0 !important;
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+.slidev-layout.default h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.375rem;
+  background-color: #3b82f6;
+  margin-top: 1rem;
+  border-radius: 9999px;
+}
+.slidev-layout.default.no-separator h1::after {
+  display: none;
+}

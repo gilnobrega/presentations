@@ -9,6 +9,10 @@ const props = defineProps({
   rightRatio: {
     type: [Number, String],
     default: 1
+  },
+  separator: {
+    type: Boolean,
+    default: true
   }
 })
 
@@ -24,7 +28,7 @@ const gridStyle = computed(() => ({
       <div class="slide-title">
         <slot />
       </div>
-      <div class="w-full h-1.5 bg-[#3b82f6] mt-4 rounded-full"></div>
+      <div v-if="separator" class="w-full h-1.5 bg-[#3b82f6] mt-4 rounded-full"></div>
     </div>
     
     <!-- Content Grid -->
