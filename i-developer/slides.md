@@ -211,17 +211,22 @@ layout: dos-donts
 </div>
 
 ---
-layout: default
+layout: dos-donts
 ---
 
 # Restricting Commands
 
-**❌ Don't**
+::dont::
 * Grant unvetted access to command line
 
-**✅ Do**
+::do::
 * "Always ask" mode for commands
 * "Skip" commands that are not useful
+
+::right::
+<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
+  Image Placeholder
+</div>
 
 ---
 layout: default
@@ -252,48 +257,63 @@ layout: center
 # Understanding Context Rot
 
 ---
-layout: default
+layout: dos-donts
 ---
 
 # Preventing Context Rot - Less is More
 
-**❌ Don't**
+::dont::
 * Provide too much context (entire codebase)
 * Refactor code without understanding requirements
 * Reuse the same chat
 
-**✅ Do**
+::do::
 * Point the LLM to a narrow set of files needed for the task ahead
 * Ensure there are clear acceptance criteria and tests before refactoring code
 * Start a new chat for every small task
 
+::right::
+<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
+  Image Placeholder
+</div>
+
 ---
-layout: default
+layout: dos-donts
 ---
 
 # Preventing Context Rot - Less is More
 
-**❌ Don't**
+::dont::
 * Provide too much context
 * Reuse the same chat
 
-**✅ Do**
+::do::
 * Add relevant files to context
 * Create a new chat for every task
 
+::right::
+<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
+  Image Placeholder
+</div>
+
 ---
-layout: default
+layout: dos-donts
 ---
 
 # Preventing Context Rot - Retaining Agency
 
-**❌ Don't**
+::dont::
 * Enable file scanning in large codebases
 * Leave agents unattended
 
-**✅ Do**
+::do::
 * Disable file scanning
 * Prefer Chat mode over Agent mode
+
+::right::
+<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
+  Image Placeholder
+</div>
 
 ---
 layout: default
@@ -319,18 +339,23 @@ layout: default
 * Always run `pnpm lint` and `pnpm test` before committing.
 
 ---
-layout: default
+layout: dos-donts
 ---
 
 # Preventing Context Rot - Hot take time!
 
-**❌ Don't**
+::dont::
 * Use a single `Agents.md` file
 * Definitely don't use AI to generate it
 
-**✅ Do**
+::do::
 * Maintain markdown documentation in a folder (`Testing.md`, `DesignSystem.md`, `Navigation.md`, etc.)
 * Add specific documentation files to context when needed
+
+::right::
+<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
+  Image Placeholder
+</div>
 
 ---
 layout: default
@@ -412,17 +437,22 @@ layout: center
 # Hot Take: Code Completion
 
 ---
-layout: default
+layout: dos-donts
 ---
 
 # Cutting Disruption
 
-**❌ Don't**
+::dont::
 * Use tools that disrupt your ways of working
 
-**✅ Do**
+::do::
 * Use tools that can express your intention.
 * Identify which tools are useful for the task ahead and disable those that aren't.
+
+::right::
+<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
+  Image Placeholder
+</div>
 
 ---
 layout: center
@@ -507,15 +537,15 @@ Before any task: <span v-click class="expand-text"><span>**How am I going to del
 </div>
 
 ---
-layout: default
+layout: dos-donts
 ---
 
 # Maintaining Alignment as an Author
 
-**❌ Don't**
+::dont::
 * Give vague orders
 
-**✅ Do**
+::do::
 * Mention technical patterns
 * Reference "role model" files
 * Functional Programming
@@ -525,19 +555,29 @@ layout: default
 * BDD
 * Solid Principles
 
+::right::
+<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
+  Image Placeholder
+</div>
+
 ---
-layout: default
+layout: dos-donts
 ---
 
 # Maintaining Alignment as a Reviewer
 
-**❌ Don't**
+::dont::
 * Lower the bar for AI-generated code
 * Accept code that does not fit in
 
-**✅ Do**
+::do::
 * Keep the same standards
 * Maintain a set of contribution guidelines
+
+::right::
+<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
+  Image Placeholder
+</div>
 
 ---
 layout: center
@@ -546,18 +586,23 @@ layout: center
 # Exercise
 
 ---
-layout: default
+layout: dos-donts
 ---
 
 # Testing Exercise
 
-**❌ Don't**
+::dont::
 * Tell the AI to just "write a unit test"
 
-**✅ Do**
+::do::
 * Follow Gherkin (GIVEN WHEN THEN) for the title
 * Make the title multi-line, each statement in a different line
 * Instruct: "Do not write comments, the code should be self-explanatory"
+
+::right::
+<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
+  Image Placeholder
+</div>
 
 ---
 layout: center
