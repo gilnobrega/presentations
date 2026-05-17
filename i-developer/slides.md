@@ -25,11 +25,11 @@ section: Intro
 
 ### Gil Nobrega
 
-Flutter Developer <img src="/images/flutter-logo.svg" class="inline h-6 align-middle ml-1" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Google-flutter-logo.svg" class="inline h-6 align-middle mr-1" /> developer
 
 <v-click>
 
-Senior Mobile Engineer @ <img src="/images/tide-logo.png" class="inline h-6 align-middle ml-1" />
+Senior Mobile Engineer @ <img src="https://www.openbanking.org.uk/wp-content/uploads/Tide-logo-png_1771729.png" class="inline h-6 align-middle ml-1" />
 
 </v-click>
 
@@ -45,7 +45,7 @@ Senior Mobile Engineer @ <img src="/images/tide-logo.png" class="inline h-6 alig
 ::right::
 
 <v-click at="-1">
-<img src="/images/tide-app-hero.jpg" class="rounded-xl shadow-lg border border-white/10" />
+<img src="https://images.ctfassets.net/3h69mkdgxn20/57Wlffj2kXJzlgspiqzuwr/976fb2b0ad5a8d509a76a842e21b7635/Everything_you_need_to_run_your_business.png" class="h-100 no-shadow" />
 </v-click>
 
 ---
@@ -57,7 +57,6 @@ clickAnimation: right
 # The Three Laws of Robotics
 
 ::default::
-
 <v-clicks>
 
 <LawCard title="First Law">
@@ -71,17 +70,30 @@ A robot must obey the orders given it by human beings except where such orders w
 <LawCard title="Third Law">
 A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
 </LawCard>
+
 </v-clicks>
 
 ::right::
-<img src="https://upload.wikimedia.org/wikipedia/en/8/8e/I_Robot_-_Runaround.jpg" alt="I, Robot Cover" />
+![I, Robot Cover](https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1536494104i/40226738.jpg)
 
 ---
-layout: center
+layout: default
 ---
 
 # From Science Fiction to Reality
 The new Software Engineering world
+
+<div class="relative w-[500px] h-[340px] mt-5 ml-4">
+<v-clicks>
+  <img src="/images/forbes-article-2023.png" class="absolute left-0 top-0 w-72 transform -rotate-2 hover:-rotate-2 hover:scale-105 hover:-translate-y-2 transition-all duration-300 ease-out z-10" />
+  
+  <img src="https://i.redd.it/just-a-simple-microslop-graphic-for-free-use-v0-1dxth73u1ubg1.png?width=4000&format=png&auto=webp&s=a2146bbd91f1898c59276aebae26b550778ed8f7" class="absolute left-45 top-4 w-72 transform rotate-1 hover:rotate-6 hover:scale-105 hover:-translate-y-2 transition-all duration-300 ease-out z-20" />
+  
+  <img src="/images/github-status-page-05-17.png" class="absolute left-90 top-8 w-72 transform -rotate-1 hover:rotate-0 hover:scale-105 hover:-translate-y-2 transition-all duration-300 ease-out z-30" />
+
+  <img src="/images/guardian-anthropic-leaks-own-code.png" class="absolute left-135 top-12 w-72 transform -rotate-2 hover:rotate-0 hover:scale-105 hover:-translate-y-2 transition-all duration-300 ease-out z-40" />
+</v-clicks>
+</div>
 
 ---
 layout: center

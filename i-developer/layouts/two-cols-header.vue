@@ -35,12 +35,12 @@ const gridStyle = computed(() => ({
     <div class="grid gap-10 flex-1 min-h-0 text-[#374151]" :style="gridStyle">
       
       <!-- Left Column -->
-      <div class="w-full">
+      <div class="w-full min-h-0">
         <slot name="left" />
       </div>
       
       <!-- Right Column -->
-      <div class="w-full">
+      <div class="w-full min-h-0">
         <slot name="right" />
       </div>
       
