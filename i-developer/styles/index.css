@@ -1,0 +1,37 @@
+/* Global theme overrides to match the robot-laws layout */
+
+:root, html, html.dark {
+  /* Override backgrounds using Slidev's CSS variables */
+  --slidev-theme-background: #f8f9fa;
+  --slidev-theme-color: #374151;
+  --slidev-theme-primary: #3b82f6;
+  --slidev-theme-accents: #3b82f6;
+}
+
+/* Ensure the body and Slidev app use these variables */
+body {
+  background-color: var(--slidev-theme-background);
+  color: var(--slidev-theme-color);
+}
+
+/* Headings override */
+#slidev-app h1,
+#slidev-app h2,
+#slidev-app h3,
+#slidev-app h4,
+#slidev-app h5,
+#slidev-app h6 {
+  color: #111827;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+/* Accents */
+#slidev-app strong,
+#slidev-app b {
+  color: var(--slidev-theme-primary);
+}
+
+#slidev-app a {
+  color: var(--slidev-theme-primary);
+}

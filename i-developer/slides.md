@@ -51,22 +51,31 @@ Senior Mobile Engineer @ <img src="/images/tide-logo.png" class="inline h-6 alig
 </v-click>
 
 ---
-layout: quote
+layout: robot-laws
 ---
 
+::header::
 # From Science Fiction to Reality
 
-**First Law**
+::default::
 
-A robot may not injure a human being or, through inaction, allow a human being to come to harm.
+<div class="law-card">
+  <h3>First Law</h3>
+  <p>A robot may not injure a human being or, through inaction, allow a human being to come to harm.</p>
+</div>
 
-**Second Law**
+<div class="law-card">
+  <h3>Second Law</h3>
+  <p>A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.</p>
+</div>
 
-A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.
+<div class="law-card">
+  <h3>Third Law</h3>
+  <p>A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.</p>
+</div>
 
-**Third Law**
-
-A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
+::right::
+<img src="https://upload.wikimedia.org/wikipedia/en/8/8e/I_Robot_-_Runaround.jpg" alt="I, Robot Cover" />
 
 ---
 layout: center
