@@ -116,7 +116,7 @@ section: First Law
 separator: false
 ---
 
-# The First Law
+## The First Law
 
 <br/>
 
@@ -377,14 +377,24 @@ layout: default
 
 # A moment for reflection
 
-Before any task: 
-* What do I want to achieve?
-* What is the end goal? What is the user journey?
-* What is the happy path?
-* What is the unhappy path? Other paths?
+<div></div>
+
+Before any task: <span v-click class="expand-text"><span>**What do I want to achieve?**</span></span>
+
+<v-clicks>
+
+- What is the end goal? 
+- What is the user journey?
+- What is the happy path?
+- What is the unhappy path? Other paths?
+
+</v-clicks>
+
+<div v-click class="mt-4">
 
 **Write it down.**
 
+</div>
 ---
 layout: default
 ---
@@ -479,13 +489,24 @@ layout: default
 
 # Another moment for reflection
 
-Before any task: How am I going to deliver this?
-* How is this project organised?
-* What architecture pattern?
-* What testing strategies?
-* How would you build the layout?
+<div></div>
+
+Before any task: <span v-click class="expand-text"><span>**How am I going to deliver this?**</span></span>
+
+<v-clicks>
+
+- How is this project organised?
+- What architecture pattern?
+- What testing strategies?
+- How would you build the layout?
+
+</v-clicks>
+
+<div v-click class="mt-4">
 
 **Write it down.**
+
+</div>
 
 ---
 layout: default
