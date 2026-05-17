@@ -3,7 +3,6 @@ theme: default
 title: I, Developer
 info: Asimov's Laws for the AI-coding era
 author: Gil Nobrega
-class: text-center
 layout: cover
 transition: slide-left
 background: images/cover.png
@@ -111,7 +110,6 @@ section: Core Concepts
 
 ---
 layout: center
-class: text-center
 section: First Law
 separator: false
 ---
@@ -176,7 +174,6 @@ layout: default
 
 ---
 layout: center
-class: text-center
 separator: false
 ---
 
@@ -341,7 +338,6 @@ layout: default
 
 ---
 layout: center
-class: text-center
 ---
 
 # Upholding the First Law
@@ -352,7 +348,6 @@ class: text-center
 
 ---
 layout: center
-class: text-center
 section: Second Law
 separator: false
 ---
@@ -441,7 +436,6 @@ layout: default
 
 ---
 layout: center
-class: text-center
 ---
 
 # Upholding the Second Law
@@ -464,7 +458,6 @@ How much specific, actionable guidance the user has provided in their prompts. H
 
 ---
 layout: center
-class: text-center
 section: Third Law
 separator: false
 ---
@@ -563,7 +556,6 @@ layout: default
 
 ---
 layout: center
-class: text-center
 ---
 
 # Upholding the Third Law

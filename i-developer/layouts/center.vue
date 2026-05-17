@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="slidev-layout center bg-[#f8f9fa] w-full h-full px-12 py-10 flex flex-col justify-center items-center text-center">
+  <div class="slidev-layout center !bg-[#f8f9fa] w-full h-full px-12 py-10 flex flex-col justify-center items-center text-center">
     <div class="my-auto w-full z-10 relative">
       <div class="inline-block text-center">
         <div class="slide-title">

@@ -14,6 +14,11 @@ body {
   color: var(--slidev-theme-color);
 }
 
+/* Force Slidev layouts (except cover which can have images) to use our background */
+#app .slidev-layout:not(.cover) {
+  background: var(--slidev-theme-background) !important;
+}
+
 /* Headings override */
 .slidev-layout h1,
 .slidev-layout h2,
