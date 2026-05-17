@@ -59,16 +59,19 @@ clickAnimation: right
 
 ::default::
 
-<v-clicks every="2">
+<v-clicks>
 
-### First Law
+<LawCard title="First Law">
 A robot may not injure a human being or, through inaction, allow a human being to come to harm.
+</LawCard>
 
-### Second Law
+<LawCard title="Second Law">
 A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.
+</LawCard>
 
-### Third Law
+<LawCard title="Third Law">
 A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
+</LawCard>
 </v-clicks>
 
 ::right::
@@ -113,7 +116,7 @@ section: First Law
 ---
 
 # The First Law
-"A robot may not injure a human being or, through inaction, allow a human being to come to harm."
+"A robot may not injure a human being or, through inaction, allow a human being to come to **harm**."
 
 ---
 layout: center
@@ -356,7 +359,9 @@ layout: center
 class: text-center
 ---
 
-# The Second Law, Reinterpreted
+## The Second Law, **Reinterpreted**
+
+<br/>
 
 "A robot must obey the orders given it by human beings except where such orders would conflict with the First Law."
 
@@ -460,7 +465,9 @@ layout: center
 class: text-center
 ---
 
-# The Third Law, Reinterpreted
+## The Third Law, **Reinterpreted**
+
+<br/>
 
 "A robot must protect its own existence as long as such protection does not conflict with the First or Second Law."
 
