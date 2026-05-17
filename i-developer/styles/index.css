@@ -35,3 +35,101 @@ body {
 #slidev-app a {
   color: var(--slidev-theme-primary);
 }
+
+/* =========================================
+   Layout-Specific Styles Extracted from Vue
+   ========================================= */
+
+/* Cover Layout */
+.slidev-layout.cover {
+  color: #f3f4f6;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+.slidev-layout.cover h1 {
+  margin: 0 !important;
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+.slidev-layout.cover h2,
+.slidev-layout.cover h3,
+.slidev-layout.cover h4,
+.slidev-layout.cover h5,
+.slidev-layout.cover h6 {
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+.slidev-layout.cover p {
+  margin-top: 1.5rem;
+  font-size: 1.75rem;
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.slidev-layout.cover strong,
+.slidev-layout.cover b,
+.slidev-layout.cover a {
+  color: #60a5fa;
+}
+
+/* Two Cols Header Layout */
+.slidev-layout.two-cols-header .slide-title h1 {
+  margin: 0 !important;
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+.slidev-layout.two-cols-header {
+  color: #374151;
+}
+.slidev-layout.two-cols-header h1,
+.slidev-layout.two-cols-header h2,
+.slidev-layout.two-cols-header h3,
+.slidev-layout.two-cols-header h4,
+.slidev-layout.two-cols-header h5,
+.slidev-layout.two-cols-header h6 {
+  color: #111827;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+.slidev-layout.two-cols-header strong,
+.slidev-layout.two-cols-header b,
+.slidev-layout.two-cols-header a {
+  color: #3b82f6;
+}
+
+/* Robot Laws (Pure Markdown Cards) */
+.laws-cards h3 {
+  background-color: #ffffff;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 1rem 1.25rem 0 1.25rem;
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.05), 0 -2px 4px -1px rgba(0, 0, 0, 0.03);
+  color: #3b82f6;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin: 0 !important;
+  border: none;
+}
+.laws-cards p {
+  background-color: #ffffff;
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 0.25rem 1.25rem 1rem 1.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  margin: 0 0 1rem 0 !important; /* Serves as the gap between consecutive cards */
+}
+.image-container img {
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  max-height: 100%;
+  object-fit: contain;
+}
