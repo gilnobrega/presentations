@@ -116,7 +116,7 @@ section: First Law
 ---
 
 # The First Law
-"A robot may not injure a human being or, through inaction, allow a human being to come to **harm**."
+"A robot may not <span v-click class="animated-bold-word">injure</span> a human being or, through inaction, allow a human being to come to <span v-after class="animated-bold-word">harm</span>."
 
 ---
 layout: center
@@ -176,15 +176,17 @@ class: text-center
 separator: false
 ---
 
-## The First Law, **Reinterpreted**
+## The First Law<span v-click class="expand-text"><span>, **Reinterpreted**</span></span>
 
 <br/>
 
 "A robot may not injure a human being or, through inaction, allow a human being to come to harm."
 
+<v-after>
 <br/>
 
-**"AI tools and their byproducts must not harm the immediate or end users, directly or indirectly."**
+**AI tools and their byproducts must not harm the immediate or end users, directly or indirectly.**
+</v-after>
 
 ---
 layout: default
@@ -357,17 +359,20 @@ section: Second Law
 ---
 layout: center
 class: text-center
+separator: false
 ---
 
-## The Second Law, **Reinterpreted**
+## The Second Law<span v-click class="expand-text"><span>, **Reinterpreted**</span></span>
 
 <br/>
 
 "A robot must obey the orders given it by human beings except where such orders would conflict with the First Law."
 
-<br>
+<v-after>
+<br/>
 
-**"You should have agency over the AI tools you use, not the other way around. Except when your orders could harm users."**
+**You should have agency over the AI tools you use, not the other way around. Except when your orders could harm users.**
+</v-after>
 
 ---
 layout: default
@@ -463,17 +468,20 @@ section: Third Law
 ---
 layout: center
 class: text-center
+separator: false
 ---
 
-## The Third Law, **Reinterpreted**
+## The Third Law<span v-click class="expand-text"><span>, **Reinterpreted**</span></span>
 
 <br/>
 
 "A robot must protect its own existence as long as such protection does not conflict with the First or Second Law."
 
-<br>
+<v-after>
+<br/>
 
-**"The output of AI tools must deserve to exist in the long term. As long as it does not harm the user and it reflects the intentions of the software engineer."**
+**The output of AI tools must deserve to exist in the long term. As long as it does not harm the user and it reflects the intentions of the software engineer.**
+</v-after>
 
 ---
 layout: default

@@ -177,3 +177,36 @@ body {
 .slidev-layout.default.no-separator h1::after {
   display: none;
 }
+
+/* Custom Animation for Boldening */
+.animated-bold-word {
+  opacity: 1 !important; /* Override Slidev's default fade-in */
+  color: #3b82f6; /* Blue when active */
+  text-shadow: 0 0 1px currentColor, 0 0 1px currentColor, 0 0 0.5px currentColor;
+  transition: all 0.5s ease-in-out;
+}
+
+.animated-bold-word.slidev-vclick-hidden {
+  opacity: 1 !important;
+  color: inherit;
+  text-shadow: none;
+}
+
+/* Custom Animation for Text Expansion */
+.expand-text {
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  transition: grid-template-columns 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease-in-out;
+  opacity: 1 !important;
+  vertical-align: bottom; /* Aligns smoothly with adjacent text */
+}
+
+.expand-text.slidev-vclick-hidden {
+  grid-template-columns: 0fr;
+  opacity: 0 !important;
+}
+
+.expand-text > span {
+  overflow: hidden;
+  white-space: nowrap; /* Prevents wrapping during expansion */
+}
