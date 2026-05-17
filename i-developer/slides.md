@@ -54,7 +54,7 @@ clickAnimation: right
 ---
 
 ::header::
-# From Science Fiction to Reality
+# The Three Laws of Robotics
 
 ::default::
 
@@ -77,7 +77,8 @@ A robot must protect its own existence as long as such protection does not confl
 layout: center
 ---
 
-# The new Software Engineering Reality
+# From Science Fiction to Reality
+The new Software Engineering world
 
 ---
 layout: center
