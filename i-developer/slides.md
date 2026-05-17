@@ -17,6 +17,7 @@ Asimov's Laws for the AI-coding era
 
 ---
 layout: two-cols-header
+section: Intro
 ---
 
 # Intro
@@ -94,6 +95,7 @@ layout: center
 
 ---
 layout: default
+section: Core Concepts
 ---
 
 # Core Concepts
@@ -107,6 +109,7 @@ layout: default
 ---
 layout: center
 class: text-center
+section: First Law
 ---
 
 # The First Law
@@ -338,6 +341,7 @@ class: text-center
 ---
 layout: center
 class: text-center
+section: Second Law
 ---
 
 # The Second Law
@@ -441,6 +445,7 @@ How much specific, actionable guidance the user has provided in their prompts. H
 ---
 layout: center
 class: text-center
+section: Third Law
 ---
 
 # The Third Law
@@ -546,6 +551,7 @@ layout: center
 
 ---
 layout: default
+section: Conclusion
 ---
 
 # The 3 I's Framework
