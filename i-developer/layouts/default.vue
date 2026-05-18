@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import SlideHeader from '../components/SlideHeader.vue'
+
 const props = defineProps({
   separator: {
     type: Boolean,
@@ -8,9 +10,15 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="slidev-layout default bg-[#f8f9fa] w-full h-full px-12 py-10 flex flex-col" :class="{ 'no-separator': !separator }">
-    <div class="flex-1 w-full text-[#374151]">
+  <div class="slidev-layout default bg-[#f8f9fa] w-full h-full px-12 py-10 flex flex-col">
+    <!-- Reusable Slide Header Component -->
+    <SlideHeader :separator="separator">
       <slot />
+    </SlideHeader>
+    
+    <!-- Body Content -->
+    <div class="flex-1 w-full text-[#374151] min-h-0">
+      <slot name="body" />
     </div>
   </div>
 </template>

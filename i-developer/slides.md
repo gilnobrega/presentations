@@ -83,6 +83,8 @@ layout: default
 # From Science Fiction to Reality
 The new Software Engineering world
 
+::body::
+
 <div class="relative w-[500px] h-[340px] mt-5 ml-4">
 <v-clicks>
   <img src="/images/forbes-article-2023.png" class="absolute left-0 top-0 w-72 transform -rotate-2 hover:-rotate-2 hover:scale-105 hover:-translate-y-2 transition-all duration-300 ease-out z-10" />
@@ -120,10 +122,12 @@ layout: default
 section: Core Concepts
 ---
 
-# LLMs
-Large Language Models
+# LLM
+Large Language Model
 
-<img src="https://cdsassets.apple.com/live/7WUAS350/images/ios/ios-26-iphone-17-pro-messages-predictive-text-options.png" alt="iPhone Predictive Text" class=" m-auto h-100 no-shadow"/>
+::body::
+
+<img src="https://cdsassets.apple.com/live/7WUAS350/images/ios/ios-26-iphone-17-pro-messages-predictive-text-options.png" alt="iPhone Predictive Text" class="m-auto h-100 no-shadow" />
 
 ---
 layout: default
@@ -131,6 +135,8 @@ section: Core Concepts
 ---
 
 # Reinforcement Learning
+
+::body::
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUhqBV95kpeIt36ZU1l7y_5-GytbRbZBd_Mw&s" alt="Dog handing paw" class=" m-auto h-100 no-shadow"/>
 
@@ -140,6 +146,8 @@ section: Core Concepts
 ---
 
 # Tool Calling
+
+::body::
 
 <div></div>
 
@@ -267,6 +275,8 @@ layout: default
 
 # Definition of Harm
 
+::body::
+
 <div class="hidden"></div>
 
 "Because if we can use our design systems to speed up meaningful work, standardise things to a high quality, and scale the things we actually want to reproduce - then the reverse is also true.
@@ -282,6 +292,8 @@ layout: default
 ---
 
 # Examples of AI Harm
+
+::body::
 
 **Direct / Indirect**
 * Deception
@@ -356,6 +368,8 @@ layout: default
 ---
 
 # Using MCPs
+
+::body::
 
 * Risk vs Reward
 * What's the worst that can happen?
@@ -444,6 +458,8 @@ layout: default
 
 # Preventing Context Rot - Hot take time!
 
+::body::
+
 ### Sample AGENTS.md file
 
 **Dev environment tips**
@@ -486,6 +502,8 @@ layout: default
 
 # Upholding the First Law
 
+::body::
+
 * Limiting the Blast Radius
 * Context Curation
 
@@ -525,6 +543,8 @@ layout: default
 
 # A moment for reflection
 
+::body::
+
 <div></div>
 
 Before any task: <span v-click class="expand-text"><span>**What do I want to achieve?**</span></span>
@@ -548,6 +568,8 @@ layout: default
 ---
 
 # Situation-aware Context
+
+::body::
 
 * **Learning a new language:** "... Explain this concept to an engineer with a background in XYZ"
 * **Just joined a new project:** "... Walk me through the codebase, step by step"
@@ -589,6 +611,8 @@ layout: default
 
 # Upholding the Second Law - How?
 
+::body::
+
 * Rethink what works for you
 * Context Curation
 
@@ -607,6 +631,8 @@ layout: default
 ---
 
 # Measuring Intention (Prompt Specificity)
+
+::body::
 
 How much specific, actionable guidance the user has provided in their prompts. Higher specificity typically leads to better AI responses.
 
@@ -639,6 +665,8 @@ layout: default
 ---
 
 # Another moment for reflection
+
+::body::
 
 <div></div>
 
@@ -749,6 +777,8 @@ section: Conclusion
 ---
 
 # The 3 I's Framework
+
+::body::
 
 * **Isolation:** The code produced by AI must not harm users.
 * **Intention:** The code produced by AI must reflect the Engineer's intentions.
