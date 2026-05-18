@@ -325,6 +325,21 @@ separator: false
 </v-after>
 
 ---
+layout: center
+separator: false
+---
+
+## Write code 10 times faster
+
+<br/>
+
+<v-click>
+
+## ...and **break journeys** 10 times faster
+
+</v-click>
+
+---
 layout: dos-donts
 ---
 
@@ -538,6 +553,23 @@ separator: false
 </v-click>
 
 ---
+layout: center
+separator: false
+---
+
+<img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-copilot-icon.png" class ="w-25 p-2.5 m-auto"/>
+
+## Everyone has a co-pilot
+
+<br/>
+
+<v-click>
+
+## ...but you need to **know how to fly the plane**
+
+</v-click>
+
+---
 layout: default
 ---
 
@@ -547,7 +579,7 @@ layout: default
 
 <div></div>
 
-Before any task: <span v-click class="expand-text"><span>**What do I want to achieve?**</span></span>
+### Before any task: <span v-click class="expand-text animated-bold-word"><span>**What do I want to achieve?**</span></span>
 
 <v-clicks>
 
@@ -661,6 +693,21 @@ separator: false
 </v-click>
 
 ---
+layout: center
+separator: false
+---
+
+## Write code 10 times faster
+
+<br/>
+
+<v-click>
+
+## ...and **create tech debt** 10 times faster
+
+</v-click>
+
+---
 layout: default
 ---
 
@@ -670,7 +717,7 @@ layout: default
 
 <div></div>
 
-Before any task: <span v-click class="expand-text"><span>**How am I going to deliver this?**</span></span>
+### Before any task: <span v-click class="expand-text animated-bold-word"><span>**How am I going to deliver this?**</span></span>
 
 <v-clicks>
 
