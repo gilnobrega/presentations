@@ -399,7 +399,7 @@ If you really have to!
 
 <div class="m-auto text-sm">
 
-Example database table
+Database table with prompt injection
 
 | user_id | first_name | last_name | status |
 | :--- | :--- | :--- | :--- |
@@ -478,9 +478,10 @@ How Increasing Input Tokens Impacts LLM Performance,
 <v-click>
 <img src="/images/claude-opus-4.7-context-rot-benchmark.png" alt=" Claude Opus 4.7 on long context comprehension and precise sequential reasoning at 1 million
 tokens measured through OpenAI MRCR v2 8 needles. Shows a visible decrease in performance compared to Opus 4.6." />
+
 Claude Opus 4.7 on long context comprehension and precise sequential reasoning at 1 million
-tokens, Opus 4.7 System Card,
-[trychroma.com/research/context-rot](https://www.trychroma.com/research/context-rot)
+tokens,
+[Opus 4.7 System Card](https://www.stampr-ai.com/data/models/cards/claude-opus-4-7/claude-opus-4-7_20260416_153246_a7729a0e_stamped.pdf)
 </v-click>
 
 ---
