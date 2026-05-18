@@ -103,6 +103,11 @@ layout: center
 ---
 
 # Who is this for?
+<v-click> 
+
+## Software Engineers, not vibecoders
+
+</v-click>
 
 ---
 layout: center
@@ -257,23 +262,35 @@ layout: center
 # Can Software be harmful?
 
 ---
-layout: center
+layout: default
 ---
 
-# Design Systems
+::header::
+# 🏴‍☠️ A lawless world
+Software before before **Design Systems**
 
----
-layout: center
----
+::body::
 
-# The Promise of Productivity boost
+<img src="/images/buttons-of-steam.png" alt="Multiple designs for buttons shown in Steam, an online gaming store" class="h-80 m-auto">
 
 ---
 layout: default
 ---
 
 ::header::
-# Definition of Harm
+# 👨‍🎨 Design Systems
+And the Promise of Productivity boost
+
+::body::
+
+<img src="/images/material-design-buttons.png" alt="A grid showing buttons in material design versions 1, 2 and 3" class="h-80 m-auto">
+
+---
+layout: default
+---
+
+::header::
+# 🔪 Definition of Harm
 
 ::body::
 
@@ -286,6 +303,8 @@ It means that we can also use our design systems to **speed up problematic work,
 In other words, not only is this work not inherently valuable, it's also not inherently harmless."
 
 *— Amy Hupe, Design Systems Consultant*
+
+[amyhupe.co.uk](https://amyhupe.co.uk)
 
 ---
 layout: default
