@@ -819,17 +819,33 @@ layout: center
 # Measuring Integration
 
 ---
-layout: default
+layout: robot-laws
+clickAnimation: right
 section: Conclusion
 ---
 
+::header::
 # The 3 I's Framework
 
-::body::
+::default::
+<v-clicks>
 
-* **Isolation:** The code produced by AI must not harm users.
-* **Intention:** The code produced by AI must reflect the Engineer's intentions.
-* **Integration:** The code produced by AI must be long-lived.
+<LawCard title="Isolation">
+The code produced by AI must not harm users
+</LawCard>
+
+<LawCard title="Intention">
+The code produced by AI must reflect the Engineer's intentions.
+</LawCard>
+
+<LawCard title="Integration">
+The code produced by AI must be long-lived.
+</LawCard>
+
+</v-clicks>
+
+::right::
+![I, Robot Cover](https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1536494104i/40226738.jpg)
 
 ---
 layout: center
