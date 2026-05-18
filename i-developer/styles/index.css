@@ -286,3 +286,56 @@ body {
   transform: translateX(-20px);
 }
 
+/* Premium Styled Markdown Tables */
+.slidev-layout table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.slidev-layout th {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  font-weight: 600;
+  padding: 0.6rem 0.85rem;
+  border-bottom: 2px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.slidev-layout td {
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+  color: #4b5563;
+  vertical-align: middle;
+}
+
+/* Remove border-right from the last column */
+.slidev-layout th:last-child,
+.slidev-layout td:last-child {
+  border-right: none;
+}
+
+/* Remove border-bottom from the last row */
+.slidev-layout tr:last-child td {
+  border-bottom: none;
+}
+
+/* Zebra striping for a premium developer feel */
+.slidev-layout tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Table Hover Row Highlights */
+.slidev-layout tbody tr:hover {
+  background-color: #f3f4f6;
+}
+
+
