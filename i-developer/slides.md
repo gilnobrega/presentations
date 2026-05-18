@@ -345,8 +345,8 @@ layout: two-cols-header
 ---
 
 ::header::
-# Stranger Danger
-The imminent threat of Prompt Injection
+# ‼️ Stranger Danger
+The threat of **Prompt Injection**
 
 ::left::
 <img v-click src="/images/prompt-injection-example.webp" alt="Prompt injection in Amazon's chat bot" class="m-auto h-150 z-10" />
@@ -462,12 +462,14 @@ layout: two-cols-header
 ---
 
 ::header::
-# Understanding Context Rot
+# 🪡 Needle in a hay stack
+## Understanding **Context Rot**
+<v-click>The LLM performance decreases, as you provide more context</v-click>
 
 ::left::
 
 <v-click>
-<img src="https://www.trychroma.com/img/context_rot/hero_plot.png" alt="Claude Sonnet 4, GPT-4.1, Qwen3-32B, and Gemini 2.5 Flash on Repeated Words Task" />
+<img src="https://www.trychroma.com/img/context_rot/hero_plot.png" alt="Claude Sonnet 4, GPT-4.1, Qwen3-32B, and Gemini 2.5 Flash on Repeated Words Task" class="h-60" />
 
 How Increasing Input Tokens Impacts LLM Performance,
 [trychroma.com/research/context-rot](https://www.trychroma.com/research/context-rot)
@@ -493,56 +495,19 @@ layout: dos-donts
 Preventing Context Rot
 
 ::dont::
-* Provide too much context (entire codebase)
-* Reuse the same chat
-
-::do::
-* Point the LLM to a narrow set of files needed for the task ahead
-* Start a new chat for every small task
-
-::right::
-<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
-  Image Placeholder
-</div>
-
----
-layout: dos-donts
----
-
-::header::
-# Preventing Context Rot - Less is More
-
-::dont::
 * Provide too much context
 * Reuse the same chat
 
 ::do::
-* Add relevant files to context
-* Create a new chat for every task
-
-::right::
-<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
-  Image Placeholder
-</div>
-
----
-layout: dos-donts
----
-
-::header::
-# Preventing Context Rot - Retaining Agency
-
-::dont::
-* Enable file scanning in large codebases
-* Leave agents unattended
-
-::do::
+* Add only relevant files
+* Start a new chat for every task
 * Disable file scanning
-* Prefer Chat mode over Agent mode
 
 ::right::
-<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
-  Image Placeholder
+<div>
+<img src="/images/feeding-entire-folder.png" class="m-b-10" />
+
+<img src="/images/feeding-specific-file.png" />
 </div>
 
 ---
@@ -550,7 +515,8 @@ layout: default
 ---
 
 ::header::
-# Preventing Context Rot - Hot take time!
+# 🔥 Hot take time!
+About *AGENTS.md* and *CLAUDE.md*
 
 ::body::
 
@@ -576,14 +542,14 @@ layout: dos-donts
 ---
 
 ::header::
-# Preventing Context Rot - Hot take time!
+# Everyone needs documentation
 
 ::dont::
-* Use a single `Agents.md` file
+* Use a single *Agents.md* file
 * Definitely don't use AI to generate it
 
 ::do::
-* Maintain markdown documentation in a folder (`Testing.md`, `DesignSystem.md`, `Navigation.md`, etc.)
+* Maintain human-readable documentation in a folder (*Testing.md*, *DesignSystem.md*, *Navigation.md*, etc.)
 * Add specific documentation files to context when needed
 
 ::right::
