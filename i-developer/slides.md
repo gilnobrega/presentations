@@ -553,31 +553,26 @@ layout: dos-donts
 * Add specific documentation files to context when needed
 
 ::right::
-<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
-  Image Placeholder
+<div>
+<img src="/images/agents-md-research.png" />
+
+Resolution rate for 4 different models, without context files, with LLM-generated context files, and with developer-written on SWE-BENCH LITE
+context files, [Evaluating AGENTS.md](https://arxiv.org/pdf/2602.11988)
 </div>
-
----
-layout: default
----
-
-::header::
-# Upholding the First Law
-
-::body::
-
-* Limiting the Blast Radius
-* Context Curation
 
 ---
 layout: center
 ---
 
-# Upholding the First Law
+## Upholding the First Law
 
 "AI tools and their byproducts must not harm the immediate or end users, directly or indirectly."
 
-**Isolation**
+<v-click>
+
+# **Isolation**
+
+</v-click>
 
 ---
 layout: center
