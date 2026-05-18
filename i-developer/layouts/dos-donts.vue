@@ -12,7 +12,9 @@ const props = defineProps({
 
 <template>
   <TwoColsHeader :separator="separator" left-ratio="1" right-ratio="1">
-    <slot />
+    <template #header>
+      <slot name="header" />
+    </template>
     
     <template #left>
       <div class="flex flex-col gap-6 h-full justify-start mt-2">

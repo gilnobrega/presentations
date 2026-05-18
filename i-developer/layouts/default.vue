@@ -13,7 +13,7 @@ const props = defineProps({
   <div class="slidev-layout default bg-[#f8f9fa] w-full h-full px-12 py-10 flex flex-col">
     <!-- Reusable Slide Header Component -->
     <SlideHeader :separator="separator">
-      <slot />
+      <slot name="header" />
     </SlideHeader>
     
     <!-- Body Content -->

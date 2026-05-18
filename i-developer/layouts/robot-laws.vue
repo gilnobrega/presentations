@@ -10,7 +10,7 @@ const hasTransition = !!slots['first-summarized']
   <!-- Inherit the layout structure, typography, and styling from two-cols-header, but pass a custom column ratio -->
   <TwoColsHeader left-ratio="2" right-ratio="1">
     <!-- Map the header slot -->
-    <template #default>
+    <template #header>
       <slot name="header" />
     </template>
     

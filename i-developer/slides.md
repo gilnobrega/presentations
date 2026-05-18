@@ -19,6 +19,7 @@ layout: two-cols-header
 section: Intro
 ---
 
+::header::
 # Intro
 
 ::left::
@@ -73,6 +74,7 @@ A robot must protect its own existence as long as such protection does not confl
 layout: default
 ---
 
+::header::
 # From Science Fiction to Reality
 The new Software Engineering world
 
@@ -115,6 +117,7 @@ layout: default
 section: Core Concepts
 ---
 
+::header::
 # LLM
 Large Language Model
 
@@ -127,6 +130,7 @@ layout: default
 section: Core Concepts
 ---
 
+::header::
 # Reinforcement Learning
 
 ::body::
@@ -138,6 +142,7 @@ layout: default
 section: Core Concepts
 ---
 
+::header::
 # Tool Calling
 
 ::body::
@@ -167,6 +172,7 @@ layout: two-cols-header
 section: Core Concepts
 ---
 
+::header::
 # MCP
 Model Context Protocol
 
@@ -266,6 +272,7 @@ layout: center
 layout: default
 ---
 
+::header::
 # Definition of Harm
 
 ::body::
@@ -284,6 +291,7 @@ In other words, not only is this work not inherently valuable, it's also not inh
 layout: default
 ---
 
+::header::
 # Examples of AI Harm
 
 ::body::
@@ -333,9 +341,24 @@ separator: false
 </v-click>
 
 ---
+layout: two-cols-header
+---
+
+::header::
+# Stranger Danger
+The imminent threat of Prompt Injection
+
+::left::
+<img v-click src="/images/prompt-injection-example.webp" alt="Prompt injection in Amazon's chat bot" class="m-auto h-150 z-10" />
+
+::right::
+<img v-click src="/images/prompt-injection-example.png" alt="Prompt injection in Twitter revealing environment tables" class="m-auto h-125 z-20" />
+
+---
 layout: dos-donts
 ---
 
+::header::
 # Handling User Data
 
 ::dont::
@@ -343,6 +366,7 @@ layout: dos-donts
 
 ::do::
 * Grant access to lower environment with fake data
+* Generate script to migrate production data
 
 ::right::
 
@@ -356,15 +380,17 @@ layout: dos-donts
 layout: dos-donts
 ---
 
+::header::
 # Analysing User Data
 If you really have to!
 
 ::dont::
-* Restrict tool calling
+* Allow internet or terminal access
 * Store conversation logs with PII
 
 ::do::
 * Limit Production access to read-only
+* Restrict tool calling
 * Opt out of model training
 
 ::right::
@@ -388,64 +414,89 @@ Example database table
 layout: dos-donts
 ---
 
-# Restricting Commands
+::header::
+# Retaining Control
 
 ::dont::
 * Grant unvetted access to command line
+* Grant access to web
 
 ::do::
-* "Always ask" mode for commands
+* "Always ask" mode for everything
 * "Skip" commands that are not useful
 
 ::right::
-<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
-  Image Placeholder
-</div>
-
----
-layout: default
----
-
-# Using MCPs
-
-::body::
-
-* Risk vs Reward
-* What's the worst that can happen?
+<img v-click src="/images/cursor-auto-run-settings.png" alt="Auto-Run settings panel in Cursor" class="m-auto h-80" />
 
 ---
 layout: center
 ---
 
-# Handling User Data (Nightmare Edition)
+## Using MCPs
+
+<v-clicks>
+
+How much time am I saving?
+
+What's the worst that could happen?
+
+</v-clicks>
 
 ---
-layout: center
+layout: two-cols-header
 ---
 
-# Preventing Prompt Injection
-You must have control of context
+::header::
+# 🦞 The Ultimate MCP
+
+::left::
+<img v-click src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Openclaw-logo-text-dark.png" alt="OpenClaw logo" class="m-l-10 h-20"/>
+
+<img v-click src="/images/meta-head-of-ai-1.png" alt="Meta Head of AI's tweet about OpenClaw deleting her entire inbox" class="m-l-20 m-t-10 h-50"/>
+
+::right::
+<img v-click src="/images/meta-head-of-ai-2.png" alt="Meta Head of AI's OpenClaw chat in telegram" class="m-auto h-150"/>
 
 ---
-layout: center
+layout: two-cols-header
 ---
 
+::header::
 # Understanding Context Rot
+
+::left::
+
+<v-click>
+<img src="https://www.trychroma.com/img/context_rot/hero_plot.png" alt="Claude Sonnet 4, GPT-4.1, Qwen3-32B, and Gemini 2.5 Flash on Repeated Words Task" />
+
+How Increasing Input Tokens Impacts LLM Performance,
+[trychroma.com/research/context-rot](https://www.trychroma.com/research/context-rot)
+</v-click>
+
+::right::
+
+<v-click>
+<img src="/images/claude-opus-4.7-context-rot-benchmark.png" alt=" Claude Opus 4.7 on long context comprehension and precise sequential reasoning at 1 million
+tokens measured through OpenAI MRCR v2 8 needles. Shows a visible decrease in performance compared to Opus 4.6." />
+Claude Opus 4.7 on long context comprehension and precise sequential reasoning at 1 million
+tokens, Opus 4.7 System Card,
+[trychroma.com/research/context-rot](https://www.trychroma.com/research/context-rot)
+</v-click>
 
 ---
 layout: dos-donts
 ---
 
-# Preventing Context Rot - Less is More
+::header::
+# When Less is More
+Preventing Context Rot
 
 ::dont::
 * Provide too much context (entire codebase)
-* Refactor code without understanding requirements
 * Reuse the same chat
 
 ::do::
 * Point the LLM to a narrow set of files needed for the task ahead
-* Ensure there are clear acceptance criteria and tests before refactoring code
 * Start a new chat for every small task
 
 ::right::
@@ -457,6 +508,7 @@ layout: dos-donts
 layout: dos-donts
 ---
 
+::header::
 # Preventing Context Rot - Less is More
 
 ::dont::
@@ -476,6 +528,7 @@ layout: dos-donts
 layout: dos-donts
 ---
 
+::header::
 # Preventing Context Rot - Retaining Agency
 
 ::dont::
@@ -495,6 +548,7 @@ layout: dos-donts
 layout: default
 ---
 
+::header::
 # Preventing Context Rot - Hot take time!
 
 ::body::
@@ -520,6 +574,7 @@ layout: default
 layout: dos-donts
 ---
 
+::header::
 # Preventing Context Rot - Hot take time!
 
 ::dont::
@@ -539,6 +594,7 @@ layout: dos-donts
 layout: default
 ---
 
+::header::
 # Upholding the First Law
 
 ::body::
@@ -597,6 +653,7 @@ separator: false
 layout: default
 ---
 
+::header::
 # A moment for reflection
 
 ::body::
@@ -623,6 +680,7 @@ layout: default
 layout: default
 ---
 
+::header::
 # Situation-aware Context
 
 ::body::
@@ -641,6 +699,7 @@ layout: center
 layout: dos-donts
 ---
 
+::header::
 # Cutting Disruption
 
 ::dont::
@@ -665,6 +724,7 @@ layout: center
 layout: default
 ---
 
+::header::
 # Upholding the Second Law - How?
 
 ::body::
@@ -686,6 +746,7 @@ layout: center
 layout: default
 ---
 
+::header::
 # Measuring Intention (Prompt Specificity)
 
 ::body::
@@ -735,6 +796,7 @@ separator: false
 layout: default
 ---
 
+::header::
 # Another moment for reflection
 
 ::body::
@@ -762,6 +824,7 @@ layout: default
 layout: dos-donts
 ---
 
+::header::
 # Maintaining Alignment as an Author
 
 ::dont::
@@ -786,6 +849,7 @@ layout: dos-donts
 layout: dos-donts
 ---
 
+::header::
 # Maintaining Alignment as a Reviewer
 
 ::dont::
@@ -811,6 +875,7 @@ layout: center
 layout: dos-donts
 ---
 
+::header::
 # Testing Exercise
 
 ::dont::
@@ -877,5 +942,6 @@ The code produced by AI must be long-lived.
 layout: default
 ---
 
+::header::
 # Links and Q&A
 
