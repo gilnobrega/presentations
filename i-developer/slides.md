@@ -56,25 +56,18 @@ clickAnimation: right
 ::header::
 # The Three Laws of Robotics
 
-::default::
-<v-clicks>
-
-<LawCard title="First Law">
+::first::
 A robot may not injure a human being or, through inaction, allow a human being to come to harm.
-</LawCard>
 
-<LawCard title="Second Law">
+::second::
 A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.
-</LawCard>
 
-<LawCard title="Third Law">
+::third::
 A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
-</LawCard>
-
-</v-clicks>
 
 ::right::
 ![I, Robot Cover](https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1536494104i/40226738.jpg)
+
 
 ---
 layout: default
@@ -822,39 +815,36 @@ layout: center
 layout: robot-laws
 clickAnimation: right
 section: Conclusion
+clicks: 3
 ---
 
 ::header::
 # The 3 I's Framework
 
-::default::
-<v-clicks>
+::first::
+AI tools and their byproducts must not harm the immediate or end users, directly or indirectly.
 
-<LawCard title="Isolation">
-The code produced by AI must not harm users
-</LawCard>
+::first-summarized::
+The code produced by AI must not cause harm to users.
 
-<LawCard title="Intention">
+::second::
+You should have agency over the AI tools you use, not the other way around. Except when your orders could harm users.
+
+::second-summarized::
 The code produced by AI must reflect the Engineer's intentions.
-</LawCard>
 
-<LawCard title="Integration">
+::third::
+The output of AI tools must deserve to exist in the long term. As long as it does not harm the user and it reflects the intentions of the software engineer.
+
+::third-summarized::
 The code produced by AI must be long-lived.
-</LawCard>
-
-</v-clicks>
 
 ::right::
 ![I, Robot Cover](https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1536494104i/40226738.jpg)
 
 ---
-layout: center
+layout: default
 ---
 
-# Article
+# Links and Q&A
 
----
-layout: end
----
-
-# Q&A

@@ -17,6 +17,10 @@ defineProps({
 </template>
 
 <style>
+.slidev-layout .law-card-component {
+  margin-bottom: 1rem !important;
+}
+
 .slidev-layout .law-card-title {
   background-color: #ffffff;
   border-radius: 0.5rem 0.5rem 0 0;
@@ -38,7 +42,7 @@ defineProps({
   color: #374151;
   font-size: 0.95rem;
   line-height: 1.35;
-  margin: 0 0 1rem 0 !important;
+  margin: 0 !important;
   text-align: left;
 }
 
