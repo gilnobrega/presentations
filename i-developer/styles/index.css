@@ -43,6 +43,22 @@ body {
 .slidev-layout h5 { font-weight: 600; }
 .slidev-layout h6 { font-weight: 600; }
 
+.slidev-layout h1 strong,
+.slidev-layout h2 strong,
+.slidev-layout h3 strong,
+.slidev-layout h4 strong,
+.slidev-layout h5 strong,
+.slidev-layout h6 strong,
+.slidev-layout h1 b,
+.slidev-layout h2 b,
+.slidev-layout h3 b,
+.slidev-layout h4 b,
+.slidev-layout h5 b,
+.slidev-layout h6 b {
+  font-weight: inherit;
+}
+
+
 /* Accents */
 #slidev-app strong,
 #slidev-app b {

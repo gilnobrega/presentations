@@ -925,4 +925,3 @@ layout: default
 
 ::header::
 # Links and Q&A
-
