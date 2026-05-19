@@ -25,11 +25,12 @@ const props = defineProps({
   }
 })
 
-const formatCol = (val: string | number | undefined, defaultVal: string = '1fr') => {
+const formatCol = (val: string | number | undefined, defaultVal: string = 'minmax(0, 1fr)') => {
   if (val === undefined || val === null || val === '') return defaultVal
   const trimmed = String(val).trim()
   if (typeof val === 'number' || /^[0-9.]+(?:fr)?$/.test(trimmed)) {
-    return trimmed.endsWith('fr') ? trimmed : `${trimmed}fr`
+    const numericVal = trimmed.endsWith('fr') ? trimmed : `${trimmed}fr`
+    return `minmax(0, ${numericVal})`
   }
   return trimmed
 }
@@ -39,7 +40,7 @@ const gridStyle = computed(() => {
   const rightVal = props.rightRatio !== undefined ? props.rightRatio : props['right-ratio']
   
   return {
-    gridTemplateColumns: `${formatCol(leftVal, '1fr')} ${formatCol(rightVal, '1fr')}`
+    gridTemplateColumns: `${formatCol(leftVal, 'minmax(0, 1fr)')} ${formatCol(rightVal, 'minmax(0, 1fr)')}`
   }
 })
 </script>
@@ -51,16 +52,13 @@ const gridStyle = computed(() => {
       <slot name="header" />
     </SlideHeader>
     
-    <!-- Content Grid -->
     <div class="grid gap-10 flex-1 min-h-0 text-[#374151]" :style="gridStyle">
       
-      <!-- Left Column -->
-      <div class="w-full min-h-0">
+      <div class="w-full min-w-0 min-h-0">
         <slot name="left" />
       </div>
       
-      <!-- Right Column -->
-      <div class="w-full min-h-0">
+      <div class="w-full min-w-0 min-h-0">
         <slot name="right" />
       </div>
       
