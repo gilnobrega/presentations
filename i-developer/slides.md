@@ -648,17 +648,18 @@ separator: false
 </v-click>
 
 ---
-layout: default
+layout: two-cols-header
+left-ratio: 4
+right-ratio: 6
 ---
 
 ::header::
 # A moment for reflection
 
-::body::
+::left::
 
-<div></div>
-
-### Before any task: <span v-click class="expand-text animated-bold-word"><span>**What do I want to achieve?**</span></span>
+### Before any task: 
+### <v-click>**What do I want to achieve?**</v-click>
 
 <v-clicks>
 
@@ -674,24 +675,107 @@ layout: default
 **Write it down.**
 
 </div>
----
-layout: default
----
 
-::header::
-# Situation-aware Context
+::right::
 
-::body::
-
-* **Learning a new language:** "... Explain this concept to an engineer with a background in XYZ"
-* **Just joined a new project:** "... Walk me through the codebase, step by step"
-* **Explaining a technical concept:** "... Explain this concept to a Product Manager. Avoid jargon."
+<img v-click src="https://developer.android.com/static/blog/assets/2_3_add_comments_to_implementation_ed1fe9893c_uKc7D.webp" alt="Planning Mode in Android Studio" class="m-auto h-100"/>
 
 ---
 layout: center
 ---
 
-# Hot Take: Code Completion
+## Never about writing code.
+<v-click>
+
+## It's about solving problems,
+
+</v-click>
+
+<v-click>
+<br/>
+
+## And the best path depends on **your situation**
+
+</v-click>
+
+---
+layout: center
+---
+
+## When **learning** something new
+
+<br />
+
+<v-click>
+
+### "(...) Explain this concept to an engineer with a background in XYZ."
+
+</v-click>
+
+<v-click>
+
+### "(...) I am proficient in this stack. Create an analogy for this concept."
+
+</v-click>
+
+---
+layout: center
+---
+
+## When **communicating** with a peer with a different skill-set
+
+<br />
+
+<v-click>
+
+### "(...) Explain this concept to a Product Manager. Avoid jargon."
+
+</v-click>
+
+---
+layout: default
+---
+
+::header::
+# When joining a **new project**
+Understand the product first. Then flex your skills.
+::body::
+
+<v-click>
+Don't be this person
+
+<img src="https://external-preview.redd.it/rewrite-bun-in-rust-has-been-merged-v0-ejb7gxwV9DNp9Lr2JaYWxYMHhdDgOChc7nN3_B71I3g.png?auto=webp&s=a64295de5b72c2a14e5f629fd9e1733b9c6b78cf" alt="PR in Bun's repo that lands a full rewrite in Rust" class="m-auto h-50" />
+
+</v-click>
+
+<br/>
+
+<v-click>
+
+### "(...) Walk me through the codebase, step by step.<br/>Explain the domain and the architecture."
+
+</v-click>
+
+---
+layout: default
+---
+
+::header::
+# 🔥 Hot Take
+Code Completion a.k.a. Tab Suggestions
+
+::body::
+
+<v-switch>
+  <template #1>
+    <img src="/images/cursor-tab.png" class="m-auto h-100" />
+  </template>
+  <template #2>
+<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
+  Image Placeholder
+</div>
+  </template> 
+</v-switch>
 
 ---
 layout: dos-donts
@@ -719,26 +803,18 @@ layout: center
 # The Email Incident, Revisited
 
 ---
-layout: default
----
-
-::header::
-# Upholding the Second Law - How?
-
-::body::
-
-* Rethink what works for you
-* Context Curation
-
----
 layout: center
 ---
 
-# Upholding the Second Law
+## Upholding the Second Law
 
 "You should have agency over the AI tools you use, not the other way around. Except when your orders could harm users."
 
-**Intention**
+<v-click>
+
+# **Intention**
+
+</v-click>
 
 ---
 layout: default
@@ -895,11 +971,15 @@ layout: dos-donts
 layout: center
 ---
 
-# Upholding the Third Law
+## Upholding the Third Law
 
 "The output of AI tools must deserve to exist in the long term. As long as it does not harm the user and it reflects the intentions of the software engineer."
 
-**Integration**
+<v-click>
+
+# **Integration**
+
+</v-click>
 
 ---
 layout: center
