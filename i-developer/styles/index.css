@@ -582,6 +582,16 @@ body {
   width: 100%;
 }
 
+/* Disable v-switch transitions while any parent slide transition is active (entering or leaving) */
+[class*="-enter-active"] .cross-fade-enter-active,
+[class*="-enter-active"] .cross-fade-leave-active,
+[class*="-leave-active"] .cross-fade-enter-active,
+[class*="-leave-active"] .cross-fade-leave-active {
+  transition: none !important;
+  animation: none !important;
+}
+
+
 
 
 

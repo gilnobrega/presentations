@@ -163,7 +163,7 @@ section: Core Concepts
 ## $\sqrt{28}$
 
   </v-click>
-  
+
 ::right::
 <img src="https://m.media-amazon.com/images/I/61TP9vwlWrL._AC_UF1000,1000_QL80_.jpg" alt="Casio Calculator" class="m-auto h-100 no-shadow" />
 
@@ -448,16 +448,14 @@ layout: dos-donts
 * "Skip" commands that are not useful
 
 ::right::
-<v-click>
-  <v-switch transition="cross-fade" unmount class="v-switch-crossfade">
-    <template #1>
-      <img src="/images/cursor-auto-run-settings.png" alt="Auto-Run settings panel in Cursor" class="m-auto h-80" />
-    </template>
-    <template #2>
-       <img src="/images/antigravity-command-third-option.png" alt="Antigravity IDE allows running command, skipping or third option customisable by user" class="m-auto h-80" />   
-    </template>
-  </v-switch>
-</v-click>
+<v-switch transition="cross-fade" unmount class="v-switch-crossfade">
+  <template #1>
+    <img src="/images/cursor-auto-run-settings.png" alt="Auto-Run settings panel in Cursor" class="m-auto h-80" />
+  </template>
+  <template #2>
+      <img src="/images/antigravity-command-third-option.png" alt="Antigravity IDE allows running command, skipping or third option customisable by user" class="m-auto h-80" />   
+  </template>
+</v-switch>
 
 ---
 layout: center
