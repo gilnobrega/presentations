@@ -860,7 +860,9 @@ Analysing Prompt Specificity
 
 ::left::
 
-<img src="/images/cursor-conversation-insights.png" alt="Cursor Conversation Insights Dashboard" class="m-auto h-70"/>
+<div class="zoom-container">
+  <img src="/images/cursor-conversation-insights.png" alt="Cursor Conversation Insights Dashboard" class="no-shadow" :class="{ 'zoomed': $clicks >= 1 }"/>
+</div>
 
 [cursor.com/dashboard/conversation-insights](https://cursor.com/dashboard/conversation-insights)
 

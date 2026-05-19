@@ -591,6 +591,31 @@ body {
   animation: none !important;
 }
 
+/* Animated zoom for Prompt Specificity chart on Slide 43 */
+.zoom-container {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  height: 17.5rem; /* Equivalent to h-70 in Slidev */
+  width: fit-content;
+  display: block;
+}
+
+.zoom-container img {
+  height: 100% !important;
+  width: auto !important;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  transform-origin: 90% 90% !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.zoom-container img.zoomed {
+  transform: scale(2.2) !important;
+}
+
+
 
 
 
