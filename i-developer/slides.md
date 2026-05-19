@@ -185,7 +185,7 @@ Model Context Protocol
 <v-click>
 Before 
 
-<div class="flex justify-center mt-6">
+<div class="flex justify-center">
 
 ```mermaid{theme: 'neutral', scale: 0.55}
 flowchart TD
@@ -216,7 +216,7 @@ flowchart TD
 <v-click>
 After
 
-<div class="flex justify-center mt-6">
+<div class="flex justify-center">
 
 ```mermaid{theme: 'neutral', scale: 0.55}
 flowchart TD
@@ -311,22 +311,30 @@ layout: default
 ---
 
 ::header::
-# Examples of AI Harm
+# Spectrum of AI Harm
 
 ::body::
 
-**Direct / Indirect**
-* Deception
-* Sycophancy
-* Hallucination
-* Manipulation of user data
-* Compromising Infrastructure
-* Erosion of software quality
-* Regressions
-* Tech Debt
-* Lack of architecture integrity
-* Decline of UX
-
+<SpectrumOfHarms>
+  <v-clicks>
+    <HarmItem>Deception</HarmItem>
+    <HarmItem>Sycophancy</HarmItem>
+    <HarmItem>Hallucination</HarmItem>
+    <HarmItem>Manipulation of user data</HarmItem>
+    <HarmItem>Compromising Infrastructure</HarmItem>
+    <HarmItem>
+      <div class="nested-container-inline">
+        <span>Erosion of software quality</span>
+        <div class="sub-harms-inline">
+          <span class="sub-harm-inline">Regressions</span>
+          <span class="sub-harm-inline">Tech Debt</span>
+        </div>
+      </div>
+    </HarmItem>
+    <HarmItem>Lack of architecture integrity</HarmItem>
+    <HarmItem>Decline of UX</HarmItem>
+  </v-clicks>
+</SpectrumOfHarms>
 ---
 layout: center
 separator: false
@@ -806,7 +814,8 @@ layout: dos-donts
 ---
 
 ::header::
-# Maintaining Alignment as an Author
+# Maintaining Alignment
+...as an Author
 
 ::dont::
 * Give vague orders
@@ -831,7 +840,8 @@ layout: dos-donts
 ---
 
 ::header::
-# Maintaining Alignment as a Reviewer
+# Maintaining Alignment
+...as a Reviewer
 
 ::dont::
 * Lower the bar for AI-generated code
