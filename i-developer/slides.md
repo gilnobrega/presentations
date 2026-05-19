@@ -374,7 +374,7 @@ layout: two-cols-header
 ::header::
 # ‼️ Stranger Danger
 The threat of **Prompt Injection**
-
+<v-click>When new context hijacks original instructions</v-click>
 ::left::
 <img v-click src="/images/prompt-injection-example.webp" alt="Prompt injection in Amazon's chat bot" class="m-auto h-150 z-10" />
 
@@ -453,7 +453,16 @@ layout: dos-donts
 * "Skip" commands that are not useful
 
 ::right::
-<img v-click src="/images/cursor-auto-run-settings.png" alt="Auto-Run settings panel in Cursor" class="m-auto h-80" />
+<v-click>
+  <v-switch>
+    <template #1>
+      <img src="/images/cursor-auto-run-settings.png" alt="Auto-Run settings panel in Cursor" class="m-auto h-80" />
+    </template>
+    <template #2>
+       <img src="/images/antigravity-command-third-option.png" alt="Antigravity IDE allows running command, skipping or third option customisable by user" class="m-auto h-80" />   
+    </template>
+  </v-switch>
+</v-click>
 
 ---
 layout: center
