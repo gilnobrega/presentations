@@ -1237,6 +1237,8 @@ This is your codebase
 
 ::left::
 
+<v-click>
+
 Existing Implementation
 ```dart{all|1-3|5-7|9-11|all}
 abstract class Animal {
@@ -1252,7 +1254,11 @@ class Cat extends Animal {
 }
 ```
 
+</v-click>
+
 ::right::
+
+<v-click>
 
 Existing Tests
 ```dart{all|3-8|10|11|12|all}
@@ -1274,19 +1280,71 @@ void main() {
 }
 ```
 
+</v-click>
+
 ---
 layout: two-cols-header
 ---
 
 ::header::
-# 🐱 Your task
-Cover *Cat* with tests
+# 🐱 Covering *Cat* with tests
 
 ::left::
-If you give a vague prompt
+<v-click>
+
+```
+Write 1 unit test for Cat.speak method
+```
+```dart{all|6|7,10,13|all}{maxHeight:'290px'}
+void main() {
+  group('Cat', () {
+    test('speak should return meow', () {
+      // Arrange
+      final cat = Cat();
+
+      // Act
+      final result = cat.speak();
+
+      // Assert
+      expect(result, equals('meow'));
+    });
+  });
+}
+```
+</v-click>
 
 ::right::
-If you give a specific prompt
+
+<v-click>
+
+```{all|2-3|4|5-6|all}
+Write 1 unit test for Cat.speak method
+Follow Gherkin (GIVEN WHEN THEN) for the title.
+Follow the 3As pattern (Arrange, Act, Assert).
+Check @dog_test.dart for style.
+Do not write unnecessary comments, 
+the code should explain itself.
+```
+
+```dart{maxHeight:'250px'}
+void main() {
+  group('Animal', () {
+    test(
+      '''
+      GIVEN my animal is a cat
+      WHEN it speaks
+      THEN it should meow
+      ''',
+      () {
+        final cat = Cat();
+        final output = cat.speak();
+        expect(output, equals('meow'));
+      },
+    );
+  });
+}
+```
+</v-click>
 
 ---
 layout: center
