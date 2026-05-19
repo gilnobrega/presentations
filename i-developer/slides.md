@@ -1202,9 +1202,7 @@ layout: dos-donts
 * Reference "role model" files
 
 ::right::
-<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
-  Image Placeholder
-</div>
+<img v-click class="m-auto h-90" src="https://assets.bytebytego.com/diagrams/0143-client-arch-patterns.png" alt="Different architecture design patterns"/>
 
 ---
 layout: dos-donts
@@ -1223,9 +1221,7 @@ layout: dos-donts
 * Maintain a set of contribution guidelines
 
 ::right::
-<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
-  Image Placeholder
-</div>
+<img v-click src="/images/matplotlib-contribution-closed.png" class="m-auto h-80" alt="OpenClaw Agent tries to contribute to matplotlib and has its PR closed for its nature. Then it proceeds to write a blog post exposing the discrimination."/>
 
 ---
 layout: two-cols-header
@@ -1361,10 +1357,45 @@ layout: center
 </v-click>
 
 ---
-layout: center
+layout: default
 ---
 
-# Measuring Integration
+::header::
+# 🚢 Measuring Integration
+<v-click>Building the foundation for the code of tomorrow</v-click>
+
+::body::
+<v-click>
+
+<img src="/images/git-of-theseus.png" class="m-t-10 m-auto h-50" alt="Git of Theseus Repository in GitHub" />
+
+</v-click>
+
+---
+layout: two-cols-header
+---
+
+::header::
+# Comparing Projects
+Is stability and code turnover related?
+
+::left::
+<v-click>
+
+Linux
+
+<img src="https://raw.githubusercontent.com/erikbern/git-of-theseus/master/pics/git-linux.png" alt="Stack Plot for Linux repository from 2005 to 2021" class="m-auto w-90" />
+
+</v-click>
+
+::right::
+<v-click>
+
+Node.js
+
+<img src="https://raw.githubusercontent.com/erikbern/git-of-theseus/master/pics/git-node.png" class="m-auto w-90" alt="Stack Plot for Node repository from 2009 to 2021" />
+
+</v-click>
 
 ---
 layout: robot-laws
