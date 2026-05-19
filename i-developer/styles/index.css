@@ -1,6 +1,8 @@
 /* Global theme overrides to match the robot-laws layout */
 
-:root, html, html.dark {
+:root,
+html,
+html.dark {
   /* Override backgrounds using Slidev's CSS variables */
   --slidev-theme-background: #f8f9fa;
   --slidev-theme-color: #374151;
@@ -36,12 +38,29 @@ body {
   letter-spacing: -0.025em;
 }
 
-.slidev-layout h1 { font-weight: 800; }
-.slidev-layout h2 { font-weight: 800; }
-.slidev-layout h3 { font-weight: 700; }
-.slidev-layout h4 { font-weight: 600; }
-.slidev-layout h5 { font-weight: 600; }
-.slidev-layout h6 { font-weight: 600; }
+.slidev-layout h1 {
+  font-weight: 800;
+}
+
+.slidev-layout h2 {
+  font-weight: 800;
+}
+
+.slidev-layout h3 {
+  font-weight: 700;
+}
+
+.slidev-layout h4 {
+  font-weight: 600;
+}
+
+.slidev-layout h5 {
+  font-weight: 600;
+}
+
+.slidev-layout h6 {
+  font-weight: 600;
+}
 
 .slidev-layout h1 strong,
 .slidev-layout h2 strong,
@@ -78,6 +97,7 @@ body {
   color: #f3f4f6;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
+
 .slidev-layout.cover h1 {
   margin: 0 !important;
   font-size: 4.5rem;
@@ -88,6 +108,7 @@ body {
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   text-align: center;
 }
+
 .slidev-layout.cover h2,
 .slidev-layout.cover h3,
 .slidev-layout.cover h4,
@@ -99,6 +120,7 @@ body {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
+
 .slidev-layout.cover p {
   margin-top: 1.5rem;
   font-size: 1.75rem;
@@ -107,6 +129,7 @@ body {
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
+
 .slidev-layout.cover strong,
 .slidev-layout.cover b,
 .slidev-layout.cover a {
@@ -122,9 +145,11 @@ body {
   letter-spacing: -0.025em;
   line-height: 1.1;
 }
+
 .slidev-layout.two-cols-header {
   color: #374151;
 }
+
 .slidev-layout.two-cols-header h1,
 .slidev-layout.two-cols-header h2,
 .slidev-layout.two-cols-header h3,
@@ -134,6 +159,7 @@ body {
   color: #111827;
   letter-spacing: -0.025em;
 }
+
 .slidev-layout.two-cols-header strong,
 .slidev-layout.two-cols-header b,
 .slidev-layout.two-cols-header a {
@@ -146,7 +172,7 @@ body {
   box-sizing: border-box;
 }
 
-.image-container > div {
+.image-container>div {
   height: 100%;
   width: 100%;
   display: flex;
@@ -166,6 +192,7 @@ body {
 .slidev-layout.center {
   color: #374151;
 }
+
 .slidev-layout.center h1 {
   margin: 0 !important;
   font-size: 4.5rem;
@@ -174,6 +201,7 @@ body {
   line-height: 1.1;
   text-align: center;
 }
+
 .slidev-layout.center h2,
 .slidev-layout.center h3,
 .slidev-layout.center h4,
@@ -183,6 +211,7 @@ body {
   letter-spacing: -0.025em;
   text-align: center;
 }
+
 .slidev-layout.center p {
   margin-top: 1.5rem;
   font-size: 1.75rem;
@@ -191,6 +220,7 @@ body {
   text-align: center;
   line-height: 1.6;
 }
+
 .slidev-layout.center strong,
 .slidev-layout.center b,
 .slidev-layout.center a {
@@ -198,16 +228,19 @@ body {
 }
 
 /* Global Subtitle styling and spacing across all layouts */
-.slidev-layout h1 + p,
-.slidev-layout h1 + h2,
-.slidev-layout h1 + h3,
-.slidev-layout h1 + h4 {
-  margin-top: 0.25rem !important; /* Tight, premium spacing between title and subtitle */
+.slidev-layout h1+p,
+.slidev-layout h1+h2,
+.slidev-layout h1+h3,
+.slidev-layout h1+h4 {
+  margin-top: 0.25rem !important;
+  /* Tight, premium spacing between title and subtitle */
   font-size: 1.25rem !important;
-  color: #4b5563 !important; /* Elegant gray-600 */
+  color: #4b5563 !important;
+  /* Elegant gray-600 */
   font-weight: 500 !important;
   line-height: 1.4 !important;
-  opacity: 1 !important; /* Force solid opacity so that the separator line is perfectly bright and vibrant */
+  opacity: 1 !important;
+  /* Force solid opacity so that the separator line is perfectly bright and vibrant */
 }
 
 /* If a subtitle sibling is present immediately after h1, reduce h1 bottom margin for all layouts */
@@ -225,8 +258,10 @@ body {
 
 /* Custom Animation for Boldening */
 .animated-bold-word {
-  opacity: 1 !important; /* Override Slidev's default fade-in */
-  color: #3b82f6; /* Blue when active */
+  opacity: 1 !important;
+  /* Override Slidev's default fade-in */
+  color: #3b82f6;
+  /* Blue when active */
   text-shadow: 0 0 1px currentColor, 0 0 1px currentColor, 0 0 0.5px currentColor;
   transition: all 0.5s ease-in-out;
 }
@@ -243,7 +278,8 @@ body {
   grid-template-columns: 1fr;
   transition: grid-template-columns 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease-in-out;
   opacity: 1 !important;
-  vertical-align: bottom; /* Aligns smoothly with adjacent text */
+  vertical-align: bottom;
+  /* Aligns smoothly with adjacent text */
 }
 
 .expand-text.slidev-vclick-hidden {
@@ -251,9 +287,10 @@ body {
   opacity: 0 !important;
 }
 
-.expand-text > span {
+.expand-text>span {
   overflow: hidden;
-  white-space: nowrap; /* Prevents wrapping during expansion */
+  white-space: nowrap;
+  /* Prevents wrapping during expansion */
 }
 
 /* Custom Card Animations for robot-laws Layout transitions */
@@ -262,6 +299,7 @@ body {
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -272,10 +310,12 @@ body {
   0% {
     box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1);
   }
+
   50% {
     box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
     border-color: rgba(59, 130, 246, 0.5);
   }
+
   100% {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   }
@@ -283,7 +323,7 @@ body {
 
 .highlight-card {
   animation: slideInRight 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards,
-             highlightPulse 1.5s ease-in-out;
+    highlightPulse 1.5s ease-in-out;
   border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: 0.5rem;
 }
@@ -293,10 +333,12 @@ body {
 .fade-leave-active {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .fade-enter-from {
   opacity: 0;
   transform: translateX(20px);
 }
+
 .fade-leave-to {
   opacity: 0;
   transform: translateX(-20px);
@@ -365,7 +407,8 @@ body {
   align-items: stretch;
   min-height: 380px;
   max-height: 410px;
-  margin-left: 5.5rem; /* Make room for the left side labels */
+  margin-left: 5.5rem;
+  /* Make room for the left side labels */
 }
 
 /* Gradient Axis */
@@ -387,7 +430,8 @@ body {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #64748b; /* Sleek muted gray */
+  color: #64748b;
+  /* Sleek muted gray */
 }
 
 .side-label.top {
@@ -499,14 +543,37 @@ body {
 }
 
 /* Dynamic gradient step based on order of appearance in the DOM */
-.harm-item:nth-child(1)::before { background: #2563eb; }
-.harm-item:nth-child(2)::before { background: #3f5ad6; }
-.harm-item:nth-child(3)::before { background: #5951c1; }
-.harm-item:nth-child(4)::before { background: #7348ac; }
-.harm-item:nth-child(5)::before { background: #8d3f97; }
-.harm-item:nth-child(6)::before { background: #a73682; }
-.harm-item:nth-child(7)::before { background: #c12d6d; }
-.harm-item:nth-child(8)::before { background: #dc2626; }
+.harm-item:nth-child(1)::before {
+  background: #2563eb;
+}
+
+.harm-item:nth-child(2)::before {
+  background: #3f5ad6;
+}
+
+.harm-item:nth-child(3)::before {
+  background: #5951c1;
+}
+
+.harm-item:nth-child(4)::before {
+  background: #7348ac;
+}
+
+.harm-item:nth-child(5)::before {
+  background: #8d3f97;
+}
+
+.harm-item:nth-child(6)::before {
+  background: #a73682;
+}
+
+.harm-item:nth-child(7)::before {
+  background: #c12d6d;
+}
+
+.harm-item:nth-child(8)::before {
+  background: #dc2626;
+}
 
 .harm-item.block-layout {
   display: block;
@@ -564,6 +631,7 @@ body {
 .cross-fade-leave-active {
   transition: opacity 0.4s ease-in-out;
 }
+
 .cross-fade-enter-from,
 .cross-fade-leave-to {
   opacity: 0;
@@ -577,7 +645,8 @@ body {
   justify-content: center;
   width: 100%;
 }
-.v-switch-crossfade > * {
+
+.v-switch-crossfade>* {
   grid-area: switch;
   width: 100%;
 }
@@ -597,7 +666,8 @@ body {
   border-radius: 0.5rem;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   margin: auto;
-  height: 17.5rem; /* Equivalent to h-70 in Slidev */
+  height: 17.5rem;
+  /* Equivalent to h-70 in Slidev */
   width: fit-content;
   display: block;
 }
@@ -612,11 +682,5 @@ body {
 }
 
 .zoom-container img.zoomed {
-  transform: scale(2.2) !important;
+  transform: scale(2.5) !important;
 }
-
-
-
-
-
-
