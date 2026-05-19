@@ -143,34 +143,29 @@ section: Core Concepts
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUhqBV95kpeIt36ZU1l7y_5-GytbRbZBd_Mw&s" alt="Dog handing paw" class=" m-auto h-100 no-shadow"/>
 
 ---
-layout: default
+layout: two-cols-header
 section: Core Concepts
 ---
 
 ::header::
 # Tool Calling
 
-::body::
+::left::
 
-<div></div>
-
-<v-switch>
-  <template #1>
+  <v-click>
 
 ## 2+2
 
-  </template>
-  <template #2>
+  </v-click>
+  <br/>
+  <v-click>
 
 ## $\sqrt{28}$
 
-  </template>
-  <template #3>
-
+  </v-click>
+  
+::right::
 <img src="https://m.media-amazon.com/images/I/61TP9vwlWrL._AC_UF1000,1000_QL80_.jpg" alt="Casio Calculator" class="m-auto h-100 no-shadow" />
-
-  </template>
-</v-switch>
 
 ---
 layout: two-cols-header
@@ -454,7 +449,7 @@ layout: dos-donts
 
 ::right::
 <v-click>
-  <v-switch>
+  <v-switch transition="cross-fade" unmount class="v-switch-crossfade">
     <template #1>
       <img src="/images/cursor-auto-run-settings.png" alt="Auto-Run settings panel in Cursor" class="m-auto h-80" />
     </template>
@@ -766,14 +761,12 @@ Code Completion a.k.a. Tab Suggestions
 
 ::body::
 
-<v-switch>
+<v-switch transition="cross-fade" unmount class="v-switch-crossfade">
   <template #1>
-    <img src="/images/cursor-tab.png" class="m-auto h-100" />
+    <img src="/images/cursor-tab.png" class="m-auto h-80" />
   </template>
   <template #2>
-<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
-  Image Placeholder
-</div>
+    <img src="/images/tab-suggestion-frustration.gif" class="m-auto h-80" />
   </template> 
 </v-switch>
 

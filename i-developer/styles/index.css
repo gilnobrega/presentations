@@ -559,5 +559,29 @@ body {
   white-space: nowrap;
 }
 
+/* Cross-fade transition for v-switch components */
+.cross-fade-enter-active,
+.cross-fade-leave-active {
+  transition: opacity 0.4s ease-in-out;
+}
+.cross-fade-enter-from,
+.cross-fade-leave-to {
+  opacity: 0;
+}
+
+/* Stacking container to overlay templates during transition to prevent layout shift */
+.v-switch-crossfade {
+  display: grid;
+  grid-template-areas: "switch";
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.v-switch-crossfade > * {
+  grid-area: switch;
+  width: 100%;
+}
+
+
 
 
