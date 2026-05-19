@@ -764,12 +764,29 @@ Code Completion a.k.a. Tab Suggestions
     <img src="/images/cursor-tab.png" class="m-auto h-80" />
   </template>
   <template #2>
+    <div class="relative m-auto h-80 w-fit">
+      <img src="/images/tab-suggestion-frustration.jpg" class="h-80" />
+      <div class="absolute inset-0 flex items-center justify-center bg-black/20 rounded-lg">
+        <span class="text-6xl filter drop-shadow-lg">▶️</span>
+      </div>
+    </div>
+  </template> 
+  <template #3>
     <img src="/images/tab-suggestion-frustration.gif" class="m-auto h-80" />
+  </template> 
+  <template #4>
+    <div class="relative m-auto h-80 w-fit">
+      <img src="/images/tab-suggestion-frustration.jpg" class="h-80" />
+      <div class="absolute inset-0 flex items-center justify-center bg-black/20 rounded-lg">
+        <span class="text-6xl filter drop-shadow-lg">⏸️</span>
+      </div>
+    </div>
   </template> 
 </v-switch>
 
 ---
 layout: dos-donts
+transition: slide-right
 ---
 
 ::header::
@@ -779,19 +796,45 @@ layout: dos-donts
 * Use tools that disrupt your ways of working
 
 ::do::
-* Use tools that can express your intention.
-* Identify which tools are useful for the task ahead and disable those that aren't.
+* Use tools that can express your intention
+* Identify which tools are useful for the task ahead
+* Disable disruptive tools
 
 ::right::
-<div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
-  Image Placeholder
-</div>
+<img src="/images/antigravity-tab-settings.png" alt="Settings page in Antigravity IDE showing Tab Suggestions disabled" />
 
 ---
 layout: center
+section: Second Law
+separator: false
 ---
 
+## The Second Law, Reinterpreted
+
+<br/>
+
+You should have agency over the AI tools you use, not the other way around. <span v-click class="animated-bold-word"><span>Except when your orders could harm users.</span></span>
+
+---
+layout: default
+---
+
+::header::
 # The Email Incident, Revisited
+
+::body::
+<img src="/images/meta-head-of-ai-3.png" class="m-auto h-70" />
+
+<v-click>
+
+Instructions were clear
+
+</v-click>
+<v-click>
+
+...but you can't control **real** context
+
+</v-click>
 
 ---
 layout: center
@@ -808,19 +851,29 @@ layout: center
 </v-click>
 
 ---
-layout: default
+layout: two-cols-header
 ---
 
 ::header::
-# Measuring Intention (Prompt Specificity)
+# Measuring Intention 
+Analysing Prompt Specificity
 
-::body::
+::left::
+
+<img src="/images/cursor-conversation-insights.png" alt="Cursor Conversation Insights Dashboard" class="m-auto h-70"/>
+
+[cursor.com/dashboard/conversation-insights](https://cursor.com/dashboard/conversation-insights)
+
+::right::
+
+<v-click>
 
 How much specific, actionable guidance the user has provided in their prompts. Higher specificity typically leads to better AI responses.
 
-* **Low:** Minimal actionable guidance. No concrete code references, acceptance criteria, or constraints; vague requests or low-context questions.
-* **Medium:** Some actionable guidance, but not enough to meet the high bar. Typically includes one of: code references, acceptance criteria, or constraints.
-* **High:** Substantial actionable guidance that is likely to lead to a good response. Includes multiple evidence types or is clear and well-specified enough for success.
+* **Low:** Minimal actionable guidance. No concrete code references, acceptance criteria, or constraints; vague requests or low-context questions. (...)
+* **High:** Substantial actionable guidance that is <span v-click="+2" class="animated-bold-word"><span>likely to lead to a good response</span></span>. Includes multiple evidence types or is clear and well-specified enough for success.
+
+</v-click>
 
 ---
 layout: center
