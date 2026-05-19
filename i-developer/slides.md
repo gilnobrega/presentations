@@ -954,12 +954,6 @@ layout: dos-donts
 ::do::
 * Mention technical patterns
 * Reference "role model" files
-* Functional Programming
-* Arrange, Act, Assert
-* Self-explanatory code
-* Clean Architecture
-* BDD
-* Solid Principles
 
 ::right::
 <div class="w-full h-64 bg-gray-100/50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium">
@@ -988,10 +982,50 @@ layout: dos-donts
 </div>
 
 ---
-layout: center
+layout: two-cols-header
 ---
 
-# Exercise
+::header::
+# 📝 Exercise
+
+::left::
+
+Existing Implementation
+```dart{all|1-3|5-7|9-11|all}
+abstract class Animal {
+  String speak();
+}
+
+class Dog extends Animal {
+  String speak() => 'bark';
+}
+
+class Cat extends Animal {
+  String speak() => 'meow';
+}
+```
+
+::right::
+
+Existing Tests
+```dart{all|3-8|10|11|12|all}
+void main() {
+  group('Animal', () {
+    test(
+      '''
+      GIVEN my animal is a dog
+      WHEN it speaks
+      THEN it should bark
+      ''',
+      () {
+        final dog = Dog();
+        final output = dog.speak();
+        expect(output, equals('bark'));
+      },
+    );
+  });
+}
+```
 
 ---
 layout: dos-donts
