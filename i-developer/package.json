@@ -2,6 +2,7 @@
   "name": "i-developer",
   "type": "module",
   "private": true,
+  "license": "(CC-BY-SA-4.0 AND AGPL-3.0-or-later AND Apache-2.0)",
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
