@@ -1078,7 +1078,7 @@ Instructions were clear
 </v-click>
 <v-click>
 
-...but you can't control **real** context
+...but you never know what is in a **real** inbox
 
 </v-click>
 
@@ -1291,7 +1291,8 @@ layout: two-cols-header
 ```
 Write 1 unit test for Cat.speak method
 ```
-```dart{all|6|7,10,13|all}{maxHeight:'290px'}
+
+```dart{all|3|4,7,10|all}{maxHeight:'290px'}
 void main() {
   group('Cat', () {
     test('speak should return meow', () {
@@ -1311,7 +1312,7 @@ void main() {
 
 ::right::
 
-<v-click>
+<div v-click="+4">
 
 ```{all|2-3|4|5-6|all}
 Write 1 unit test for Cat.speak method
@@ -1322,7 +1323,7 @@ Do not write unnecessary comments,
 the code should explain itself.
 ```
 
-```dart{maxHeight:'250px'}
+```dart{all|5-7|10|11|12|all}{maxHeight:'250px'}
 void main() {
   group('Animal', () {
     test(
@@ -1340,7 +1341,8 @@ void main() {
   });
 }
 ```
-</v-click>
+
+</div>
 
 ---
 layout: center
@@ -1411,7 +1413,7 @@ clicks: 3
 AI tools and their byproducts must not harm the immediate or end users, directly or indirectly.
 
 ::first-summarized::
-The code produced by AI must not cause harm to users.
+The code produced by AI must not harm users.
 
 ::second::
 You should have agency over the AI tools you use, not the other way around. Except when your orders could harm users.
@@ -1429,8 +1431,40 @@ The code produced by AI must be long-lived.
 ![I, Robot Cover](https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1536494104i/40226738.jpg)
 
 ---
-layout: default
+layout: two-cols-header
 ---
 
 ::header::
-# Links and Q&A
+# Links
+
+::left::
+
+<v-click>
+
+Made with **[Sli.dev](https://sli.dev)** framework, using Antigravity IDE
+
+<div class="bg-white p-4 w-48 h-48 flex items-center justify-center m-auto">
+    <style>
+        .qr-container svg { width: 100%; height: 100%; }
+    </style>
+    <div class="qr-container w-full h-full">
+        <svg viewBox="0 0 37 37" xmlns="http://www.w3.org/2000/svg"><rect width="37px" height="37px" fill="#ffffff"></rect><path d="M4,4h1v1h-1M5,4h1v1h-1M6,4h1v1h-1M7,4h1v1h-1M8,4h1v1h-1M9,4h1v1h-1M10,4h1v1h-1M12,4h1v1h-1M16,4h1v1h-1M17,4h1v1h-1M20,4h1v1h-1M24,4h1v1h-1M26,4h1v1h-1M27,4h1v1h-1M28,4h1v1h-1M29,4h1v1h-1M30,4h1v1h-1M31,4h1v1h-1M32,4h1v1h-1M4,5h1v1h-1M10,5h1v1h-1M12,5h1v1h-1M13,5h1v1h-1M19,5h1v1h-1M20,5h1v1h-1M23,5h1v1h-1M24,5h1v1h-1M26,5h1v1h-1M32,5h1v1h-1M4,6h1v1h-1M6,6h1v1h-1M7,6h1v1h-1M8,6h1v1h-1M10,6h1v1h-1M12,6h1v1h-1M14,6h1v1h-1M15,6h1v1h-1M18,6h1v1h-1M19,6h1v1h-1M24,6h1v1h-1M26,6h1v1h-1M28,6h1v1h-1M29,6h1v1h-1M30,6h1v1h-1M32,6h1v1h-1M4,7h1v1h-1M6,7h1v1h-1M7,7h1v1h-1M8,7h1v1h-1M10,7h1v1h-1M12,7h1v1h-1M13,7h1v1h-1M15,7h1v1h-1M18,7h1v1h-1M20,7h1v1h-1M23,7h1v1h-1M26,7h1v1h-1M28,7h1v1h-1M29,7h1v1h-1M30,7h1v1h-1M32,7h1v1h-1M4,8h1v1h-1M6,8h1v1h-1M7,8h1v1h-1M8,8h1v1h-1M10,8h1v1h-1M12,8h1v1h-1M14,8h1v1h-1M15,8h1v1h-1M16,8h1v1h-1M20,8h1v1h-1M21,8h1v1h-1M22,8h1v1h-1M23,8h1v1h-1M26,8h1v1h-1M28,8h1v1h-1M29,8h1v1h-1M30,8h1v1h-1M32,8h1v1h-1M4,9h1v1h-1M10,9h1v1h-1M13,9h1v1h-1M15,9h1v1h-1M16,9h1v1h-1M18,9h1v1h-1M20,9h1v1h-1M22,9h1v1h-1M23,9h1v1h-1M26,9h1v1h-1M32,9h1v1h-1M4,10h1v1h-1M5,10h1v1h-1M6,10h1v1h-1M7,10h1v1h-1M8,10h1v1h-1M9,10h1v1h-1M10,10h1v1h-1M12,10h1v1h-1M14,10h1v1h-1M16,10h1v1h-1M18,10h1v1h-1M20,10h1v1h-1M22,10h1v1h-1M24,10h1v1h-1M26,10h1v1h-1M27,10h1v1h-1M28,10h1v1h-1M29,10h1v1h-1M30,10h1v1h-1M31,10h1v1h-1M32,10h1v1h-1M12,11h1v1h-1M13,11h1v1h-1M14,11h1v1h-1M19,11h1v1h-1M24,11h1v1h-1M5,12h1v1h-1M6,12h1v1h-1M8,12h1v1h-1M10,12h1v1h-1M11,12h1v1h-1M13,12h1v1h-1M15,12h1v1h-1M16,12h1v1h-1M19,12h1v1h-1M23,12h1v1h-1M24,12h1v1h-1M26,12h1v1h-1M28,12h1v1h-1M29,12h1v1h-1M30,12h1v1h-1M31,12h1v1h-1M32,12h1v1h-1M4,13h1v1h-1M8,13h1v1h-1M9,13h1v1h-1M11,13h1v1h-1M16,13h1v1h-1M23,13h1v1h-1M24,13h1v1h-1M25,13h1v1h-1M28,13h1v1h-1M29,13h1v1h-1M32,13h1v1h-1M8,14h1v1h-1M10,14h1v1h-1M11,14h1v1h-1M15,14h1v1h-1M16,14h1v1h-1M18,14h1v1h-1M21,14h1v1h-1M23,14h1v1h-1M24,14h1v1h-1M29,14h1v1h-1M30,14h1v1h-1M31,14h1v1h-1M32,14h1v1h-1M5,15h1v1h-1M7,15h1v1h-1M11,15h1v1h-1M12,15h1v1h-1M15,15h1v1h-1M16,15h1v1h-1M18,15h1v1h-1M19,15h1v1h-1M20,15h1v1h-1M21,15h1v1h-1M24,15h1v1h-1M25,15h1v1h-1M26,15h1v1h-1M28,15h1v1h-1M31,15h1v1h-1M5,16h1v1h-1M9,16h1v1h-1M10,16h1v1h-1M13,16h1v1h-1M15,16h1v1h-1M16,16h1v1h-1M18,16h1v1h-1M19,16h1v1h-1M21,16h1v1h-1M23,16h1v1h-1M24,16h1v1h-1M26,16h1v1h-1M27,16h1v1h-1M30,16h1v1h-1M4,17h1v1h-1M6,17h1v1h-1M8,17h1v1h-1M12,17h1v1h-1M14,17h1v1h-1M17,17h1v1h-1M18,17h1v1h-1M21,17h1v1h-1M22,17h1v1h-1M24,17h1v1h-1M25,17h1v1h-1M26,17h1v1h-1M27,17h1v1h-1M31,17h1v1h-1M32,17h1v1h-1M4,18h1v1h-1M5,18h1v1h-1M8,18h1v1h-1M10,18h1v1h-1M12,18h1v1h-1M14,18h1v1h-1M15,18h1v1h-1M18,18h1v1h-1M22,18h1v1h-1M24,18h1v1h-1M26,18h1v1h-1M27,18h1v1h-1M30,18h1v1h-1M31,18h1v1h-1M32,18h1v1h-1M4,19h1v1h-1M5,19h1v1h-1M6,19h1v1h-1M8,19h1v1h-1M9,19h1v1h-1M11,19h1v1h-1M12,19h1v1h-1M13,19h1v1h-1M17,19h1v1h-1M21,19h1v1h-1M22,19h1v1h-1M27,19h1v1h-1M5,20h1v1h-1M6,20h1v1h-1M8,20h1v1h-1M9,20h1v1h-1M10,20h1v1h-1M12,20h1v1h-1M13,20h1v1h-1M14,20h1v1h-1M18,20h1v1h-1M20,20h1v1h-1M22,20h1v1h-1M23,20h1v1h-1M26,20h1v1h-1M28,20h1v1h-1M29,20h1v1h-1M31,20h1v1h-1M32,20h1v1h-1M7,21h1v1h-1M8,21h1v1h-1M16,21h1v1h-1M17,21h1v1h-1M18,21h1v1h-1M19,21h1v1h-1M20,21h1v1h-1M21,21h1v1h-1M22,21h1v1h-1M23,21h1v1h-1M27,21h1v1h-1M29,21h1v1h-1M30,21h1v1h-1M31,21h1v1h-1M32,21h1v1h-1M4,22h1v1h-1M6,22h1v1h-1M8,22h1v1h-1M10,22h1v1h-1M14,22h1v1h-1M16,22h1v1h-1M17,22h1v1h-1M19,22h1v1h-1M20,22h1v1h-1M21,22h1v1h-1M22,22h1v1h-1M25,22h1v1h-1M27,22h1v1h-1M29,22h1v1h-1M30,22h1v1h-1M31,22h1v1h-1M32,22h1v1h-1M5,23h1v1h-1M6,23h1v1h-1M8,23h1v1h-1M11,23h1v1h-1M12,23h1v1h-1M18,23h1v1h-1M20,23h1v1h-1M21,23h1v1h-1M22,23h1v1h-1M23,23h1v1h-1M26,23h1v1h-1M27,23h1v1h-1M29,23h1v1h-1M4,24h1v1h-1M6,24h1v1h-1M9,24h1v1h-1M10,24h1v1h-1M11,24h1v1h-1M13,24h1v1h-1M16,24h1v1h-1M18,24h1v1h-1M19,24h1v1h-1M21,24h1v1h-1M24,24h1v1h-1M25,24h1v1h-1M26,24h1v1h-1M27,24h1v1h-1M28,24h1v1h-1M29,24h1v1h-1M31,24h1v1h-1M32,24h1v1h-1M12,25h1v1h-1M16,25h1v1h-1M19,25h1v1h-1M20,25h1v1h-1M24,25h1v1h-1M28,25h1v1h-1M4,26h1v1h-1M5,26h1v1h-1M6,26h1v1h-1M7,26h1v1h-1M8,26h1v1h-1M9,26h1v1h-1M10,26h1v1h-1M12,26h1v1h-1M14,26h1v1h-1M16,26h1v1h-1M17,26h1v1h-1M18,26h1v1h-1M21,26h1v1h-1M23,26h1v1h-1M24,26h1v1h-1M26,26h1v1h-1M28,26h1v1h-1M30,26h1v1h-1M31,26h1v1h-1M32,26h1v1h-1M4,27h1v1h-1M10,27h1v1h-1M13,27h1v1h-1M18,27h1v1h-1M20,27h1v1h-1M24,27h1v1h-1M28,27h1v1h-1M32,27h1v1h-1M4,28h1v1h-1M6,28h1v1h-1M7,28h1v1h-1M8,28h1v1h-1M10,28h1v1h-1M12,28h1v1h-1M14,28h1v1h-1M16,28h1v1h-1M17,28h1v1h-1M19,28h1v1h-1M24,28h1v1h-1M25,28h1v1h-1M26,28h1v1h-1M27,28h1v1h-1M28,28h1v1h-1M29,28h1v1h-1M31,28h1v1h-1M32,28h1v1h-1M4,29h1v1h-1M6,29h1v1h-1M7,29h1v1h-1M8,29h1v1h-1M10,29h1v1h-1M14,29h1v1h-1M16,29h1v1h-1M18,29h1v1h-1M19,29h1v1h-1M24,29h1v1h-1M25,29h1v1h-1M28,29h1v1h-1M29,29h1v1h-1M4,30h1v1h-1M6,30h1v1h-1M7,30h1v1h-1M8,30h1v1h-1M10,30h1v1h-1M12,30h1v1h-1M13,30h1v1h-1M17,30h1v1h-1M18,30h1v1h-1M22,30h1v1h-1M23,30h1v1h-1M27,30h1v1h-1M28,30h1v1h-1M29,30h1v1h-1M30,30h1v1h-1M32,30h1v1h-1M4,31h1v1h-1M10,31h1v1h-1M12,31h1v1h-1M14,31h1v1h-1M15,31h1v1h-1M16,31h1v1h-1M19,31h1v1h-1M21,31h1v1h-1M23,31h1v1h-1M26,31h1v1h-1M27,31h1v1h-1M29,31h1v1h-1M31,31h1v1h-1M4,32h1v1h-1M5,32h1v1h-1M6,32h1v1h-1M7,32h1v1h-1M8,32h1v1h-1M9,32h1v1h-1M10,32h1v1h-1M13,32h1v1h-1M15,32h1v1h-1M16,32h1v1h-1M20,32h1v1h-1M21,32h1v1h-1M22,32h1v1h-1M23,32h1v1h-1M28,32h1v1h-1M29,32h1v1h-1M31,32h1v1h-1M32,32h1v1h-1" fill="#000000"></path></svg>
+    </div>
+</div>
+
+[github.com/gilnobrega/presentations/tree/main/i-developer](https://github.com/gilnobrega/presentations/tree/main/i-developer)
+
+</v-click>
+
+::right::
+
+<v-click>
+
+<div class="m-auto m-t-30 m-l-30" >
+
+# Questions?
+
+</div>
+
+</v-click>
+
