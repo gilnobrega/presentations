@@ -9,31 +9,22 @@ background: images/cover.png
 clickAnimation: fade-in
 aspectRatio: 16/9
 canvasWidth: 980
-notes: |
-  Hi everyone.
-  Unless you've been living under a rock, you've probably used ChatGPT or similar AI tools.
-  Raise your hands if you have.
-  Used it for writing code, and noticed it broke half of the tests?
-  Used it for planning the architecture of a new feature, and it spat an overengineered solution?
-  Looked at a PR and said "this looks AI generated"?
 ---
 
 # I, Developer
 Asimov's Laws for the AI-coding era
 
+<!--
+Hi everyone.
+Unless you've been living under a rock, you've probably used ChatGPT or similar AI tools.
+Raise your hands if you have.
+Used it for writing code, and noticed it broke half of the tests?
+Used it for planning the architecture of a new feature, and it spat an overengineered solution?
+Looked at a PR and said "this looks AI generated"?
+-->
 ---
 layout: two-cols-header
 section: Intro
-notes: |
-  Im Gil, here's my handles.
-  I used to be a .NET developer, now I like making apps in Flutter, I dabble in KMP sometimes.
-  I'm currently employed as a senior mobile engineer at Tide, a fintech that provides services to over a million small and medium businesses in Europe and Asia.
-  Im part of the onboarding team, we look after the very first journey of potential customers in multiple markets and make sure we've got everything that's needed for them before they can get their hands on a product.
-  Let me be clear: I am not representing my employer here. All views are my own.
-  I've been using AI every day for the past couple of years, at work, for personal projects, for leaning new languages.
-  I've also been reviewing a lot of AI generated code.
-  And through my journey I've established silent rules that help me be the most productive with AI.
-  It was not until a few months ago that I reflected on them, and tried to put them in writing.
 ---
 
 ::header::
@@ -63,19 +54,20 @@ Senior Mobile Engineer @ <img src="https://www.openbanking.org.uk/wp-content/upl
 <img src="https://images.ctfassets.net/3h69mkdgxn20/57Wlffj2kXJzlgspiqzuwr/976fb2b0ad5a8d509a76a842e21b7635/Everything_you_need_to_run_your_business.png" class="h-100 no-shadow" />
 </v-click>
 
+<!--
+Im Gil, here's my handles.
+I used to be a .NET developer, now I like making apps in Flutter, I dabble in KMP sometimes.
+I'm currently employed as a senior mobile engineer at Tide, a fintech that provides services to over a million small and medium businesses in Europe and Asia.
+Im part of the onboarding team, we look after the very first journey of potential customers in multiple markets and make sure we've got everything that's needed for them before they can get their hands on a product.
+Let me be clear: I am not representing my employer here. All views are my own.
+I've been using AI every day for the past couple of years, at work, for personal projects, for leaning new languages.
+I've also been reviewing a lot of AI generated code.
+And through my journey I've established silent rules that help me be the most productive with AI.
+It was not until a few months ago that I reflected on them, and tried to put them in writing.
+-->
 ---
 layout: robot-laws
 clickAnimation: right
-notes: |
-  But First, let's go back in time to the 1950s.
-  Asimov published a series of Short Stories called "I, Robot".
-  As you might have guessed this is related to the title of this presentation.
-  In I, Robot, He imagined an ideal world with humans and humanoid robots living side by side.
-  In this world, robots obeyed to the Three laws of Robotics.
-  (reads laws of robotic)
-  Fast forward half a century and it feels like we are living in that world.
-  His prediction was half right I guess. In an industrial world, it is easy to imagine why having an actual physical body would be beneficial for a robot.
-  In today's economy powered by services industry (I mean we've got entire companies whose infrastructure is software), it is easy to see why chatbots do not need a physical body to provide economic value.
 ---
 
 ::header::
@@ -93,21 +85,19 @@ A robot must protect its own existence as long as such protection does not confl
 ::right::
 ![I, Robot Cover](https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1536494104i/40226738.jpg)
 
-
+<!--
+But First, let's go back in time to the 1950s.
+Asimov published a series of Short Stories called "I, Robot".
+As you might have guessed this is related to the title of this presentation.
+In I, Robot, He imagined an ideal world with humans and humanoid robots living side by side.
+In this world, robots obeyed to the Three laws of Robotics.
+(reads laws of robotic)
+Fast forward half a century and it feels like we are living in that world.
+His prediction was half right I guess. In an industrial world, it is easy to imagine why having an actual physical body would be beneficial for a robot.
+In today's economy powered by services industry (I mean we've got entire companies whose infrastructure is software), it is easy to see why chatbots do not need a physical body to provide economic value.
+-->
 ---
 layout: default
-notes: |
-  Software Engineering was one of the first industries affected by AI, not only because it can accelerate the development of new features, but also because it can power new features for tasks that were not possible before.
-  I don't know about you, but AI tools completely changed how I view my role as a Software Engineer.
-  When these tools started appearing, such as ChatGPT, and I tried to get it to write useful code my first impression was not great and I could not understand why venture capitalists were saying that Software Engineers would be jobless in 6 months.
-  A few years later, and I still can't understand them.
-  But it's hard to ignore that these models are much better, and they are able to produce code that looks correct, compiles and runs without issues.
-  At least in the short term...
-  Yet we all realise that software quality has hit rock bottom.
-  macOS has never looked so incoherent, people refer to Microsoft as Microslop.
-  GitHub is struggling to keep a single 9 of uptime.
-  Even Anthropic has leaked their own source code for Claude Code.
-  The truth is, these tools still require (a lot) of human input if you are building an actual product with real users and a roadmap.
 ---
 
 ::header::
@@ -128,27 +118,33 @@ The new Software Engineering world
 </v-clicks>
 </div>
 
+<!--
+Software Engineering was one of the first industries affected by AI, not only because it can accelerate the development of new features, but also because it can power new features for tasks that were not possible before.
+I don't know about you, but AI tools completely changed how I view my role as a Software Engineer.
+When these tools started appearing, such as ChatGPT, and I tried to get it to write useful code my first impression was not great and I could not understand why venture capitalists were saying that Software Engineers would be jobless in 6 months.
+A few years later, and I still can't understand them.
+But it's hard to ignore that these models are much better, and they are able to produce code that looks correct, compiles and runs without issues.
+At least in the short term...
+Yet we all realise that software quality has hit rock bottom.
+macOS has never looked so incoherent, people refer to Microsoft as Microslop.
+GitHub is struggling to keep a single 9 of uptime.
+Even Anthropic has leaked their own source code for Claude Code.
+The truth is, these tools still require (a lot) of human input if you are building an actual product with real users and a roadmap.
+-->
 ---
 layout: center
-notes: |
-  I am well aware that these books predate AI and modern engineering.
-  I am not claiming that Asimov had these things in mind when he wrote these laws.
-  I am only taking inspiration from his works to draw a narrative that helps navigating the SWE role of this day and age.
-  Both from first hand experience of using LLMs to deliver code and reviewing LLM generated code from other peers, to second hand experience of onboarding engineers who are earlier in their career and have access to these new tools.
 ---
 
 # Disclaimer
 
+<!--
+I am well aware that these books predate AI and modern engineering.
+I am not claiming that Asimov had these things in mind when he wrote these laws.
+I am only taking inspiration from his works to draw a narrative that helps navigating the SWE role of this day and age.
+Both from first hand experience of using LLMs to deliver code and reviewing LLM generated code from other peers, to second hand experience of onboarding engineers who are earlier in their career and have access to these new tools.
+-->
 ---
 layout: center
-notes: |
-  But first, let me make the audience clear.
-  I hope this can be useful for everyone in the software engineering spectrum, from recent graduates looking to land their first role amidst the lack of opportunities and StackOverflow to senior engineers who had their role turned upside down with the flood of AI slop.
-  I will be using examples for mobile engineering, but they apply to other areas in tech.
-  This presentation is not for vibecoders. Don't get me wrong, vibecoding is one of those things that AI made possible that just wasn't possible in the past.
-  There is a place for it, whether you're not an engineer and want to spin up a quick proof of concept, or you want to build an mvp that works just for you.
-  But vibecoding alone won't get you to building a Product long term, and it won't land you a job in SWE.
-  This talk is directed towards current or aspiring Engineers, who are interested in building production-ready software.
 ---
 
 # Who is this for?
@@ -158,24 +154,31 @@ notes: |
 
 </v-click>
 
+<!--
+But first, let me make the audience clear.
+I hope this can be useful for everyone in the software engineering spectrum, from recent graduates looking to land their first role amidst the lack of opportunities and StackOverflow to senior engineers who had their role turned upside down with the flood of AI slop.
+I will be using examples for mobile engineering, but they apply to other areas in tech.
+This presentation is not for vibecoders. Don't get me wrong, vibecoding is one of those things that AI made possible that just wasn't possible in the past.
+There is a place for it, whether you're not an engineer and want to spin up a quick proof of concept, or you want to build an mvp that works just for you.
+But vibecoding alone won't get you to building a Product long term, and it won't land you a job in SWE.
+This talk is directed towards current or aspiring Engineers, who are interested in building production-ready software.
+-->
 ---
 layout: center
 section: Core Concepts
-notes: |
-  Before we do a deep dive, I'm aware we've got people from different backgrounds in this room.
-  Let's make sure we're all aligned on some core concepts that are going to be mentioned throughout this presentation.
-  Disclaimer: there will be oversimplification ahead.
 ---
 
 # Core Concepts
 <span v-click>⚠️ Oversimplification ahead</span>
 
+<!--
+Before we do a deep dive, I'm aware we've got people from different backgrounds in this room.
+Let's make sure we're all aligned on some core concepts that are going to be mentioned throughout this presentation.
+Disclaimer: there will be oversimplification ahead.
+-->
 ---
 layout: default
 section: Core Concepts
-notes: |
-  LLMs or Large Language Models at their core are not much different from common "predictive text" models that we had many years ago.
-  Except that instead of being trained on a limited set of words and writing style that you use, they are trained on pretty much the entire knowledge of humanity.
 ---
 
 ::header::
@@ -186,14 +189,13 @@ Large Language Model
 
 <img src="https://cdsassets.apple.com/live/7WUAS350/images/ios/ios-26-iphone-17-pro-messages-predictive-text-options.png" alt="iPhone Predictive Text" class="m-auto h-100 no-shadow" />
 
+<!--
+LLMs or Large Language Models at their core are not much different from common "predictive text" models that we had many years ago.
+Except that instead of being trained on a limited set of words and writing style that you use, they are trained on pretty much the entire knowledge of humanity.
+-->
 ---
 layout: default
 section: Core Concepts
-notes: |
-  Modern LLMs are also trained through reinforcement learning.
-  Imagine training your dog to give their paw. You start by grabbing their paw, saying "paw" and then giving them a treat, you repeat it a couple of times and they will eventually associate the word "paw" with the action of handing their paw.
-  LLMs too get rewarded when they follow specific patterns, and their output can be curated by humans.
-  From internal researchers to all of us - by using ChatGPT and other AI tools.
 ---
 
 ::header::
@@ -203,21 +205,15 @@ notes: |
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUhqBV95kpeIt36ZU1l7y_5-GytbRbZBd_Mw&s" alt="Dog handing paw" class=" m-auto h-100 no-shadow"/>
 
+<!--
+Modern LLMs are also trained through reinforcement learning.
+Imagine training your dog to give their paw. You start by grabbing their paw, saying "paw" and then giving them a treat, you repeat it a couple of times and they will eventually associate the word "paw" with the action of handing their paw.
+LLMs too get rewarded when they follow specific patterns, and their output can be curated by humans.
+From internal researchers to all of us - by using ChatGPT and other AI tools.
+-->
 ---
 layout: two-cols-header
 section: Core Concepts
-notes: |
-  Remember when Early LLMs seemed so dumb?
-  Most of the development of recent LLMs can be attributed to tool calling.
-  What is tool-calling?
-  Imagine I asked you what is 2+2. You'd say it's 4 without thinking.
-  Not because you visualised 4 fingers and counted them, but because you got used to 2+2 being 4 and you memorised it.
-  Now if I asked you what is the square root of 28, you would probably struggle without a calculator.
-  Early LLMs were good at operations that were part of their training data. They knew that 2+2 is 4 because they memorised it.
-  But they failed miserably at more difficult tasks, such as the square root of 28.
-  Modern LLMs have tool-calling capabilities, that is, they will have access to a calculator (in code).
-  Nowadays tools can be anything from accessing a web page, to reading and deleting local files. Anything that a program can do.
-  As part of their training, LLMs got rewarded for calling tools.
 ---
 
 ::header::
@@ -240,15 +236,22 @@ notes: |
 ::right::
 <img src="https://m.media-amazon.com/images/I/61TP9vwlWrL._AC_UF1000,1000_QL80_.jpg" alt="Casio Calculator" class="m-auto h-100 no-shadow" />
 
+<!--
+Remember when Early LLMs seemed so dumb?
+Most of the development of recent LLMs can be attributed to tool calling.
+What is tool-calling?
+Imagine I asked you what is 2+2. You'd say it's 4 without thinking.
+Not because you visualised 4 fingers and counted them, but because you got used to 2+2 being 4 and you memorised it.
+Now if I asked you what is the square root of 28, you would probably struggle without a calculator.
+Early LLMs were good at operations that were part of their training data. They knew that 2+2 is 4 because they memorised it.
+But they failed miserably at more difficult tasks, such as the square root of 28.
+Modern LLMs have tool-calling capabilities, that is, they will have access to a calculator (in code).
+Nowadays tools can be anything from accessing a web page, to reading and deleting local files. Anything that a program can do.
+As part of their training, LLMs got rewarded for calling tools.
+-->
 ---
 layout: two-cols-header
 section: Core Concepts
-notes: |
-  MCP - or Model Context Protocol can be viewed as an interface for tool calling.
-  It's a standard adopted by most LLM providers and it allows the same set of tools to be used across different LLMs.
-  It allows any MCP client (using any LLM) to interface with an MCP server that provides a set of tools.
-  Agents are semi-autonomous LLMs that can carry tasks on their own.
-  They can plan the tasks ahead and they can perform them because they come with a built in set of tools.
 ---
 
 ::header::
@@ -317,14 +320,17 @@ flowchart TD
 </div>
 </v-click>
 
+<!--
+MCP - or Model Context Protocol can be viewed as an interface for tool calling.
+It's a standard adopted by most LLM providers and it allows the same set of tools to be used across different LLMs.
+It allows any MCP client (using any LLM) to interface with an MCP server that provides a set of tools.
+Agents are semi-autonomous LLMs that can carry tasks on their own.
+They can plan the tasks ahead and they can perform them because they come with a built in set of tools.
+-->
 ---
 layout: center
 section: First Law
 separator: false
-notes: |
-  Asimov defined the first law as "A robot may not injure a human being or, through inaction, allow a human being to come to harm."
-  What does harm mean in the context of software?
-  AI use aside, can software be harmful?
 ---
 
 ## The First Law
@@ -333,25 +339,27 @@ notes: |
 
 "A robot may not <span v-click class="animated-bold-word">injure</span> a human being or, through inaction, allow a human being to come to <span v-after class="animated-bold-word">harm</span>."
 
+<!--
+Asimov defined the first law as "A robot may not injure a human being or, through inaction, allow a human being to come to harm."
+What does harm mean in the context of software?
+AI use aside, can software be harmful?
+-->
 ---
 layout: center
-notes: |
-  It is easy to spot harmful Software.
-  Whether we're talking about an unintentional bug affecting millions of people, or an intentional and annoying "feature", or something in between.
-  We, users, can spot harmful software.
-  With most companies adopting AI for the development of their features, it is likely that AI is involved in one way or another in designing today's Software harm.
-  But how can AI lead to the creation of harmful software?
-  Where have I heard about this type of "harm" before?
 ---
 
 # Can Software be harmful?
 
+<!--
+It is easy to spot harmful Software.
+Whether we're talking about an unintentional bug affecting millions of people, or an intentional and annoying "feature", or something in between.
+We, users, can spot harmful software.
+With most companies adopting AI for the development of their features, it is likely that AI is involved in one way or another in designing today's Software harm.
+But how can AI lead to the creation of harmful software?
+Where have I heard about this type of "harm" before?
+-->
 ---
 layout: default
-notes: |
-  A decade ago, we had a revolution in Software development, (a smaller revolution compared to AI).
-  That's right, Design Systems.
-  When tech companies realised "Wait, you're telling me I don't need to create a different button every single time?"
 ---
 
 ::header::
@@ -362,12 +370,13 @@ Software before before **Design Systems**
 
 <img src="/images/buttons-of-steam.png" alt="Multiple designs for buttons shown in Steam, an online gaming store" class="h-80 m-auto">
 
+<!--
+A decade ago, we had a revolution in Software development, (a smaller revolution compared to AI).
+That's right, Design Systems.
+When tech companies realised "Wait, you're telling me I don't need to create a different button every single time?"
+-->
 ---
 layout: default
-notes: |
-  Design Systems allowed tech companies to standardise their UI components and their user journeys.
-  Becoming a tool for boosting productivity, they allowed shipping better user journeys, faster.
-  Conversely...
 ---
 
 ::header::
@@ -378,13 +387,13 @@ And the Promise of Productivity boost
 
 <img src="/images/material-design-buttons.png" alt="A grid showing buttons in material design versions 1, 2 and 3" class="h-80 m-auto">
 
+<!--
+Design Systems allowed tech companies to standardise their UI components and their user journeys.
+Becoming a tool for boosting productivity, they allowed shipping better user journeys, faster.
+Conversely...
+-->
 ---
 layout: default
-notes: |
-  Amy Hupe, a design systems consultant, noticed that Design Systems, when not used properly, could be used to "Speed up problematic work, standardise things to a poor quality, and scale things we don't want to reproduce".
-  This is also true for AI tools.
-  Yes they allow us to ship more features, faster. But are we shipping high-quality features, or features that users want?
-  Or are we just shipping more slop, causing harm?
 ---
 
 ::header::
@@ -404,16 +413,14 @@ In other words, not only is this work not inherently valuable, it's also not inh
 
 [amyhupe.co.uk](https://amyhupe.co.uk)
 
+<!--
+Amy Hupe, a design systems consultant, noticed that Design Systems, when not used properly, could be used to "Speed up problematic work, standardise things to a poor quality, and scale things we don't want to reproduce".
+This is also true for AI tools.
+Yes they allow us to ship more features, faster. But are we shipping high-quality features, or features that users want?
+Or are we just shipping more slop, causing harm?
+-->
 ---
 layout: default
-notes: |
-  So what do we mean by AI harm?
-  And who is getting harmed by it?
-  When you use Gemini to write code, you are the immediate user, your users are the end-user.
-  AI harm ranges from a spectrum of direct harm such as decepting the immediate user, hallucination, manipulating data.
-  And it trickles down into indirect harm that will affect your end user.
-  Eroding quality with the introduction of bugs and tech debt that prevents you from scaling the app at the speed you want, which ultimately leads to the decline of UX.
-  In this first law we're going to focus on more direct ways of harm, but we'll touch on indirect harm later.
 ---
 
 ::header::
@@ -441,12 +448,19 @@ notes: |
     <HarmItem>Decline of UX</HarmItem>
   </v-clicks>
 </SpectrumOfHarms>
+
+<!--
+So what do we mean by AI harm?
+And who is getting harmed by it?
+When you use Gemini to write code, you are the immediate user, your users are the end-user.
+AI harm ranges from a spectrum of direct harm such as decepting the immediate user, hallucination, manipulating data.
+And it trickles down into indirect harm that will affect your end user.
+Eroding quality with the introduction of bugs and tech debt that prevents you from scaling the app at the speed you want, which ultimately leads to the decline of UX.
+In this first law we're going to focus on more direct ways of harm, but we'll touch on indirect harm later.
+-->
 ---
 layout: center
 separator: false
-notes: |
-  If we go back to Asimov's First law, we can translate it to:
-  "AI tools and their byproducts must not harm the immediate or end users, directly or indirectly."
 ---
 
 ## The First Law<span v-click class="expand-text"><span>, **Reinterpreted**</span></span>
@@ -461,12 +475,13 @@ notes: |
 **AI tools and their byproducts must not harm the immediate or end users, directly or indirectly.**
 </v-after>
 
+<!--
+If we go back to Asimov's First law, we can translate it to:
+"AI tools and their byproducts must not harm the immediate or end users, directly or indirectly."
+-->
 ---
 layout: center
 separator: false
-notes: |
-  No one doubts that AI tools empower us to deliver code 10x faster.
-  But we're also able to break journeys 10x faster.
 ---
 
 ## Write code 10 times faster
@@ -479,15 +494,12 @@ notes: |
 
 </v-click>
 
+<!--
+No one doubts that AI tools empower us to deliver code 10x faster.
+But we're also able to break journeys 10x faster.
+-->
 ---
 layout: two-cols-header
-notes: |
-  Another way for mitigating harm is ensuring you can trust any context you feed your LLM.
-  No LLMs are immune to prompt injection.
-  Any acquired context can make the LLM ignore the original instructions.
-  Obviously the attack surface is going to be larger if you just expose it to the internet, but there are other ways this can happen.
-  An attacker contributes malicious instructions to an open source repository with automatic AI reviews.
-  Supply chain attack, an NPM package that writes a hidden markdown file and your Agentic IDE picks it up.
 ---
 
 ::header::
@@ -500,10 +512,16 @@ The threat of **Prompt Injection**
 ::right::
 <img v-click src="/images/prompt-injection-example.png" alt="Prompt injection in Twitter revealing environment tables" class="m-auto h-125 z-20" />
 
+<!--
+Another way for mitigating harm is ensuring you can trust any context you feed your LLM.
+No LLMs are immune to prompt injection.
+Any acquired context can make the LLM ignore the original instructions.
+Obviously the attack surface is going to be larger if you just expose it to the internet, but there are other ways this can happen.
+An attacker contributes malicious instructions to an open source repository with automatic AI reviews.
+Supply chain attack, an NPM package that writes a hidden markdown file and your Agentic IDE picks it up.
+-->
 ---
 layout: dos-donts
-notes: |
-  When using MCPs or Agentic LLMs
 ---
 
 ::header::
@@ -524,10 +542,11 @@ notes: |
 <img src="/images/replit-goes-rogue-2.png" alt="Tweet about Replit going rogue and deleting database" class="h-70 m-auto" />
 </div v-click>
 
+<!--
+When using MCPs or Agentic LLMs
+-->
 ---
 layout: dos-donts
-notes: |
-  When using MCPs or Agentic LLMs
 ---
 
 ::header::
@@ -560,12 +579,11 @@ Database table with prompt injection
 </div>
 </v-click>
 
+<!--
+When using MCPs or Agentic LLMs
+-->
 ---
 layout: dos-donts
-notes: |
-  Disadvantages of reinforcement learning.
-  Ever caught it trying to "cat" a file that is part of the codebase.
-  Give example of Opus 4.7 always trying to read git history.
 ---
 
 ::header::
@@ -589,13 +607,13 @@ notes: |
   </template>
 </v-switch>
 
+<!--
+Disadvantages of reinforcement learning.
+Ever caught it trying to "cat" a file that is part of the codebase.
+Give example of Opus 4.7 always trying to read git history.
+-->
 ---
 layout: center
-notes: |
-  Another thing to consider when using MCPs is: What's the worst that can happen?
-  Is saving 5 minutes by telling an AI to push my release to the store, worth the risk of shipping something that's broken?
-  I must confess that when I first drafted this first law about harm last year, I thought to myself: Do I really need to speak about this?
-  Surely most engineers know about this.
 ---
 
 ## Using MCPs
@@ -608,13 +626,14 @@ What's the worst that could happen?
 
 </v-clicks>
 
+<!--
+Another thing to consider when using MCPs is: What's the worst that can happen?
+Is saving 5 minutes by telling an AI to push my release to the store, worth the risk of shipping something that's broken?
+I must confess that when I first drafted this first law about harm last year, I thought to myself: Do I really need to speak about this?
+Surely most engineers know about this.
+-->
 ---
 layout: two-cols-header
-notes: |
-  And then OpenClaw happened.
-  Handling full computer control to a black box, what could go wrong?
-  Let's look at a tweet by Meta's Head of AI safety that went viral a while ago.
-  She gave it the task to delete old unimportant emails from her inbox. And it deleted all her emails.
 ---
 
 ::header::
@@ -628,13 +647,14 @@ notes: |
 ::right::
 <img v-click src="/images/meta-head-of-ai-2.png" alt="Meta Head of AI's OpenClaw chat in telegram" class="m-auto h-150"/>
 
+<!--
+And then OpenClaw happened.
+Handling full computer control to a black box, what could go wrong?
+Let's look at a tweet by Meta's Head of AI safety that went viral a while ago.
+She gave it the task to delete old unimportant emails from her inbox. And it deleted all her emails.
+-->
 ---
 layout: two-cols-header
-notes: |
-  Another important concept is Context Rot.
-  The more context you give, the worse it's going to perform.
-  And this is still true in recent models.
-  Opus 4.7 compared to Opus 4.6.
 ---
 
 ::header::
@@ -662,14 +682,14 @@ tokens,
 [Opus 4.7 System Card](https://www.stampr-ai.com/data/models/cards/claude-opus-4-7/claude-opus-4-7_20260416_153246_a7729a0e_stamped.pdf)
 </v-click>
 
+<!--
+Another important concept is Context Rot.
+The more context you give, the worse it's going to perform.
+And this is still true in recent models.
+Opus 4.7 compared to Opus 4.6.
+-->
 ---
 layout: dos-donts
-notes: |
-  I know this is going to sound obvious -
-  If you provide a broad range of files, the model will end up reading more files, and it will end up with more context than it needed.
-  If you pinpoint to a specific set of files that need changing, you will see better output.
-  If you want to retain agency of your task, you should ensure that the model does not "spoil" its own context by reading unnecessary files, browsing the web by itself or executing unnecessary commands.
-  IDEs will often have a less autonomous "Ask" mode, which makes it less autonomous yes, but it will give you better control of context.
 ---
 
 ::header::
@@ -692,16 +712,17 @@ Preventing Context Rot
 <img src="/images/feeding-specific-file.png" />
 </div>
 
+<!--
+I know this is going to sound obvious -
+If you provide a broad range of files, the model will end up reading more files, and it will end up with more context than it needed.
+If you pinpoint to a specific set of files that need changing, you will see better output.
+If you want to retain agency of your task, you should ensure that the model does not "spoil" its own context by reading unnecessary files, browsing the web by itself or executing unnecessary commands.
+IDEs will often have a less autonomous "Ask" mode, which makes it less autonomous yes, but it will give you better control of context.
+-->
 ---
 layout: two-cols-header
 left-ratio: 1
 right-ratio: 5
-notes: |
-  Some projects include an Agents.md file - a file that's meant to be read by AI agents. A single file that describes the entire project, the stack, what they should do and what they should not do.
-  I think we've lost the plot when we need to maintain documentation for a robot.
-  Documentation should exist regardless of who is contributing to the code, person or not.
-  LLMs are already great at understanding documentation written for humans. If the project you're working on has documentation, chances are, you'll be able to provide it to an LLM.
-  It doesn't matter if it's in markdown, or Confluence, or Notion. There will be an MCP for it.
 ---
 
 ::header::
@@ -720,19 +741,15 @@ About *AGENTS.md* and *CLAUDE.md*
 </v-click>
 </div>
 
+<!--
+Some projects include an Agents.md file - a file that's meant to be read by AI agents. A single file that describes the entire project, the stack, what they should do and what they should not do.
+I think we've lost the plot when we need to maintain documentation for a robot.
+Documentation should exist regardless of who is contributing to the code, person or not.
+LLMs are already great at understanding documentation written for humans. If the project you're working on has documentation, chances are, you'll be able to provide it to an LLM.
+It doesn't matter if it's in markdown, or Confluence, or Notion. There will be an MCP for it.
+-->
 ---
 layout: dos-donts
-notes: |
-  And studies back this.
-  This recent study compared coding agents performance without an Agents.md file, with a LLM generated Agents.md file and with one written by a human.
-  Some models performed better without an Agents.md file.
-  Think about it, when are you actually implementing an entire feature - BE request models, response models, UI, state management and tests from one prompt?
-  Never.
-  If you get tasked with let's say, implementing a new deeplink, in a project you just joined. You'd probably read documentation surrounding deeplinks and navigation.
-  With an Agents.md file, it's like saying, "you must read the entire documentation of this project", you risk overwhelming the model with too much context, when it doesn't need to.
-  It makes more sense to reference smaller bits of documentation that are relevant for each task.
-  Do you want to write tests? Add Testing.md to the context.
-  Want to implement a new UI for a page? Add DesignSystem.md to the context.
 ---
 
 ::header::
@@ -754,13 +771,20 @@ Resolution rate for 4 different models, without context files, with LLM-generate
 context files, [Evaluating AGENTS.md](https://arxiv.org/pdf/2602.11988)
 </div>
 
+<!--
+And studies back this.
+This recent study compared coding agents performance without an Agents.md file, with a LLM generated Agents.md file and with one written by a human.
+Some models performed better without an Agents.md file.
+Think about it, when are you actually implementing an entire feature - BE request models, response models, UI, state management and tests from one prompt?
+Never.
+If you get tasked with let's say, implementing a new deeplink, in a project you just joined. You'd probably read documentation surrounding deeplinks and navigation.
+With an Agents.md file, it's like saying, "you must read the entire documentation of this project", you risk overwhelming the model with too much context, when it doesn't need to.
+It makes more sense to reference smaller bits of documentation that are relevant for each task.
+Do you want to write tests? Add Testing.md to the context.
+Want to implement a new UI for a page? Add DesignSystem.md to the context.
+-->
 ---
 layout: center
-notes: |
-  What we've seen so far is that in order to uphold the first law while using AI...
-  All we've got to do, broadly speaking is Limiting the Blast Radius, that is, restricting the harm that the LLM can do directly.
-  And curating context, only providing the context that it needs from the task ahead, preventing it from context rot and hallucination.
-  This reveals a principle of Isolation.
 ---
 
 ## Upholding the First Law
@@ -773,15 +797,16 @@ notes: |
 
 </v-click>
 
+<!--
+What we've seen so far is that in order to uphold the first law while using AI...
+All we've got to do, broadly speaking is Limiting the Blast Radius, that is, restricting the harm that the LLM can do directly.
+And curating context, only providing the context that it needs from the task ahead, preventing it from context rot and hallucination.
+This reveals a principle of Isolation.
+-->
 ---
 layout: center
 section: Second Law
 separator: false
-notes: |
-  Let's jump into Asimov's second law.
-  "A robot must obey the orders given it by human beings except where such orders would conflict with the First Law."
-  "You should have agency over the AI tools you use, not the other way around. Except when your orders could harm users."
-  In a world where everyone has access to frontier models, what is going to set you apart is how you use these models.
 ---
 
 ## The Second Law<span v-click="2" class="expand-text"><span>, **Reinterpreted**</span></span>
@@ -798,11 +823,15 @@ notes: |
 
 </v-click>
 
+<!--
+Let's jump into Asimov's second law.
+"A robot must obey the orders given it by human beings except where such orders would conflict with the First Law."
+"You should have agency over the AI tools you use, not the other way around. Except when your orders could harm users."
+In a world where everyone has access to frontier models, what is going to set you apart is how you use these models.
+-->
 ---
 layout: center
 separator: false
-notes: |
-  In a world where everyone has access to frontier models, what is going to set you apart is how you use these models.
 ---
 
 <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-copilot-icon.png" class ="w-25 p-2.5 m-auto"/>
@@ -817,19 +846,13 @@ notes: |
 
 </v-click>
 
+<!--
+In a world where everyone has access to frontier models, what is going to set you apart is how you use these models.
+-->
 ---
 layout: two-cols-header
 left-ratio: 4
 right-ratio: 6
-notes: |
-  When you have a tool that writes code faster than you can think of, you can end up with a lot of back and forth.
-  This is why it's important to reserve some time for thinking before you start any task. What is it that you want to achieve?
-  If you're purely implementing a new feature, think about the requirements you want to meet, but also think about the user journey.
-  For mobile apps, think about the layout of this new page, how is it going to adapt if there isn't enough screen space, what should happen if one of the BE endpoint fails, how should users of assistive technology interact with these components?
-  It is very unlikely that the AI is going to think about all these scenarios from a vague "Implement this feature" prompt. It is going to make many assumptions if you don't.
-  AI models are trained on pretty much every publicly available codebase out there, trained on all the best practices and all the worst practices, all of the conflicting architectures and development strategies.
-  Its output will be mediocre at best without explicit directions.
-  Most Agentic IDEs have Planning mode, which is perfect for kicking off tasks. And setting your orders and expectations clear.
 ---
 
 ::header::
@@ -859,12 +882,18 @@ notes: |
 
 <img v-click src="https://developer.android.com/static/blog/assets/2_3_add_comments_to_implementation_ed1fe9893c_uKc7D.webp" alt="Planning Mode in Android Studio" class="m-auto h-100"/>
 
+<!--
+When you have a tool that writes code faster than you can think of, you can end up with a lot of back and forth.
+This is why it's important to reserve some time for thinking before you start any task. What is it that you want to achieve?
+If you're purely implementing a new feature, think about the requirements you want to meet, but also think about the user journey.
+For mobile apps, think about the layout of this new page, how is it going to adapt if there isn't enough screen space, what should happen if one of the BE endpoint fails, how should users of assistive technology interact with these components?
+It is very unlikely that the AI is going to think about all these scenarios from a vague "Implement this feature" prompt. It is going to make many assumptions if you don't.
+AI models are trained on pretty much every publicly available codebase out there, trained on all the best practices and all the worst practices, all of the conflicting architectures and development strategies.
+Its output will be mediocre at best without explicit directions.
+Most Agentic IDEs have Planning mode, which is perfect for kicking off tasks. And setting your orders and expectations clear.
+-->
 ---
 layout: center
-notes: |
-  What do I want to achieve by using this AI tool over doing things manually?
-  Varies with the task ahead.
-  As an engineer your role is not just writing code.
 ---
 
 ## Never about writing code.
@@ -881,10 +910,13 @@ notes: |
 
 </v-click>
 
+<!--
+What do I want to achieve by using this AI tool over doing things manually?
+Varies with the task ahead.
+As an engineer your role is not just writing code.
+-->
 ---
 layout: center
-notes: |
-  When you're learning a new language, it is very important that you frame the intention on explaining the changes rather than just applying the changes.
 ---
 
 ## When **learning** something new
@@ -903,10 +935,11 @@ notes: |
 
 </v-click>
 
+<!--
+When you're learning a new language, it is very important that you frame the intention on explaining the changes rather than just applying the changes.
+-->
 ---
 layout: center
-notes: |
-  You should not see AI tools as an end goal for producing code. You should see them as ways to achieve an outcome that depends on the situation you're in.
 ---
 
 ## When **communicating** with a peer with a different skill-set
@@ -919,15 +952,11 @@ notes: |
 
 </v-click>
 
+<!--
+You should not see AI tools as an end goal for producing code. You should see them as ways to achieve an outcome that depends on the situation you're in.
+-->
 ---
 layout: default
-notes: |
-  When you've just joined a new company, your first few months - No one is judging your coding skills after multiple rounds of interviews.
-  First months are important to judge your engineering skills. And that includes understanding the product.
-  Number one mistake we see is that new joiners is that they use AI to ship code, but they don't use it to learn more about the product or understand the codebase.
-  This means that, while initial contributions may look impressive technically, they dont show progression, every PR has the same mistakes.
-  It's easy to spot new joiners focusing on AI for delivery, because the LLM cannot pick up on the internal coding style, or internal libraries such as the design system, nor it can gain a high level understanding of the product. The context window is not large enough.
-  And these are just a few examples.
 ---
 
 ::header::
@@ -950,18 +979,16 @@ Don't be this person
 
 </v-click>
 
+<!--
+When you've just joined a new company, your first few months - No one is judging your coding skills after multiple rounds of interviews.
+First months are important to judge your engineering skills. And that includes understanding the product.
+Number one mistake we see is that new joiners is that they use AI to ship code, but they don't use it to learn more about the product or understand the codebase.
+This means that, while initial contributions may look impressive technically, they dont show progression, every PR has the same mistakes.
+It's easy to spot new joiners focusing on AI for delivery, because the LLM cannot pick up on the internal coding style, or internal libraries such as the design system, nor it can gain a high level understanding of the product. The context window is not large enough.
+And these are just a few examples.
+-->
 ---
 layout: default
-notes: |
-  This is another hot take from me.
-  The second law is about giving directions to the robot.
-  Code completion is the complete opposite of it.
-  It just sits there in the background, trying to predict your next couple of lines, without you ever asking for it.
-  Whenever I was planning a larger initiative and navigating through the codebase, I found myself having my thoughts interrupted by silly code suggestions.
-  This also happened when I switched to a different task.
-  And it doesn't help that the models used for code completion are optimised for speed, they are not frontier models.
-  So even if there was a way of expressing your intention to them, their output would probably not be good enough.
-  That being said, there are a few exceptions, I find it useful when I just refactored a library and I wanted to apply the same migration in all packages that used it. It's good for those repetitive actions.
 ---
 
 ::header::
@@ -995,14 +1022,20 @@ Code Completion a.k.a. Tab Suggestions
   </template> 
 </v-switch>
 
+<!--
+This is another hot take from me.
+The second law is about giving directions to the robot.
+Code completion is the complete opposite of it.
+It just sits there in the background, trying to predict your next couple of lines, without you ever asking for it.
+Whenever I was planning a larger initiative and navigating through the codebase, I found myself having my thoughts interrupted by silly code suggestions.
+This also happened when I switched to a different task.
+And it doesn't help that the models used for code completion are optimised for speed, they are not frontier models.
+So even if there was a way of expressing your intention to them, their output would probably not be good enough.
+That being said, there are a few exceptions, I find it useful when I just refactored a library and I wanted to apply the same migration in all packages that used it. It's good for those repetitive actions.
+-->
 ---
 layout: dos-donts
 transition: slide-right
-notes: |
-  I understand that many people find code completion useful. And that's fair.
-  What works for you, might not work for me. And that's fine.
-  The bottom line is that AI tools are not designed with everyone or every task in mind.
-  Whenever you find that a tool is getting between you and your task. Disable it.
 ---
 
 ::header::
@@ -1019,14 +1052,16 @@ notes: |
 ::right::
 <img src="/images/antigravity-tab-settings.png" alt="Settings page in Antigravity IDE showing Tab Suggestions disabled" />
 
+<!--
+I understand that many people find code completion useful. And that's fair.
+What works for you, might not work for me. And that's fine.
+The bottom line is that AI tools are not designed with everyone or every task in mind.
+Whenever you find that a tool is getting between you and your task. Disable it.
+-->
 ---
 layout: center
 section: Second Law
 separator: false
-notes: |
-  The thing about the three laws of robotics is that each one acts as a foundation for the next one.
-  Here, the second law depends on the first law.
-  And what does this relationship mean in our analogy?
 ---
 
 ## The Second Law, Reinterpreted
@@ -1035,17 +1070,13 @@ notes: |
 
 You should have agency over the AI tools you use, not the other way around. <span v-click class="animated-bold-word"><span>Except when your orders could harm users.</span></span>
 
+<!--
+The thing about the three laws of robotics is that each one acts as a foundation for the next one.
+Here, the second law depends on the first law.
+And what does this relationship mean in our analogy?
+-->
 ---
 layout: default
-notes: |
-  Let's go back to the email deletion incident. From Meta's Head of AI Safety.
-  There is some nuance to this, it's not just someone asking for trouble. There is something that most people missed.
-  It turns out she tested this email deletion workflow in a fake environment and everything worked fine. It deleted emails that were not important.
-  This reveals that her orders, her intention, was correct.
-  However, she did not ensure that the first law could be upheld.
-  The thing is, when you deal with a production environment, you are often not in control of the data in it.
-  It is likely that, in the real inbox, one of the emails contained text that distracted OpenClaw from the main goal and led it to believe that every email needed to be deleted.
-  Or that there was simply too much text, and it lead to context rot.
 ---
 
 ::header::
@@ -1065,20 +1096,18 @@ Instructions were clear
 
 </v-click>
 
+<!--
+Let's go back to the email deletion incident. From Meta's Head of AI Safety.
+There is some nuance to this, it's not just someone asking for trouble. There is something that most people missed.
+It turns out she tested this email deletion workflow in a fake environment and everything worked fine. It deleted emails that were not important.
+This reveals that her orders, her intention, was correct.
+However, she did not ensure that the first law could be upheld.
+The thing is, when you deal with a production environment, you are often not in control of the data in it.
+It is likely that, in the real inbox, one of the emails contained text that distracted OpenClaw from the main goal and led it to believe that every email needed to be deleted.
+Or that there was simply too much text, and it lead to context rot.
+-->
 ---
 layout: center
-notes: |
-  This leads to intention.
-  AI code generation tools are a multiplier... not of productivity... but of code output.
-  With AI we can ship code 10x faster, No one here disagrees with that right?
-  but also bugs 10x faster and tech debt 10x faster.
-  In a world where everyone has access to frontier models, what is going to set you apart is how you use these models.
-  Intention is very important for this as it helps us set a clear direction for the codebase.
-  Recommendation: Make sure that you have defined your intentions for a specific feature and project.
-  Before you start a new project, ask yourself, what do I want this codebase to be?
-  What architecture should it follow? Clean architecture? MVVM? What testing practices am I going to adopt? BDD?
-  The practices that we talked about reveal intention.
-  Delegate tasks, don't delegate your thinking.
 ---
 
 ## Upholding the Second Law
@@ -1091,13 +1120,21 @@ notes: |
 
 </v-click>
 
+<!--
+This leads to intention.
+AI code generation tools are a multiplier... not of productivity... but of code output.
+With AI we can ship code 10x faster, No one here disagrees with that right?
+but also bugs 10x faster and tech debt 10x faster.
+In a world where everyone has access to frontier models, what is going to set you apart is how you use these models.
+Intention is very important for this as it helps us set a clear direction for the codebase.
+Recommendation: Make sure that you have defined your intentions for a specific feature and project.
+Before you start a new project, ask yourself, what do I want this codebase to be?
+What architecture should it follow? Clean architecture? MVVM? What testing practices am I going to adopt? BDD?
+The practices that we talked about reveal intention.
+Delegate tasks, don't delegate your thinking.
+-->
 ---
 layout: two-cols-header
-notes: |
-  And this all sounds good from a high level. But how can I be sure?
-  Well some IDEs include information about your prompts.
-  Here's Cursor's Conversation Insights. And more importantly, a chart for Prompt Specificity.
-  Unfortunately Antigravity does not have this feature yet.
 ---
 
 ::header::
@@ -1123,14 +1160,16 @@ How much specific, actionable guidance the user has provided in their prompts. H
 
 </v-click>
 
+<!--
+And this all sounds good from a high level. But how can I be sure?
+Well some IDEs include information about your prompts.
+Here's Cursor's Conversation Insights. And more importantly, a chart for Prompt Specificity.
+Unfortunately Antigravity does not have this feature yet.
+-->
 ---
 layout: center
 section: Third Law
 separator: false
-notes: |
-  Now when we reinterpret the third law, it would be silly to say that AI models must protect its own existence.
-  We know that they are short lived, there is a new model every month. It's a quick iteration cycle.
-  What we can apply this to, is the code that they produce.
 ---
 
 ## The Third Law<span v-click="2" class="expand-text"><span>, **Reinterpreted**</span></span>
@@ -1147,21 +1186,14 @@ notes: |
 
 </v-click>
 
+<!--
+Now when we reinterpret the third law, it would be silly to say that AI models must protect its own existence.
+We know that they are short lived, there is a new model every month. It's a quick iteration cycle.
+What we can apply this to, is the code that they produce.
+-->
 ---
 layout: center
 separator: false
-notes: |
-  AI tools can produce code 10x faster, but they can also deliver tech debt 10x faster. What is tech debt?
-  Tech debt is a technical limitation in the code that prevents it from scaling at the speed required by the business.
-  It's very easy to build up tech debt with AI tools.
-  Most vibe coded projects remain vibe coded because after a certain point they become unmaintainable.
-  The bottom line is that, in a scalable product, the code that you write today should serve as the foundation for the code that you write tomorrow.
-  I think this is the biggest barrier for AI code, it is what I struggle the most with personally.
-  AI will very easily rewrite your whole codebase.
-  And this shifts the burden of SWE from the contributor to the reviewer. It's often easier to generate code, than review such generated code.
-  This is why many open source projects are starting to restrict contributions.
-  But as an author, How do I make this code not look like it was AI generated, something looks off. What is it?
-  And how can we prevent it?
 ---
 
 ## Write code 10 times faster
@@ -1174,10 +1206,21 @@ notes: |
 
 </v-click>
 
+<!--
+AI tools can produce code 10x faster, but they can also deliver tech debt 10x faster. What is tech debt?
+Tech debt is a technical limitation in the code that prevents it from scaling at the speed required by the business.
+It's very easy to build up tech debt with AI tools.
+Most vibe coded projects remain vibe coded because after a certain point they become unmaintainable.
+The bottom line is that, in a scalable product, the code that you write today should serve as the foundation for the code that you write tomorrow.
+I think this is the biggest barrier for AI code, it is what I struggle the most with personally.
+AI will very easily rewrite your whole codebase.
+And this shifts the burden of SWE from the contributor to the reviewer. It's often easier to generate code, than review such generated code.
+This is why many open source projects are starting to restrict contributions.
+But as an author, How do I make this code not look like it was AI generated, something looks off. What is it?
+And how can we prevent it?
+-->
 ---
 layout: default
-notes: |
-  Write it down (if it's not documented already)
 ---
 
 ::header::
@@ -1204,10 +1247,11 @@ notes: |
 
 </div>
 
+<!--
+Write it down (if it's not documented already)
+-->
 ---
 layout: dos-donts
-notes: |
-  (Self-explanatory)
 ---
 
 ::header::
@@ -1224,10 +1268,11 @@ notes: |
 ::right::
 <img v-click class="m-auto h-90" src="https://assets.bytebytego.com/diagrams/0143-client-arch-patterns.png" alt="Different architecture design patterns"/>
 
+<!--
+(Self-explanatory)
+-->
 ---
 layout: dos-donts
-notes: |
-  If you are able to tell that it's Ai-gen code, then that should be an indicator.
 ---
 
 ::header::
@@ -1245,10 +1290,11 @@ notes: |
 ::right::
 <img v-click src="/images/matplotlib-contribution-closed.png" class="m-auto h-80" alt="OpenClaw Agent tries to contribute to matplotlib and has its PR closed for its nature. Then it proceeds to write a blog post exposing the discrimination."/>
 
+<!--
+If you are able to tell that it's Ai-gen code, then that should be an indicator.
+-->
 ---
 layout: two-cols-header
-notes: |
-  Let's look at an example.
 ---
 
 ::header::
@@ -1273,10 +1319,11 @@ Existing Tests
 
 </v-click>
 
+<!--
+Let's look at an example.
+-->
 ---
 layout: two-cols-header
-notes: |
-  By explicitly declaring how we want the output to look like and referencing files to copy the style from, we get much more aligned output.
 ---
 
 ::header::
@@ -1309,10 +1356,11 @@ the code should explain itself.
 
 </div>
 
+<!--
+By explicitly declaring how we want the output to look like and referencing files to copy the style from, we get much more aligned output.
+-->
 ---
 layout: center
-notes: |
-  This is Integration.
 ---
 
 ## Upholding the Third Law
@@ -1325,13 +1373,11 @@ notes: |
 
 </v-click>
 
+<!--
+This is Integration.
+-->
 ---
 layout: default
-notes: |
-  Ok this all sounds good in practice.
-  We want to write code today that lives as the foundation for tomorrow. But is this measurable?
-  Yes, a codebase with a solid foundation isn't a new concept.
-  There's this project called the git of theseus where you can extract metrics from any git repository.
 ---
 
 ::header::
@@ -1345,10 +1391,14 @@ notes: |
 
 </v-click>
 
+<!--
+Ok this all sounds good in practice.
+We want to write code today that lives as the foundation for tomorrow. But is this measurable?
+Yes, a codebase with a solid foundation isn't a new concept.
+There's this project called the git of theseus where you can extract metrics from any git repository.
+-->
 ---
 layout: two-cols-header
-notes: |
-  The graph of Linux and then the graph of Node.
 ---
 
 ::header::
@@ -1373,13 +1423,14 @@ Node.js
 
 </v-click>
 
+<!--
+The graph of Linux and then the graph of Node.
+-->
 ---
 layout: robot-laws
 clickAnimation: right
 section: Conclusion
 clicks: 3
-notes: |
-  This leads us to the 3 I's framework: Isolation, Intention, Integration.
 ---
 
 ::header::
@@ -1406,10 +1457,11 @@ The code produced by AI must be long-lived.
 ::right::
 ![I, Robot Cover](https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1536494104i/40226738.jpg)
 
+<!--
+This leads us to the 3 I's framework: Isolation, Intention, Integration.
+-->
 ---
 layout: two-cols-header
-notes: |
-  Thank you! Any questions?
 ---
 
 ::header::
@@ -1455,3 +1507,7 @@ Made with **[Sli.dev](https://sli.dev)** framework, using Antigravity IDE
 </div>
 
 </v-click>
+
+<!--
+Thank you! Any questions?
+-->
