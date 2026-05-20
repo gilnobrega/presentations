@@ -36,12 +36,9 @@ Senior Mobile Engineer @ <img src="https://www.openbanking.org.uk/wp-content/upl
 
 <v-click>
 
-##### Where to find me
+<Socials />
 
-<Item><carbon:logo-github /></Item> [gilnobrega](https://github.com/gilnobrega)<br/>
-<Item><carbon:logo-linkedin /></Item> [gilnobrega](https://linkedin.com/in/gilnobrega)<br/>
-<Item><carbon:logo-twitter /></Item>  [gilnobre_ga](https://x.com/gilnobre_ga)<br/>
- </v-click>
+</v-click>
 
 ::right::
 
@@ -1151,6 +1148,16 @@ Made with **[Sli.dev](https://sli.dev)** framework, using Antigravity IDE
 <div class="m-auto m-t-30 m-l-30" >
 
 # Questions?
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="m-l-30 m-t-10">
+
+<Socials />
 
 </div>
 
