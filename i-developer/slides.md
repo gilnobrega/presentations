@@ -16,11 +16,16 @@ Asimov's Laws for the AI-coding era
 
 <!--
 Hi everyone.
+
 Unless you've been living under a rock, you've probably used ChatGPT or similar AI tools.
+
 Raise your hands if you have.
-Used it for writing code, and noticed it broke half of the tests?
-Used it for planning the architecture of a new feature, and it spat an overengineered solution?
-Looked at a PR and said "this looks AI generated"?
+
+- Used it for writing code, and noticed it broke half of the tests?
+
+- Used it for planning the architecture of a new feature, and it spat an overengineered solution?
+
+- Looked at a PR and said "this looks AI generated"?
 -->
 ---
 layout: two-cols-header
@@ -55,14 +60,17 @@ Senior Mobile Engineer @ <img src="https://www.openbanking.org.uk/wp-content/upl
 </v-click>
 
 <!--
-Im Gil, here's my handles.
+Im Gil,
 I used to be a .NET developer, now I like making apps in Flutter, I dabble in KMP sometimes.
+
 I'm currently employed as a senior mobile engineer at Tide, a fintech that provides services to over a million small and medium businesses in Europe and Asia.
-Im part of the onboarding team, we look after the very first journey of potential customers in multiple markets and make sure we've got everything that's needed for them before they can get their hands on a product.
+
 Let me be clear: I am not representing my employer here. All views are my own.
 I've been using AI every day for the past couple of years, at work, for personal projects, for leaning new languages.
+
 I've also been reviewing a lot of AI generated code.
 And through my journey I've established silent rules that help me be the most productive with AI.
+
 It was not until a few months ago that I reflected on them, and tried to put them in writing.
 -->
 ---
@@ -88,13 +96,38 @@ A robot must protect its own existence as long as such protection does not confl
 <!--
 But First, let's go back in time to the 1950s.
 Asimov published a series of Short Stories called "I, Robot".
+
 As you might have guessed this is related to the title of this presentation.
 In I, Robot, He imagined an ideal world with humans and humanoid robots living side by side.
+
 In this world, robots obeyed to the Three laws of Robotics.
+
 (reads laws of robotic)
-Fast forward half a century and it feels like we are living in that world.
-His prediction was half right I guess. In an industrial world, it is easy to imagine why having an actual physical body would be beneficial for a robot.
-In today's economy powered by services industry (I mean we've got entire companies whose infrastructure is software), it is easy to see why chatbots do not need a physical body to provide economic value.
+
+-->
+---
+layout: cover
+background: https://i.guim.co.uk/img/media/0d73ed65870cf54ead0915b129dd25717238a51f/418_0_4164_3333/master/4164.jpg?width=1300&dpr=2&s=none&crop=none
+separator: false
+backgroundPosition: 50% 20%
+backgroundScale: 2
+---
+
+# “The robots are here“
+*― Melania Trump*
+
+<v-click>
+
+## Where are the laws?
+
+</v-click>
+
+<!--
+Fast forward half a century and "The Robots are Here"
+
+Not physically, but in Software
+
+But where are the laws?
 -->
 ---
 layout: default
@@ -120,15 +153,21 @@ The new Software Engineering world
 
 <!--
 Software Engineering was one of the first industries affected by AI, not only because it can accelerate the development of new features, but also because it can power new features for tasks that were not possible before.
+
 I don't know about you, but AI tools completely changed how I view my role as a Software Engineer.
 When these tools started appearing, such as ChatGPT, and I tried to get it to write useful code my first impression was not great and I could not understand why venture capitalists were saying that Software Engineers would be jobless in 6 months.
+
 A few years later, and I still can't understand them.
 But it's hard to ignore that these models are much better, and they are able to produce code that looks correct, compiles and runs without issues.
 At least in the short term...
+
 Yet we all realise that software quality has hit rock bottom.
+
 macOS has never looked so incoherent, people refer to Microsoft as Microslop.
+
 GitHub is struggling to keep a single 9 of uptime.
 Even Anthropic has leaked their own source code for Claude Code.
+
 The truth is, these tools still require (a lot) of human input if you are building an actual product with real users and a roadmap.
 -->
 ---
@@ -138,10 +177,15 @@ layout: center
 # Disclaimer
 
 <!--
+When I first drafted these rules for software engineering, I had someone say - "it might be far fetched to say that this law means that".
+
+And to that I say - yes it is far fetched.
+
 I am well aware that these books predate AI and modern engineering.
+
 I am not claiming that Asimov had these things in mind when he wrote these laws.
+
 I am only taking inspiration from his works to draw a narrative that helps navigating the SWE role of this day and age.
-Both from first hand experience of using LLMs to deliver code and reviewing LLM generated code from other peers, to second hand experience of onboarding engineers who are earlier in their career and have access to these new tools.
 -->
 ---
 layout: center
@@ -156,11 +200,15 @@ layout: center
 
 <!--
 But first, let me make the audience clear.
+
 I hope this can be useful for everyone in the software engineering spectrum, from recent graduates looking to land their first role amidst the lack of opportunities and StackOverflow to senior engineers who had their role turned upside down with the flood of AI slop.
+
 I will be using examples for mobile engineering, but they apply to other areas in tech.
 This presentation is not for vibecoders. Don't get me wrong, vibecoding is one of those things that AI made possible that just wasn't possible in the past.
+
 There is a place for it, whether you're not an engineer and want to spin up a quick proof of concept, or you want to build an mvp that works just for you.
 But vibecoding alone won't get you to building a Product long term, and it won't land you a job in SWE.
+
 This talk is directed towards current or aspiring Engineers, who are interested in building production-ready software.
 -->
 ---
@@ -173,7 +221,9 @@ section: Core Concepts
 
 <!--
 Before we do a deep dive, I'm aware we've got people from different backgrounds in this room.
+
 Let's make sure we're all aligned on some core concepts that are going to be mentioned throughout this presentation.
+
 Disclaimer: there will be oversimplification ahead.
 -->
 ---
@@ -191,11 +241,13 @@ Large Language Model
 
 <!--
 LLMs or Large Language Models at their core are not much different from common "predictive text" models that we had many years ago.
+
 Except that instead of being trained on a limited set of words and writing style that you use, they are trained on pretty much the entire knowledge of humanity.
 -->
 ---
 layout: default
 section: Core Concepts
+hide: true
 ---
 
 ::header::
@@ -207,7 +259,9 @@ section: Core Concepts
 
 <!--
 Modern LLMs are also trained through reinforcement learning.
+
 Imagine training your dog to give their paw. You start by grabbing their paw, saying "paw" and then giving them a treat, you repeat it a couple of times and they will eventually associate the word "paw" with the action of handing their paw.
+
 LLMs too get rewarded when they follow specific patterns, and their output can be curated by humans.
 From internal researchers to all of us - by using ChatGPT and other AI tools.
 -->
@@ -239,14 +293,22 @@ section: Core Concepts
 <!--
 Remember when Early LLMs seemed so dumb?
 Most of the development of recent LLMs can be attributed to tool calling.
+
 What is tool-calling?
+
 Imagine I asked you what is 2+2. You'd say it's 4 without thinking.
+
 Not because you visualised 4 fingers and counted them, but because you got used to 2+2 being 4 and you memorised it.
+
 Now if I asked you what is the square root of 28, you would probably struggle without a calculator.
+
 Early LLMs were good at operations that were part of their training data. They knew that 2+2 is 4 because they memorised it.
+
 But they failed miserably at more difficult tasks, such as the square root of 28.
+
 Modern LLMs have tool-calling capabilities, that is, they will have access to a calculator (in code).
 Nowadays tools can be anything from accessing a web page, to reading and deleting local files. Anything that a program can do.
+
 As part of their training, LLMs got rewarded for calling tools.
 -->
 ---
@@ -321,12 +383,40 @@ flowchart TD
 </v-click>
 
 <!--
-MCP - or Model Context Protocol can be viewed as an interface for tool calling.
+In Early AI days, each tool had to be integrated with each LLM provider. Google, Anthropic and Open AI followed different protocols back then.
+
+The introduction of MCPs - or Model Context Protocol can be viewed as an interface for tool calling.
+
 It's a standard adopted by most LLM providers and it allows the same set of tools to be used across different LLMs.
+
 It allows any MCP client (using any LLM) to interface with an MCP server that provides a set of tools.
-Agents are semi-autonomous LLMs that can carry tasks on their own.
-They can plan the tasks ahead and they can perform them because they come with a built in set of tools.
+
 -->
+---
+layout: center
+section: Core Concepts
+---
+
+# Agents
+
+<br/>
+
+<v-click>
+
+LLM + Tools + Memory + 👶
+
+</v-click>
+
+<!---
+Again, oversimplification ahead
+
+But Agents are nothing more than semi-autonomous LLMs that can carry tasks on their own.
+
+They can draft plans to plan the tasks ahead and they can perform them because they come with a built in set of tools.
+
+And they can even spawn sub-agents (children)
+-->
+
 ---
 layout: center
 section: First Law
@@ -341,20 +431,38 @@ separator: false
 
 <!--
 Asimov defined the first law as "A robot may not injure a human being or, through inaction, allow a human being to come to harm."
+
 What does harm mean in the context of software?
+
 AI use aside, can software be harmful?
+
 -->
 ---
-layout: center
+layout: two-cols-header
 ---
 
+::header::
 # Can Software be harmful?
 
-<!--
-It is easy to spot harmful Software.
-Whether we're talking about an unintentional bug affecting millions of people, or an intentional and annoying "feature", or something in between.
 
-We, users, can spot harmful software.
+::left::
+<img v-click src="/images/duolingo-notification-spam.png" class="m-auto h-100"/>
+
+::right::
+<img v-click src="/images/lloyds-group-glitch.png" class="m-auto h-40"/>
+
+<img v-click src="/images/apple-intelligence-summary.png" class="m-t-10 m-auto h-40"/>
+
+<!--
+As a user, it is easy to spot harmful Software.
+
+Whether we're talking about 
+- a deliberate and annoying "feature"
+
+- an unintentional bug affecting millions of people,
+
+- or something in between.
+
 With most companies adopting AI for the development of their features, it is likely that AI is involved in one way or another in designing today's Software harm.
 
 But how can AI lead to the creation of harmful software?
@@ -375,7 +483,9 @@ Software before before **Design Systems**
 
 <!--
 A decade ago, we had a revolution in Software development, (a smaller revolution compared to AI).
+
 That's right, Design Systems.
+
 When tech companies realised "Wait, you're telling me I don't need to create a different button every single time?"
 -->
 ---
@@ -391,8 +501,10 @@ And the Promise of Productivity boost
 <img src="/images/material-design-buttons.png" alt="A grid showing buttons in material design versions 1, 2 and 3" class="h-80 m-auto">
 
 <!--
-Design Systems allowed tech companies to standardise their UI components and their user journeys.
+Design Systems allowed tech companies to standardise their UI components and their user journeys across products.
+
 Becoming a tool for boosting productivity, they allowed shipping better user journeys, faster.
+
 Conversely...
 -->
 ---

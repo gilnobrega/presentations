@@ -6,6 +6,18 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  backgroundPosition: {
+    type: String,
+    default: 'center',
+  },
+  backgroundSize: {
+    type: String,
+    default: 'cover',
+  },
+  backgroundScale: {
+    type: String,
+    default: '',
+  },
   separator: {
     type: Boolean,
     default: true,
@@ -20,8 +32,8 @@ const backgroundStyle = computed(() => {
     }
     return {
       backgroundImage: `url(${props.background})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
+      backgroundSize: props.backgroundScale || props.backgroundSize,
+      backgroundPosition: props.backgroundPosition,
       backgroundRepeat: 'no-repeat',
     }
   }
