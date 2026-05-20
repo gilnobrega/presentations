@@ -31,7 +31,6 @@ const backgroundStyle = computed(() => {
 
 <template>
   <div class="slidev-layout cover relative w-full h-full px-12 py-10 flex flex-col justify-center items-center text-center" :style="backgroundStyle">
-    <!-- Dark transparency overlay to ensure text is ALWAYS readable -->
     <div class="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
     <div class="my-auto w-full z-10 relative">

@@ -41,9 +41,7 @@ const displayTitle = computed(() => {
   <div class="rounded-lg overflow-hidden border shadow-sm recommendation-box transition-all duration-400" :class="boxClass">
     <v-click>
       <div class="text-white font-bold px-4 py-2 flex items-center gap-2 header-bar" :class="headerClass">
-        <!-- Do Icon -->
         <svg v-if="isDo" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        <!-- Don't Icon -->
         <svg v-else xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         {{ displayTitle }}
       </div>
@@ -57,13 +55,11 @@ const displayTitle = computed(() => {
 </template>
 
 <style>
-/* Tie container visibility strictly to the header's v-click state (which is the first child) */
 .recommendation-box:has(> :first-child.slidev-vclick-hidden) {
   opacity: 0;
   transform: translateY(10px);
 }
 
-/* Clean up the markdown lists inside the boxes */
 .dont-content p, .do-content p {
   margin: 0 !important;
 }
@@ -73,11 +69,10 @@ const displayTitle = computed(() => {
   padding-left: 1.25rem !important;
 }
 
-/* Smoothly expand list items as they are clicked */
 .dont-content li, .do-content li {
   margin-bottom: 0.25rem;
   transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, margin 0.4s ease-in-out, transform 0.4s ease-in-out;
-  max-height: 150px; /* generous max height */
+  max-height: 150px;
   opacity: 1;
   transform: translateX(0);
 }

@@ -1,33 +1,27 @@
-/* Global theme overrides to match the robot-laws layout */
-
 :root,
 html,
 html.dark {
-  /* Override backgrounds using Slidev's CSS variables */
+
   --slidev-theme-background: #f8f9fa;
   --slidev-theme-color: #374151;
   --slidev-theme-primary: #3b82f6;
   --slidev-theme-accents: #3b82f6;
 }
 
-/* Ensure the body and Slidev app use these variables */
 body {
   background-color: var(--slidev-theme-background);
   color: var(--slidev-theme-color);
 }
 
-/* Force Slidev layouts (except cover which can have images) to use our background */
 #app .slidev-layout:not(.cover) {
   background: var(--slidev-theme-background) !important;
 }
 
-/* Premium shadows and rounded corners for all content images (excluding small inline icons/logos/no-shadow images) */
 .slidev-layout img:not(.inline):not(.align-middle):not([src*="logo"]):not([src*="icon"]):not(.no-shadow) {
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
 }
 
-/* Headings override */
 .slidev-layout h1,
 .slidev-layout h2,
 .slidev-layout h3,
@@ -77,8 +71,6 @@ body {
   font-weight: inherit;
 }
 
-
-/* Accents */
 #slidev-app strong,
 #slidev-app b {
   color: var(--slidev-theme-primary);
@@ -88,11 +80,6 @@ body {
   color: var(--slidev-theme-primary);
 }
 
-/* =========================================
-   Layout-Specific Styles Extracted from Vue
-   ========================================= */
-
-/* Cover Layout */
 .slidev-layout.cover {
   color: #f3f4f6;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
@@ -136,7 +123,6 @@ body {
   color: #60a5fa;
 }
 
-/* Two Cols Header Layout */
 .slidev-layout.two-cols-header .slide-title h1 {
   margin: 0 !important;
   font-size: 2.75rem;
@@ -166,7 +152,6 @@ body {
   color: #3b82f6;
 }
 
-/* Robot Laws Image Container */
 .image-container {
   padding: 1.5rem 1rem;
   box-sizing: border-box;
@@ -188,7 +173,6 @@ body {
   object-fit: contain;
 }
 
-/* Center Layout */
 .slidev-layout.center {
   color: #374151;
 }
@@ -227,23 +211,21 @@ body {
   color: #3b82f6;
 }
 
-/* Global Subtitle styling and spacing across all layouts */
 .slidev-layout h1+p,
 .slidev-layout h1+h2,
 .slidev-layout h1+h3,
 .slidev-layout h1+h4 {
   margin-top: 0.25rem !important;
-  /* Tight, premium spacing between title and subtitle */
+
   font-size: 1.25rem !important;
   color: #4b5563 !important;
-  /* Elegant gray-600 */
+
   font-weight: 500 !important;
   line-height: 1.4 !important;
   opacity: 1 !important;
-  /* Force solid opacity so that the separator line is perfectly bright and vibrant */
+
 }
 
-/* If a subtitle sibling is present immediately after h1, reduce h1 bottom margin for all layouts */
 .slidev-layout h1:has(+ p),
 .slidev-layout h1:has(+ h2),
 .slidev-layout h1:has(+ h3),
@@ -251,17 +233,15 @@ body {
   margin-bottom: 0.25rem !important;
 }
 
-/* Default Layout base rules - content layout padding and formatting is inherited from default class */
 .slidev-layout.default {
   color: #374151;
 }
 
-/* Custom Animation for Boldening */
 .animated-bold-word {
   opacity: 1 !important;
-  /* Override Slidev's default fade-in */
+
   color: #3b82f6;
-  /* Blue when active */
+
   text-shadow: 0 0 1px currentColor, 0 0 1px currentColor, 0 0 0.5px currentColor;
   transition: all 0.5s ease-in-out;
 }
@@ -272,14 +252,13 @@ body {
   text-shadow: none;
 }
 
-/* Custom Animation for Text Expansion */
 .expand-text {
   display: inline-grid;
   grid-template-columns: 1fr;
   transition: grid-template-columns 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease-in-out;
   opacity: 1 !important;
   vertical-align: bottom;
-  /* Aligns smoothly with adjacent text */
+
 }
 
 .expand-text.slidev-vclick-hidden {
@@ -290,10 +269,9 @@ body {
 .expand-text>span {
   overflow: hidden;
   white-space: nowrap;
-  /* Prevents wrapping during expansion */
+
 }
 
-/* Custom Card Animations for robot-laws Layout transitions */
 @keyframes slideInRight {
   from {
     opacity: 0;
@@ -328,7 +306,6 @@ body {
   border-radius: 0.5rem;
 }
 
-/* Vue Fade Transition */
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -344,7 +321,6 @@ body {
   transform: translateX(-20px);
 }
 
-/* Premium Styled Markdown Tables */
 .slidev-layout table {
   width: 100%;
   border-collapse: collapse;
@@ -375,30 +351,22 @@ body {
   vertical-align: middle;
 }
 
-/* Remove border-right from the last column */
 .slidev-layout th:last-child,
 .slidev-layout td:last-child {
   border-right: none;
 }
 
-/* Remove border-bottom from the last row */
 .slidev-layout tr:last-child td {
   border-bottom: none;
 }
 
-/* Zebra striping for a premium developer feel */
 .slidev-layout tbody tr:nth-child(even) {
   background-color: #f9fafb;
 }
 
-/* Table Hover Row Highlights */
 .slidev-layout tbody tr:hover {
   background-color: #f3f4f6;
 }
-
-/* =========================================
-   Spectrum of AI Harms Layout
-   ========================================= */
 
 .spectrum-container {
   display: flex;
@@ -408,10 +376,9 @@ body {
   min-height: 380px;
   max-height: 410px;
   margin-left: 5.5rem;
-  /* Make room for the left side labels */
+
 }
 
-/* Gradient Axis */
 .spectrum-axis {
   display: flex;
   flex-direction: column;
@@ -431,7 +398,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #64748b;
-  /* Sleek muted gray */
+
 }
 
 .side-label.top {
@@ -502,7 +469,6 @@ body {
   z-index: 2;
 }
 
-/* Harms List */
 .harms-list {
   flex: 1;
   display: flex;
@@ -542,7 +508,6 @@ body {
   border-radius: 0.5rem 0 0 0.5rem;
 }
 
-/* Dynamic gradient step based on order of appearance in the DOM */
 .harm-item:nth-child(1)::before {
   background: #2563eb;
 }
@@ -626,7 +591,6 @@ body {
   white-space: nowrap;
 }
 
-/* Cross-fade transition for v-switch components */
 .cross-fade-enter-active,
 .cross-fade-leave-active {
   transition: opacity 0.4s ease-in-out;
@@ -637,7 +601,6 @@ body {
   opacity: 0;
 }
 
-/* Stacking container to overlay templates during transition to prevent layout shift */
 .v-switch-crossfade {
   display: grid;
   grid-template-areas: "switch";
@@ -651,7 +614,6 @@ body {
   width: 100%;
 }
 
-/* Disable v-switch transitions while any parent slide transition is active (entering or leaving) */
 [class*="-enter-active"] .cross-fade-enter-active,
 [class*="-enter-active"] .cross-fade-leave-active,
 [class*="-leave-active"] .cross-fade-enter-active,
@@ -660,14 +622,13 @@ body {
   animation: none !important;
 }
 
-/* Animated zoom for Prompt Specificity chart on Slide 43 */
 .zoom-container {
   overflow: hidden;
   border-radius: 0.5rem;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   margin: auto;
   height: 17.5rem;
-  /* Equivalent to h-70 in Slidev */
+
   width: fit-content;
   display: block;
 }

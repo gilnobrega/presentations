@@ -47,7 +47,6 @@ const gridStyle = computed(() => {
 
 <template>
   <div class="slidev-layout two-cols-header bg-[#f8f9fa] w-full h-full px-12 py-10 flex flex-col">
-    <!-- Header -->
     <SlideHeader :separator="separator">
       <slot name="header" />
     </SlideHeader>
