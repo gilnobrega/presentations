@@ -16,6 +16,10 @@ This project is licensed under a hybrid model that separates the creative presen
 4. **Thunderbird AI Agent Guidelines (`snippets/thunderbird-agents.md`)**: The [snippets/thunderbird-agents.md](./snippets/thunderbird-agents.md) file is licensed under the original license of the Thunderbird Android mobile app (Apache License 2.0) and credits the original authors.
    * See [LICENSE-APACHE.md](./LICENSE-APACHE.md) for the full license text.
 
+### Exclusions
+
+- **Images (`images/`)**: Third-party images located in the [images/](./images) directory (such as images downloaded from the internet or screenshots of web pages) are included for illustrative purposes. No license claims are made regarding these assets, and they are not covered by the CC BY-SA 4.0 or AGPL-3.0 licenses described above.
+
 ---
 
 For the full legal text of each license, please refer to the corresponding files:
