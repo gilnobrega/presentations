@@ -1240,7 +1240,11 @@ transition: slide-right
 * Disable disruptive tools
 
 ::right::
-<img src="/images/antigravity-tab-settings.png" alt="Settings page in Antigravity IDE showing Tab Suggestions disabled" />
+<div>
+<img v-click src="/images/antigravity-tab-settings.png" alt="Settings page in Antigravity IDE showing Tab Suggestions disabled" class="m-auto w-100" />
+
+<img v-click src="/images/antigravity-snooze-tab.png" alt="Quick settings panel in Antigravity IDE showing snooze Tab functionality" class="m-auto m-t-5 w-100" />
+</div>
 
 <!--
 I understand that many people find code completion useful. And that's fair.
