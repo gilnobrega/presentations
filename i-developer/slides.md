@@ -776,6 +776,7 @@ Surely most engineers know about this.
 -->
 ---
 layout: two-cols-header
+hide: true
 ---
 
 ::header::
@@ -1225,11 +1226,11 @@ That being said, there are a few exceptions, I find it useful when I just refact
 -->
 ---
 layout: dos-donts
-transition: slide-right
+#transition: slide-right
 ---
 
 ::header::
-# Cutting Disruption
+# ✂️ Cutting Disruption
 
 ::dont::
 * Use tools that disrupt your ways of working
@@ -1256,6 +1257,7 @@ Whenever you find that a tool is getting between you and your task. Disable it.
 layout: center
 section: Second Law
 separator: false
+hide: true
 ---
 
 ## The Second Law, Reinterpreted
@@ -1271,6 +1273,7 @@ And what does this relationship mean in our analogy?
 -->
 ---
 layout: default
+hide: true
 ---
 
 ::header::
