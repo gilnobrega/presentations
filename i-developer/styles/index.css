@@ -117,6 +117,13 @@ body {
   text-align: center;
 }
 
+.slidev-layout.cover h1+p,
+.slidev-layout.cover h1+h2,
+.slidev-layout.cover h1+h3,
+.slidev-layout.cover h1+h4 {
+  color: #9ca3af !important;
+}
+
 .slidev-layout.cover strong,
 .slidev-layout.cover b,
 .slidev-layout.cover a {

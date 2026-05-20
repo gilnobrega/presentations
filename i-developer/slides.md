@@ -353,9 +353,12 @@ layout: center
 <!--
 It is easy to spot harmful Software.
 Whether we're talking about an unintentional bug affecting millions of people, or an intentional and annoying "feature", or something in between.
+
 We, users, can spot harmful software.
 With most companies adopting AI for the development of their features, it is likely that AI is involved in one way or another in designing today's Software harm.
+
 But how can AI lead to the creation of harmful software?
+
 Where have I heard about this type of "harm" before?
 -->
 ---
@@ -658,7 +661,7 @@ layout: two-cols-header
 ---
 
 ::header::
-# 🪡 Needle in a hay stack
+# 🪡 Needle in a haystack
 ## Understanding **Context Rot**
 <v-click>The LLM performance decreases, as you provide more context</v-click>
 
@@ -683,8 +686,14 @@ tokens,
 </v-click>
 
 <!--
-Another important concept is Context Rot.
+LLMs have a needle in a haystack problem
+We do too. For example, what was the 2nd word of this presentation?
+
+Everything I've presented so far is your haystack. I'm asking you to find a needle - the 2nd word. You probably can't recall that, or you might recall something that's incorrect.
+
+In LLMs this is called Context Rot.
 The more context you give, the worse it's going to perform.
+
 And this is still true in recent models.
 Opus 4.7 compared to Opus 4.6.
 -->
@@ -694,7 +703,7 @@ layout: dos-donts
 
 ::header::
 # When Less is More
-Preventing Context Rot
+Prevent context rot when your codebase is a haystack
 
 ::dont::
 * Provide too much context
