@@ -13,8 +13,7 @@
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
     "slidev-theme-meetup": "^3.18.2",
-    "slidev-theme-neversink": "^0.4.1",
-    "slidev-theme-nicodevs": "^0.1.1",
+    "unplugin-auto-import": "^21.0.0",
     "vue": "^3.5.33"
   },
   "slidev": {
