@@ -74,6 +74,8 @@ part3Title: "Part 3: State of Flutter"
 - as an open-source project
 
 <!-- 
+In parts 1 and 2 we're going to debug and fix a very odd bug from a couple of years ago - a time before we had access to reliable AI tools - scary.
+
 Raise of hands if you've contributed to an open-source project?
 
 Raise of hands if you've contributed to Flutter?
@@ -360,6 +362,38 @@ If there is a scroll event that leads to overscroll, and we know that there is a
 Then this animation must not be 0ms, otherwise it would not be an animation at all!
 
 Present one line fix
+
+But how can we be sure that this could be causing the issue?
+
+How can we be so sure that it's not the way our own project is implemented that's causing the issue?
+-->
+
+---
+layout: two-cols-header
+---
+
+::header::
+# Minimal Reproducible Code
+
+<!--
+The answer to this is to go back to a blank slate, start a new flutter app with no dependencies but the dependency you're trying to debug
+
+To reproduce the bug with fewest lines as possible, in a fresh flutter app
+
+And for bugs that cannot be easily reproduced, one needs to get creative
+
+Remember our variables in the snippet? Velocity?
+
+You know what else affects velocity? Drag
+
+If we want to reproduce a scenario of very low velocity (under 25), we can create a very unrealistic Scroll Physics example with a lot of drag
+
+(Example gif showing low drag, and a lot of drag)
+
+And after asking the QA engineer to test a build with this fix, they were not able to reproduce the bug anymore
+
+Ok so now we found our issue, we know how to fix it
+How do we actually fix it?
 -->
 
 ---
@@ -402,7 +436,56 @@ Approach C: Upstream Contribution
 - The ideal way. Raise an issue, make a PR.
 - Takes the most effort upfront, but zero long-term maintenance.
 - It is the only ethical approach because we improve the library for everyone.
+
+It's not a one-size fits all though
+And you might end up with a combination
+
+Let's use our weird stretchy bug as an example
 -->
+
+---
+layout: default
+---
+
+::header::
+# Approach A: The Workaround
+
+::body::
+
+---
+layout: default
+---
+
+::header::
+# Approach B: The Soft Fork
+Where have I seen this before?
+
+::body::
+(insert flock image showing 0 contributions)
+
+---
+layout: two-cols-header
+---
+
+::header::
+# Approach C: Upstream the Fix
+Easier said than done
+
+::left::
+Large projects, such as Flutter often come with
+
+- Thorough contribution guidelines
+- Contributor's License Agreement
+
+
+::right::
+insert PR screenshot
+
+---
+layout: center
+---
+
+4 months later
 
 ---
 layout: center

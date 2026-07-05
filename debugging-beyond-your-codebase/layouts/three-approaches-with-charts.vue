@@ -23,7 +23,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="slidev-layout three-parts-layout bg-[#f8f9fa] w-full h-full px-12 py-10 flex flex-col">
+  <div class="slidev-layout three-approaches-layout bg-[#f8f9fa] w-full h-full px-12 py-10 flex flex-col">
     <SlideHeader :separator="separator">
       <slot name="header" />
     </SlideHeader>
@@ -52,7 +52,7 @@ defineProps({
       <div class="w-full min-w-0 min-h-0 flex items-stretch image-container">
         <section class="h-full w-full bg-white/70 p-5 rounded-xl border border-gray-200/80 shadow-sm text-[11px] leading-relaxed flex flex-col justify-between">
           <div class="font-bold text-gray-800 text-xs mb-3 border-b pb-2 flex items-center gap-1.5">
-            📈 Effort Over Time Profiles
+            Maintenance effort over time
           </div>
           
           <!-- Approach A Chart -->
@@ -139,72 +139,72 @@ defineProps({
 </template>
 
 <style>
-.three-parts-layout {
+.three-approaches-layout {
   padding-top: 1.25rem !important;
   padding-bottom: 1.25rem !important;
 }
 
-.three-parts-layout .image-container {
+.three-approaches-layout .image-container {
   height: 100% !important;
   align-items: stretch !important;
   padding: 0 !important;
 }
 
-.three-parts-layout .image-container > div {
+.three-approaches-layout .image-container > div {
   height: 100% !important;
   align-items: stretch !important;
   justify-content: stretch !important;
 }
 
-.three-parts-layout h1 {
+.three-approaches-layout h1 {
   margin-top: 0 !important;
   margin-bottom: 0.125rem !important;
 }
 
-.three-parts-layout p {
+.three-approaches-layout p {
   margin-top: 0 !important;
   margin-bottom: 0.25rem !important;
   font-size: 0.85rem !important;
 }
 
-.three-parts-layout .parts-cards {
+.three-approaches-layout .parts-cards {
   height: 100% !important;
 }
 
-.three-parts-layout .parts-cards > * {
+.three-approaches-layout .parts-cards > * {
   height: 100% !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
 }
 
-.three-parts-layout .law-card-component {
+.three-approaches-layout .law-card-component {
   margin-bottom: 0 !important;
 }
 
-.three-parts-layout .law-card-title {
+.three-approaches-layout .law-card-title {
   padding: 0.35rem 1rem !important;
   font-size: 0.95rem !important;
 }
 
-.three-parts-layout .law-card-body {
+.three-approaches-layout .law-card-body {
   padding: 0.15rem 1rem 0.35rem 1rem !important;
   line-height: 1.25 !important;
 }
 
-.three-parts-layout .law-card-body ul {
+.three-approaches-layout .law-card-body ul {
   list-style-type: none !important;
   padding-left: 0 !important;
   margin: 0 !important;
 }
 
-.three-parts-layout .law-card-body li {
+.three-approaches-layout .law-card-body li {
   margin: 0 !important;
   padding: 0 !important;
   font-size: 0.8rem !important;
 }
 
-.three-parts-layout svg text {
+.three-approaches-layout svg text {
   font-size: 5.5px !important;
   font-weight: 500 !important;
   fill: #9ca3af !important;
