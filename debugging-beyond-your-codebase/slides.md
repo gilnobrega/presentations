@@ -319,13 +319,72 @@ layout: default
 ---
 
 ::header::
+# Rule 0
+Ensure debugging is enabled for out-of-workspace dependencies
+
+---
+layout: default
+---
+
+::header::
 # Understanding StretchingOverscrollIndicator
+
+<!--
+We think we found our smoking gun
+
+Let's have a look at the implementation of StretchingOverscrollIndicator back then
+https://github.com/gilnobrega/flutter/blob/4a65a76279cda479d0c8a2a57ac8f34890e1adf2/packages/flutter/lib/src/widgets/overscroll_indicator.dart#L783
+
+Its implementation has a stretching transformation, this is expected (line 783)
+
+It is driven by a _StretchController
+
+It has two methods: 
+- `absorbImpact` when the overscroll is caused by an event (scroll notification) (closing the keyboard)
+- `pull` when the overscroll is caused by the user actively dragging the viewport
+
+This was the most difficult part of this exercise
+Digesting code that's "foreign" to me 
+
+But when things clicked and I knew where to look for, it was easy to find the culprit
+
+Let's have a look at `absorbImpact`
+It takes two inputs - velocity and totalOverscroll
+If velocity is smaller than 1, then it floors at 1
+If velocity is larger than 1000 then it has a ceiling at 1000
+
+There is a bit of noise here,
+At first I thought that the issue would be with the end state of the animation, but this proved to be a distraction.
+
+As I digested the code, it clicked
+The animation duration is directly dependent on the velocity
+If the velocity is smaller than 25, then it rounds to 0ms
+
+What is a 0ms animation?
+Does an animation with 0ms make sense?
+
+What Flutter should do with a 0ms animation is another question, and we could debate all night about this.
+
+But if we focus at this specific problem
+If there is a scroll event that leads to overscroll, and we know that there is a requirement to have an animation
+Then this animation must not be 0ms, otherwise it would not be an animation at all!
+
+Present one line fix
+-->
 
 ---
 layout: centre
 ---
 
-# Why should I care?
+# One-line fix
+Anyone could have fixed it
+... Provided the bug was made public
+
+---
+layout: centre
+---
+
+# Why should I care now?
 Addressing the elephant in the room (AI)
 <!--
 Before AI, the best mobile frameworks would rise based on their quality - what people could achieve with them - and their community, documentation
