@@ -54,38 +54,24 @@ I'm currently employed as a senior mobile engineer at Tide, a fintech that provi
 -->
 
 ---
-layout: default
+layout: three-parts
 section: Intro
+part1Title: "Part 1: Debugging"
+part2Title: "Part 2: Fixing"
+part3Title: "Part 3: State of Flutter"
 ---
 
 ::header::
-
 # Who is this for?
 
-::body:: 
-
-<v-clicks>
-
-# Part 1: Debugging
-
+::part1::
 - Establishing a thought process for debugging a complex bug that might live outside our direct control
 
-</v-clicks>
-
-<br/>
-
-<v-clicks>
-
-# Part 2: Fixing
-
+::part2::
 - Exploring the possible ways one could fix a bug caused by a dependency
 
-</v-clicks>
-
-<br/>
-
-# Part 3: State of Flutter
-### as an open-source project
+::part3::
+- as an open-source project
 
 <!-- 
 Raise of hands if you've contributed to an open-source project?
@@ -377,12 +363,59 @@ Present one line fix
 -->
 
 ---
-layout: center
+layout: three-approaches-with-charts
+section: "Part 2: The Fix"
+part1Title: "Approach A: Quick Workaround"
+part2Title: "Approach B: Soft Fork"
+part3Title: "Approach C: Upstream Fix"
 ---
 
-# One-line fix
-Anyone could have fixed it
-... Provided the bug was made public
+::header::
+# Comparing different approaches
+
+::part1::
+- **Duplicate & override** buggy code in your codebase
+- Does the job, but does not benefit from updates, and accumulates tech debt
+
+::part2::
+- **Soft fork the project** with your custom fix
+- Benefits from updates, but constant maintaining effort
+
+::part3::
+- **Contribute the fix** back to the original repository
+- The ethical approach, but may take time meeting maintainer's standards
+
+<!--
+How do we fix a bug in code we don't own? 
+
+Approach A: Quick & Dirty Workaround
+- Copying the code locally is quick but creates technical debt.
+- We don't get updates, and we are stuck maintaining code that shouldn't be ours.
+
+Approach B: Soft Fork
+- Maintain our own fork. Good for getting upstream updates, but requires active maintenance to resolve merge conflicts.
+- Makes sense if the upstream project is inactive or slow to merge.
+
+Both A and B are compromise solutions, typical for abandoned projects or small codebases.
+
+Approach C: Upstream Contribution
+- The ideal way. Raise an issue, make a PR.
+- Takes the most effort upfront, but zero long-term maintenance.
+- It is the only ethical approach because we improve the library for everyone.
+-->
+
+---
+layout: center
+section: "Part 3: Is Flutter open-source?"
+---
+
+# One line fix
+
+<br/>
+
+## Anyone could have fixed it
+
+## Provided the bug was made public
 
 ---
 layout: center
