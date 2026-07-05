@@ -320,6 +320,8 @@ layout: default
 
 ::header::
 # Rule 0
+
+::body::
 Ensure debugging is enabled for out-of-workspace dependencies
 
 ---
@@ -328,6 +330,8 @@ layout: default
 
 ::header::
 # Understanding StretchingOverscrollIndicator
+
+::body::
 
 <!--
 We think we found our smoking gun
@@ -373,7 +377,7 @@ Present one line fix
 -->
 
 ---
-layout: centre
+layout: center
 ---
 
 # One-line fix
@@ -381,7 +385,7 @@ Anyone could have fixed it
 ... Provided the bug was made public
 
 ---
-layout: centre
+layout: center
 ---
 
 # Why should I care now?
