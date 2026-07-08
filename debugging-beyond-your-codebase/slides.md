@@ -489,6 +489,134 @@ layout: center
 
 ---
 layout: center
+---
+
+# Flutter is **not** open-source
+
+Hear me out...
+
+<!--
+We're entering opinion domain now in Part 3
+
+In my opinion, Flutter is not open-source, by the definition of it,
+I'll explain why later 
+
+Yes I have contributed to Flutter a few times
+
+But from my experience as contributor, I would not proactively contribute to it again, unless I stumble on another bug and I feel like it is my duty to contribute back
+
+Don't get me wrong, the community is amazing, the maintainers are very collaborative and they're always there to help
+
+The contribution guidelines are explicit and very helpful
+
+But it's clear that there is 1 big company who owns the brand and funds the project - Google. And that comes with its own risks. 
+-->
+
+---
+layout: default
+---
+
+::header::
+Past record
+
+::body::
+
+(gif scrolling down killedbygoogle.com)
+
+<!---
+Chances are, we all here, have our careers tied to Flutter in one way or another
+
+And Google isn't known for keeping projects that are loved by many people alive.
+-->
+
+---
+layout: default
+---
+
+::header::
+# Contribution License Agreement
+
+::body::
+
+(gif scrolling down killedbygoogle.com)
+
+<!---
+And then there's something known as the CLA - Contributors License Agreement,
+
+Before you can merge your very first PR in any open-source project maintained by Google,
+you need to waive terms where you:
+- Allow Google to use it for closed source software (bypassing copyleft)
+- Grant Google right to distribute it forever
+- Waive the right to change your mind
+- Hand patent rights to Google
+
+These terms are stricter than any pure Open source or copyleft license
+
+While this is not a dealbreaker for many, having to sign a legal contract with such corporate terms might intimidate some people.
+-->
+
+---
+layout: center
+---
+
+::header::
+# If no one sees it, it didn't happen
+
+::body::
+
+(screenshot of github)
+(iceberg image with public issues on surface, private issues )
+
+<!--
+The most demotivating part of it was
+
+Learning that the bug we had collectively spent so much time debugging had already been reported internally, by one of Google's customers
+
+Is a project really open-source if its main driver has a private list of issues?
+-->
+
+---
+layout: default
+---
+
+::header::
+
+::body::
+
+<!--
+Is it safe to say that tests are part of an open-source project?
+
+One of my PRs got blocked because, despite being correct, it caused one of Google's internal tests to fail
+
+I asked the Google maintainer what I could do about it. Nothing.
+
+There was nothing in my control that could be done to help land my PR.
+
+I had to wait 
+
+Whereas some projects have a private suite of tests (SQLite), Flutter has a private suite of issues and a private suite of tests.
+-->
+
+---
+layout: default
+---
+
+::header::
+# The Library of Alexandria
+
+::body::
+
+<!--
+If (or when?) Google pulls the plug on Flutter, how much of these issues will be made public?
+How many of these tests will be made public?
+
+The community would lose important knowledge
+
+It is way more likely that Flutter survives as a community project if these are made public.
+-->
+
+---
+layout: center
 section: "Part 3: Is Flutter open-source?"
 ---
 
@@ -499,6 +627,34 @@ section: "Part 3: Is Flutter open-source?"
 ## Anyone could have fixed it
 
 ## Provided the bug was made public
+
+<!--
+The hard part of debugging this specific bug, was debugging it, not fixing it.
+
+The fix was literally a 1 line change.
+
+So many users affected by this issue in so many devices.
+
+And this was known, internally, never prioritised.
+
+Any one of us could have fixed it, had it been made public. This was all avoidable.
+-->
+
+---
+layout: default
+---
+
+::header::
+# The right direction
+
+::body::
+
+<!--
+Celebrate recent changes that make Flutter less dependent on Google
+Namely separating Material design from the base SDK - explain that Material had always been a first citizen and Cupertino (the iOS design system) left behind.
+
+Canonical taking charge of Flutter Desktop development.
+-->
 
 ---
 layout: center
