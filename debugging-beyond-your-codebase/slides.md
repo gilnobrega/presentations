@@ -74,7 +74,7 @@ part3Title: "Part 3: State of Flutter"
 - as an open-source project
 
 <!-- 
-In parts 1 and 2 we're going to debug and fix a very odd bug from a couple of years ago - a time before we had access to reliable AI tools - scary.
+In parts 1 and 2 we're going to debug and fix a very odd bug from a couple of years ago - a time before we had access to reliable AI tools - refreshing but also scary.
 
 Raise of hands if you've contributed to an open-source project?
 
@@ -288,16 +288,18 @@ Or the dependency onion?
 
 ::body::
 
-(insert chart with 3 circles 
-outer layer - sign up page, log in page, other product pages
-middle layer - the app utility's such as design system, etc.
-core layer - flutter
-show a path from sign up page -> design system -> flutter to illustrate our debugging path)
+<DependencyOnion :clicks="$clicks" />
+<v-click at="1"></v-click>
+<v-click at="2"></v-click>
+<v-click at="3"></v-click>
+<v-click at="4"></v-click>
 
 <!--
 While we're talking about our thought process when debugging a very specific bug, there is something that applies to all bugs here
 
 We need to start at the outer shell first, debug it thoroughly and rule it out, moving our way into the core
+
+As a feature developer, your expertise lies in the outer shell.
 
 And one thing we need to accept is that debugging becomes harder as the code becomes more alien to us, the effort for debugging and fixing code increases as we go down the dependency tree.
 -->
