@@ -264,11 +264,22 @@ layout: two-cols-header
 
 Material 2 scroll animation
 
+GlowingOverscrollIndicator
+
+<img src="https://i.sstatic.net/LG8iP.gif" />
+
 ::right::
 
 Material 3 scroll animation
 
+StretchingOverscrollIndicator
+
 <!--
+What is an overscroll indicator?
+As the user scrolls down a page, it is good UX to let the user know they have reached the end of the scrollable content.
+
+This is often done through visual cues.
+
 Material 2's scroll animation showed ripples when you reached the end of the page
 
 Whereas Material 3's stretched the page as you reached the end of the page
@@ -322,6 +333,7 @@ layout: default
 # Understanding StretchingOverscrollIndicator
 
 ::body::
+Hi
 
 <!--
 We think we found our smoking gun
@@ -592,9 +604,9 @@ One of my PRs got blocked because, despite being correct, it caused one of Googl
 
 I asked the Google maintainer what I could do about it. Nothing.
 
-There was nothing in my control that could be done to help land my PR.
+There was nothing in my control that could be done to help land my PR. No matter how many people approved it, or if it was functionally correct.
 
-I had to wait 
+I had to wait for one of their internal engineers.
 
 Whereas some projects have a private suite of tests (SQLite), Flutter has a private suite of issues and a private suite of tests.
 -->
@@ -615,6 +627,10 @@ How many of these tests will be made public?
 The community would lose important knowledge
 
 It is way more likely that Flutter survives as a community project if these are made public.
+
+Flutter's success should not depend on a single company with a poor track history of maintaining products long term.
+
+Flutter's success should depend on what makes it great - its community!
 -->
 
 ---
@@ -640,6 +656,8 @@ So many users affected by this issue in so many devices.
 And this was known, internally, never prioritised.
 
 Any one of us could have fixed it, had it been made public. This was all avoidable.
+
+Disclaimer: all my criticism in this presentation are towards Google as an organisation. Not towards any of the Flutter members or Google employees involved. They were very helpful and collaborative, what you expect from Open source projects of this scale.
 -->
 
 ---
@@ -656,6 +674,10 @@ Celebrate recent changes that make Flutter less dependent on Google
 Namely separating Material design from the base SDK - explain that Material had always been a first citizen and Cupertino (the iOS design system) left behind.
 
 Canonical taking charge of Flutter Desktop development.
+
+Honorable mention of React having a new home: The React Foundation
+
+#ReleaseTheFlutterFiles
 -->
 
 ---
