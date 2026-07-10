@@ -411,6 +411,116 @@ How do we actually fix it?
 -->
 
 ---
+layout: pros-cons
+---
+
+::header::
+# Approach A: The Workaround
+
+::pros::
+- Extremely fast
+- 100% under control
+- Isolated fix
+
+::cons::
+- Accumulates tech debt
+- No upstream updates
+- Risky upgrades
+
+::right::
+```dart
+// lib/scroll_behavior.dart
+class FixedScrollBehavior extends ScrollBehavior {
+  @override
+  Widget buildOverscrollIndicator(
+    BuildContext context, 
+    Widget child, 
+    ScrollableDetails details
+  ) {
+    return FixedStretchingOverscrollIndicator(
+      axisDirection: details.direction,
+      child: child,
+    );
+  }
+}
+```
+
+<!--
+Approach A: Quick & Dirty Workaround
+- Copying the code locally is quick but creates technical debt.
+- We don't get updates, and we are stuck maintaining code that shouldn't be ours.
+- Here, we copy StretchingOverscrollIndicator from Flutter SDK, make it FixedStretchingOverscrollIndicator, apply our one-line fix, and configure our ScrollBehavior to use it.
+-->
+
+---
+layout: pros-cons
+---
+
+::header::
+# Approach B: The Soft Fork
+
+::pros::
+- **Clean separation**
+- **Tracks upstream updates**
+- **Easy rollback**
+
+::cons::
+- **Maintenance overhead**
+- **Infrastructure setup**
+- **CI/CD complexity**
+
+::right::
+```yaml
+# pubspec.yaml
+dependency_overrides:
+  flutter:
+    git:
+      url: https://github.com/gilnobrega/flutter.git
+      ref: fix/overscroll-duration-0ms
+```
+
+<!--
+Approach B: Soft Fork
+- Maintain our own fork. Good for getting upstream updates, but requires active maintenance to resolve merge conflicts.
+- We point our pubspec.yaml directly to our Git fork where we committed the fix.
+- Makes sense if the upstream project is inactive or slow to merge. (Not the case for Flutter)
+- For large projects such as Flutter, forking it can be a slippery slope. Introducing changes whenever we disagree with the direction of the framework can quickly become unmaintainable.
+-->
+
+---
+layout: pros-cons
+---
+
+::header::
+# Approach C: Upstream the Fix
+
+::pros::
+- **Zero long-term maintenance**
+- **Improves ecosystem**
+- **No local tech debt**
+
+::cons::
+- **Extremely slow process**
+- **High bar of entry** (CLA, tests)
+- **Friction with maintainers**
+
+::right::
+```diff
+# packages/flutter/.../overscroll_indicator.dart
+- duration = velocity ~/ 25;
++ duration = math.max(25, velocity) ~/ 25;
+```
+
+<!--
+Approach C: Upstream Contribution
+- The ideal way. Raise an issue, make a PR.
+- Takes the most effort upfront, but zero long-term maintenance.
+- It is the only ethical approach because we improve the library for everyone.
+- The actual fix is just a 1-line change to ensure duration doesn't drop to 0ms when velocity is low.
+- To be specific, in this scenario the Flutter maintainers were very collaborative, but there was some organisational friction (more on that later).
+-->
+
+---
 layout: three-approaches-with-charts
 section: "Part 2: The Fix"
 part1Title: "Approach A: Quick Workaround"
@@ -453,47 +563,7 @@ Approach C: Upstream Contribution
 
 It's not a one-size fits all though
 And you might end up with a combination
-
-Let's use our weird stretchy bug as an example
 -->
-
----
-layout: default
----
-
-::header::
-# Approach A: The Workaround
-
-::body::
-
----
-layout: default
----
-
-::header::
-# Approach B: The Soft Fork
-Where have I seen this before?
-
-::body::
-(insert flock image showing 0 contributions)
-
----
-layout: two-cols-header
----
-
-::header::
-# Approach C: Upstream the Fix
-Easier said than done
-
-::left::
-Large projects, such as Flutter often come with
-
-- Thorough contribution guidelines
-- Contributor's License Agreement
-
-
-::right::
-insert PR screenshot
 
 ---
 layout: center

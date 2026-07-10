@@ -5,7 +5,7 @@ const props = defineProps({
   type: {
     type: String,
     required: true,
-    validator: (value: string) => ['do', 'dont'].includes(value)
+    validator: (value: string) => ['do', 'dont', 'pro', 'con', 'pros', 'cons'].includes(value)
   },
   title: {
     type: String,
@@ -13,27 +13,29 @@ const props = defineProps({
   }
 })
 
-const isDo = computed(() => props.type === 'do')
+const isPro = computed(() => ['do', 'pro', 'pros'].includes(props.type))
 
 const boxClass = computed(() => {
-  return isDo.value 
+  return isPro.value 
     ? 'border-green-200 bg-green-50/80' 
     : 'border-red-200 bg-red-50/80'
 })
 
 const headerClass = computed(() => {
-  return isDo.value 
+  return isPro.value 
     ? 'bg-green-500' 
     : 'bg-red-500'
 })
 
 const contentClass = computed(() => {
-  return isDo.value ? 'do-content' : 'dont-content'
+  return isPro.value ? 'do-content' : 'dont-content'
 })
 
 const displayTitle = computed(() => {
   if (props.title) return props.title
-  return isDo.value ? 'Do' : 'Don\'t'
+  if (['pro', 'pros'].includes(props.type)) return 'Pros'
+  if (['con', 'cons'].includes(props.type)) return 'Cons'
+  return props.type === 'do' ? 'Do' : 'Don\'t'
 })
 </script>
 
@@ -41,7 +43,7 @@ const displayTitle = computed(() => {
   <div class="rounded-lg overflow-hidden border shadow-sm recommendation-box transition-all duration-400" :class="boxClass">
     <v-click>
       <div class="text-white font-bold px-4 py-2 flex items-center gap-2 header-bar" :class="headerClass">
-        <svg v-if="isDo" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <svg v-if="isPro" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
         <svg v-else xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         {{ displayTitle }}
       </div>

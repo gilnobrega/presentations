@@ -18,15 +18,13 @@ const props = defineProps({
     
     <template #left>
       <div class="flex flex-col gap-6 h-full justify-start mt-2">
-        
-        <RecommendationBox type="dont">
-          <slot name="dont" />
+        <RecommendationBox type="pros">
+          <slot name="pros" />
         </RecommendationBox>
 
-        <RecommendationBox type="do">
-          <slot name="do" />
+        <RecommendationBox type="cons">
+          <slot name="cons" />
         </RecommendationBox>
-        
       </div>
     </template>
 
