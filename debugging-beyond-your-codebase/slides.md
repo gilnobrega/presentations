@@ -330,10 +330,317 @@ layout: default
 ---
 
 ::header::
-# Understanding StretchingOverscrollIndicator
+## Understanding StretchingOverscrollIndicator
 
 ::body::
-Hi
+
+```dart
+class StretchingOverscrollIndicator extends StatefulWidget {
+  /// Creates a visual indication that a scroll view has overscrolled by
+  /// applying a stretch transformation to the content.
+  ///
+  /// In order for this widget to display an overscroll indication, the [child]
+  /// widget must contain a widget that generates a [ScrollNotification], such
+  /// as a [ListView] or a [GridView].
+  const StretchingOverscrollIndicator({
+    super.key,
+    required this.axisDirection,
+    this.notificationPredicate = defaultScrollNotificationPredicate,
+    this.clipBehavior = Clip.hardEdge,
+    this.child,
+  });
+
+  /// {@macro flutter.overscroll.axisDirection}
+  final AxisDirection axisDirection;
+
+  /// {@macro flutter.overscroll.axis}
+  Axis get axis => axisDirectionToAxis(axisDirection);
+
+  /// {@macro flutter.overscroll.notificationPredicate}
+  final ScrollNotificationPredicate notificationPredicate;
+
+  /// {@macro flutter.material.Material.clipBehavior}
+  ///
+  /// Defaults to [Clip.hardEdge].
+  final Clip clipBehavior;
+
+  /// The widget below this widget in the tree.
+  ///
+  /// The overscroll indicator will apply a stretch effect to this child. This
+  /// child (and its subtree) should include a source of [ScrollNotification]
+  /// notifications.
+  final Widget? child;
+
+  @override
+  State<StretchingOverscrollIndicator> createState() => _StretchingOverscrollIndicatorState();
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(EnumProperty<AxisDirection>('axisDirection', axisDirection));
+  }
+}
+
+class _StretchingOverscrollIndicatorState extends State<StretchingOverscrollIndicator> with TickerProviderStateMixin {
+  late final _StretchController _stretchController = _StretchController(vsync: this);
+  ScrollNotification? _lastNotification;
+  OverscrollNotification? _lastOverscrollNotification;
+
+  double _totalOverscroll = 0.0;
+
+  bool _accepted = true;
+
+  bool _handleScrollNotification(ScrollNotification notification) {
+    if (!widget.notificationPredicate(notification)) {
+      return false;
+    }
+    if (notification.metrics.axis != widget.axis) {
+      // This widget is explicitly configured to one axis. If a notification
+      // from a different axis bubbles up, do nothing.
+      return false;
+    }
+
+    if (notification is OverscrollNotification) {
+      _lastOverscrollNotification = notification;
+      if (_lastNotification.runtimeType is! OverscrollNotification) {
+        final OverscrollIndicatorNotification confirmationNotification = OverscrollIndicatorNotification(leading: notification.overscroll < 0.0);
+        confirmationNotification.dispatch(context);
+        _accepted = confirmationNotification.accepted;
+      }
+
+      if (_accepted) {
+        _totalOverscroll += notification.overscroll;
+
+        if (notification.velocity != 0.0) {
+          assert(notification.dragDetails == null);
+          _stretchController.absorbImpact(notification.velocity.abs(), _totalOverscroll);
+        } else {
+          assert(notification.overscroll != 0.0);
+          if (notification.dragDetails != null) {
+            // We clamp the overscroll amount relative to the length of the viewport,
+            // which is the furthest distance a single pointer could pull on the
+            // screen. This is because more than one pointer will multiply the
+            // amount of overscroll - https://github.com/flutter/flutter/issues/11884
+
+            final double viewportDimension = notification.metrics.viewportDimension;
+            final double distanceForPull = _totalOverscroll.abs() / viewportDimension;
+            final double clampedOverscroll = clampDouble(distanceForPull, 0, 1.0);
+            _stretchController.pull(clampedOverscroll, _totalOverscroll);
+          }
+        }
+      }
+    } else if (notification is ScrollEndNotification || notification is ScrollUpdateNotification) {
+      // Since the overscrolling ended, we reset the total overscroll amount.
+      _totalOverscroll = 0;
+      _stretchController.scrollEnd();
+    }
+    _lastNotification = notification;
+    return false;
+  }
+
+  AlignmentGeometry _getAlignmentForAxisDirection(_StretchDirection stretchDirection) {
+    // Accounts for reversed scrollables by checking the AxisDirection
+    final AxisDirection direction = switch (stretchDirection) {
+      _StretchDirection.trailing => widget.axisDirection,
+      _StretchDirection.leading => flipAxisDirection(widget.axisDirection),
+    };
+    return switch (direction) {
+      AxisDirection.up    => AlignmentDirectional.topCenter,
+      AxisDirection.down  => AlignmentDirectional.bottomCenter,
+      AxisDirection.left  => Alignment.centerLeft,
+      AxisDirection.right => Alignment.centerRight,
+    };
+  }
+
+  @override
+  void dispose() {
+    _stretchController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final Size size = MediaQuery.sizeOf(context);
+    double mainAxisSize;
+    return NotificationListener<ScrollNotification>(
+      onNotification: _handleScrollNotification,
+      child: AnimatedBuilder(
+        animation: _stretchController,
+        builder: (BuildContext context, Widget? child) {
+          final double stretch = _stretchController.value;
+          double x = 1.0;
+          double y = 1.0;
+
+          switch (widget.axis) {
+            case Axis.horizontal:
+              x += stretch;
+              mainAxisSize = size.width;
+            case Axis.vertical:
+              y += stretch;
+              mainAxisSize = size.height;
+          }
+
+          final AlignmentGeometry alignment = _getAlignmentForAxisDirection(
+            _stretchController.stretchDirection,
+          );
+
+          final double viewportDimension = _lastOverscrollNotification?.metrics.viewportDimension ?? mainAxisSize;
+          final Widget transform = Transform(
+            alignment: alignment,
+            transform: Matrix4.diagonal3Values(x, y, 1.0),
+            filterQuality: stretch == 0 ? null : FilterQuality.low,
+            child: widget.child,
+          );
+
+          // Only clip if the viewport dimension is smaller than that of the
+          // screen size in the main axis. If the viewport takes up the whole
+          // screen, overflow from transforming the viewport is irrelevant.
+          return ClipRect(
+            clipBehavior: stretch != 0.0 && viewportDimension != mainAxisSize
+              ? widget.clipBehavior
+              : Clip.none,
+            child: transform,
+          );
+        },
+      ),
+    );
+  }
+}
+
+enum _StretchState {
+  idle,
+  absorb,
+  pull,
+  recede,
+}
+
+class _StretchController extends ChangeNotifier {
+  _StretchController({ required TickerProvider vsync }) {
+    if (kFlutterMemoryAllocationsEnabled) {
+      ChangeNotifier.maybeDispatchObjectCreation(this);
+    }
+    _stretchController = AnimationController(vsync: vsync)
+      ..addStatusListener(_changePhase);
+    _decelerator = CurvedAnimation(
+      parent: _stretchController,
+      curve: Curves.decelerate,
+    )..addListener(notifyListeners);
+    _stretchSize = _decelerator.drive(_stretchSizeTween);
+  }
+
+  late final AnimationController _stretchController;
+  late final Animation<double> _stretchSize;
+  late final CurvedAnimation _decelerator;
+  final Tween<double> _stretchSizeTween = Tween<double>(begin: 0.0, end: 0.0);
+  _StretchState _state = _StretchState.idle;
+
+  double get pullDistance => _pullDistance;
+  double _pullDistance = 0.0;
+
+  _StretchDirection get stretchDirection => _stretchDirection;
+  _StretchDirection _stretchDirection = _StretchDirection.trailing;
+
+  // Constants from Android.
+  static const double _exponentialScalar = math.e / 0.33;
+  static const double _stretchIntensity = 0.016;
+  static const double _flingFriction = 1.01;
+  static const Duration _stretchDuration = Duration(milliseconds: 400);
+
+  double get value => _stretchSize.value;
+
+  /// Handle a fling to the edge of the viewport at a particular velocity.
+  ///
+  /// The velocity must be positive.
+  void absorbImpact(double velocity, double totalOverscroll) {
+    assert(velocity >= 0.0);
+    velocity = clampDouble(velocity, 1, 10000);
+    _stretchSizeTween.begin = _stretchSize.value;
+    _stretchSizeTween.end = math.min(_stretchIntensity + (_flingFriction / velocity), 1.0);
+    _stretchController.duration = Duration(milliseconds: (velocity * 0.02).round());
+    _stretchController.forward(from: 0.0);
+    _state = _StretchState.absorb;
+    _stretchDirection = totalOverscroll > 0 ? _StretchDirection.trailing : _StretchDirection.leading;
+  }
+
+  /// Handle a user-driven overscroll.
+  ///
+  /// The `normalizedOverscroll` argument should be the absolute value of the
+  /// scroll distance in logical pixels, divided by the extent of the viewport
+  /// in the main axis.
+  void pull(double normalizedOverscroll, double totalOverscroll) {
+    assert(normalizedOverscroll >= 0.0);
+
+    final _StretchDirection newStretchDirection = totalOverscroll > 0 ? _StretchDirection.trailing : _StretchDirection.leading;
+    if (_stretchDirection != newStretchDirection && _state == _StretchState.recede) {
+      // When the stretch direction changes while we are in the recede state, we need to ignore the change.
+      // If we don't, the stretch will instantly jump to the new direction with the recede animation still playing, which causes
+      // a unwanted visual abnormality (https://github.com/flutter/flutter/pull/116548#issuecomment-1414872567).
+      // By ignoring the directional change until the recede state is finished, we can avoid this.
+      return;
+    }
+
+    _stretchDirection = newStretchDirection;
+    _pullDistance = normalizedOverscroll;
+    _stretchSizeTween.begin = _stretchSize.value;
+    final double linearIntensity =_stretchIntensity * _pullDistance;
+    final double exponentialIntensity = _stretchIntensity * (1 - math.exp(-_pullDistance * _exponentialScalar));
+    _stretchSizeTween.end = linearIntensity + exponentialIntensity;
+    _stretchController.duration = _stretchDuration;
+    if (_state != _StretchState.pull) {
+      _stretchController.forward(from: 0.0);
+      _state = _StretchState.pull;
+    } else {
+      if (!_stretchController.isAnimating) {
+        assert(_stretchController.value == 1.0);
+        notifyListeners();
+      }
+    }
+  }
+
+  void scrollEnd() {
+    if (_state == _StretchState.pull) {
+      _recede(_stretchDuration);
+    }
+  }
+
+  void _changePhase(AnimationStatus status) {
+    if (status != AnimationStatus.completed) {
+      return;
+    }
+    switch (_state) {
+      case _StretchState.absorb:
+        _recede(_stretchDuration);
+      case _StretchState.recede:
+        _state = _StretchState.idle;
+        _pullDistance = 0.0;
+      case _StretchState.pull:
+      case _StretchState.idle:
+        break;
+    }
+  }
+
+  void _recede(Duration duration) {
+    if (_state == _StretchState.recede || _state == _StretchState.idle) {
+      return;
+    }
+    _stretchSizeTween.begin = _stretchSize.value;
+    _stretchSizeTween.end = 0.0;
+    _stretchController.duration = duration;
+    _stretchController.forward(from: 0.0);
+    _state = _StretchState.recede;
+  }
+
+  @override
+  void dispose() {
+    _stretchController.dispose();
+    _decelerator.dispose();
+    super.dispose();
+  }
+
+  @override
+  String toString() => '_StretchController()';
+}
+```
 
 <!--
 We think we found our smoking gun
@@ -547,26 +854,97 @@ How do we actually fix it?
 -->
 
 ---
-layout: default
+layout: two-cols-header
 ---
 ::header::
-#Minimal Reproducible Code
-A more creative way
 
-::body::
+# Getting creative
+Multiple ways to solve a problem
+
+::left::
 
 (Example gif showing low drag, and a lot of drag)
 
-(code snippet)
+::right::
+
+```dart
+ testWidgets('Stretching animation completes after fling under scroll physics with high friction', (WidgetTester tester) async {
+    // Regression test for https://github.com/flutter/flutter/issues/146277
+    final GlobalKey box1Key = GlobalKey();
+    final GlobalKey box2Key = GlobalKey();
+    final GlobalKey box3Key = GlobalKey();
+    late final OverscrollNotification overscrollNotification;
+    final ScrollController controller = ScrollController();
+    addTearDown(controller.dispose);
+
+    await tester.pumpWidget(NotificationListener<OverscrollNotification>(
+      child: buildTest(
+        box1Key,
+        box2Key,
+        box3Key,
+        controller,
+        physics: const _HighFrictionClampingScrollPhysics(),
+      ),
+      onNotification: (OverscrollNotification notification) {
+        overscrollNotification = notification;
+        return false;
+      },
+    ));
+
+    expect(find.byType(StretchingOverscrollIndicator), findsOneWidget);
+    expect(find.byType(GlowingOverscrollIndicator), findsNothing);
+    final RenderBox box1 = tester.renderObject(find.byKey(box1Key));
+    final RenderBox box2 = tester.renderObject(find.byKey(box2Key));
+    final RenderBox box3 = tester.renderObject(find.byKey(box3Key));
+
+    expect(controller.offset, 0.0);
+    expect(box1.localToGlobal(Offset.zero), Offset.zero);
+    expect(box2.localToGlobal(Offset.zero), const Offset(0.0, 250.0));
+    expect(box3.localToGlobal(Offset.zero), const Offset(0.0, 500.0));
+
+    // We fling to the trailing edge and let it settle.
+    await tester.fling(find.byType(CustomScrollView), const Offset(0.0, -50.0), 10000.0);
+    await tester.pumpAndSettle();
+
+    // We are now at the trailing edge
+    expect(overscrollNotification.velocity, lessThan(25));
+    expect(controller.offset, 150.0);
+    expect(box1.localToGlobal(Offset.zero).dy, -150.0);
+    expect(box2.localToGlobal(Offset.zero).dy, 100.0);
+    expect(box3.localToGlobal(Offset.zero).dy, 350.0);
+  });
+}
+
+final class _HighFrictionClampingScrollPhysics extends ScrollPhysics {
+  const _HighFrictionClampingScrollPhysics({super.parent});
+
+  @override
+  ScrollPhysics applyTo(ScrollPhysics? ancestor) {
+    return _HighFrictionClampingScrollPhysics(parent: buildParent(ancestor));
+  }
+
+  @override
+  Simulation? createBallisticSimulation(ScrollMetrics position, double velocity) {
+    return ClampingScrollSimulation(
+      position: position.pixels,
+      velocity: velocity,
+      friction: 0.94,
+      tolerance: tolerance,
+    );
+  }
+```
 
 <!--
 But there isn't just one way to make a hard to reproduce bug more easily reproducible
 
 Sometimes you need to get more creative 
 
-Later when I was writing a regression I realised that another way to reduce velocity is by increasing drag
+Later when I was writing a regression test I realised that another way to reduce velocity is by increasing drag
 
 (Explain what drag is and show examples)
+
+And this is another way to make sure your bug fix is effective
+You write a regression test that is supposed to fail in the existing code, and pass in the fixed code.
 -->
 
 ---
