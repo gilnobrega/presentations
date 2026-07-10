@@ -379,35 +379,194 @@ Present one line fix
 
 But how can we be sure that this could be causing the issue?
 
-How can we be so sure that it's not the way our own project is implemented that's causing the issue?
+How can we be so sure that it's not the way our own project is implemented that's causing the issue? That no other dependency or implementation is interfering with it?
 -->
 
 ---
 layout: two-cols-header
+rightRatio: 0.3
 ---
 
 ::header::
 # Minimal Reproducible Code
+
+::left::
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        brightness: Brightness.light,
+      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  final _focusNode1 = FocusNode();
+  final _focusNode2 = FocusNode();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Align(
+        alignment: Alignment.bottomCenter,
+        child: MediaQuery(
+          data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                const SizedBox(height: 350),
+                Container(
+                  width: 50,
+                  color: Colors.red,
+                  height: 50,
+                ),
+                TextButton(
+                  onPressed: _onPressed,
+                  child: const Text('Press me'),
+                ),
+                _TestFormField(
+                    focusNode: _focusNode1, type: TextInputType.emailAddress),
+                _TestFormField(
+                    focusNode: _focusNode2, type: TextInputType.phone),
+                const SizedBox(
+                  height: 51.5,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Future<void> _onPressed() async {
+    await Clipboard.setData(const ClipboardData(text: ''));
+    _focusNode2.requestFocus();
+    await Future.delayed(const Duration(milliseconds: 1000));
+    _focusNode1.requestFocus();
+    await Future.delayed(const Duration(milliseconds: 1000));
+    _focusNode2.requestFocus();
+    await Future.delayed(const Duration(milliseconds: 1000));
+    _focusNode2.requestFocus();
+  }
+}
+
+class _TestFormField extends StatelessWidget {
+  const _TestFormField({this.type, this.focusNode});
+
+  final TextInputType? type;
+  final FocusNode? focusNode;
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      focusNode: focusNode,
+      initialValue: '123456789',
+      keyboardType: type,
+    );
+  }
+}
+```
+
+::right::
+
+<v-switch transition="cross-fade" unmount class="v-switch-crossfade">
+  <template #1>
+    <SlidevVideo v-click="+1" autoplay controls class="h-full" autoreset="click">
+      <source src="/images/minimal-reproducible-code-issue.mov" />
+    </SlidevVideo>
+
+  </template>
+
+  <template #2>
+    <SlidevVideo v-click="+1" autoplay controls class="h-full" autoreset="click">
+      <source src="/images/minimal-reproducible-code-fixed.mov" />
+    </SlidevVideo>
+  </template>
+</v-switch>
 
 <!--
 The answer to this is to go back to a blank slate, start a new flutter app with no dependencies but the dependency you're trying to debug
 
 To reproduce the bug with fewest lines as possible, in a fresh flutter app
 
-And for bugs that cannot be easily reproduced, one needs to get creative
+It doesn't need to be smart, it doesn't need to be clean code, it just needs to do its task - reproduce the bug easily.
 
-Remember our variables in the snippet? Velocity?
+And for that, one needs to understand all of the variables involved.
 
-You know what else affects velocity? Drag
+One of them is screen height.
+Another one of them is keyboard height.
+Another one is text scale.
+Another one is content height.
 
-If we want to reproduce a scenario of very low velocity (under 25), we can create a very unrealistic Scroll Physics example with a lot of drag
+And what we want to manipulate for our bug is velocity, we want to reach a low velocity on "impact" (programatic scrolling to the bottom)
 
-(Example gif showing low drag, and a lot of drag)
+One way to achieve that is by making the page scrollable by just a tiny bit when the keyboard is open, (changing keyboard height, text scale, etc.)
+
+And when the keyboard is dismissed programatically, it will aborb the impact of a very small transition from scrollable to non-scrollable, leading to a small velocity.
+
+(Show demo on the right)
+
+After setting the duration to a non zero amount, this can no longer be reproduced.
+
+(Show second demo with fix)
+
+So now we can be fairly confident that this was the root of our bug.
 
 And after asking the QA engineer to test a build with this fix, they were not able to reproduce the bug anymore
 
 Ok so now we found our issue, we know how to fix it
 How do we actually fix it?
+-->
+
+---
+layout: default
+---
+::header::
+#Minimal Reproducible Code
+A more creative way
+
+::body::
+
+(Example gif showing low drag, and a lot of drag)
+
+(code snippet)
+
+<!--
+But there isn't just one way to make a hard to reproduce bug more easily reproducible
+
+Sometimes you need to get more creative 
+
+Later when I was writing a regression I realised that another way to reduce velocity is by increasing drag
+
+(Explain what drag is and show examples)
 -->
 
 ---
