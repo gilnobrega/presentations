@@ -92,7 +92,7 @@ But stick around for Part 2
 
 ---
 layout: default
-section: "Part 1: Case Study"
+section: "Part 1: Debugging"
 ---
 
 ::header::
@@ -120,6 +120,18 @@ Providing financial services to over 2+ million customers in Europe and Asia, in
 
 When you reach this scale, you push the entire stack to its limits. The pain points of the stack you're using become your painpoints as an engineer.
 
+-->
+
+---
+layout: center
+---
+
+## A bug affecting 1% of devices
+<br/>
+
+## <span v-click="1">may affect <span>**thousands**</span></span>
+
+<!--
 A bug in a dependency cannot be swept under the rug. It becomes your bug.
 
 A bug that cannot be replicated easily, let's say, it affects 1% of devices, in absolute terms it can still affect thousands of people. (More on that later)
@@ -394,6 +406,7 @@ How can we be so sure that it's not the way our own project is implemented that'
 ---
 layout: two-cols-header
 rightRatio: 0.3
+section: "Part 2: Fixing"
 ---
 
 ::header::
@@ -569,7 +582,6 @@ Approach C: Upstream Contribution
 
 ---
 layout: three-approaches-with-charts
-section: "Part 2: The Fix"
 part1Title: "Approach A: Quick Workaround"
 part2Title: "Approach B: Soft Fork"
 part3Title: "Approach C: Upstream Fix"
