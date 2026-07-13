@@ -605,17 +605,26 @@ And you might end up with a combination
 
 ---
 layout: center
+separator: false
 ---
 
-4 months later
+<img src="https://i.ytimg.com/vi/YINJj6DzBps/maxresdefault.jpg" alt="Several months later..."/>
 
 ---
 layout: center
+section: "Part 3: Is Flutter open-source?"
 ---
 
-# Flutter is **not** open-source
+# Flutter is <span v-click="1" class="expand-text"><span>**not**</span></span>
+<br/>
 
+# open-source
+
+<br/>
+
+<v-click at="1">
 Hear me out...
+</v-click>
 
 <!--
 We're entering opinion domain now in Part 3
@@ -639,28 +648,18 @@ layout: default
 ---
 
 ::header::
-Past record
-
-::body::
-
-(gif scrolling down killedbygoogle.com)
-
-<!---
-Chances are, we all here, have our careers tied to Flutter in one way or another
-
-And Google isn't known for keeping projects that are loved by many people alive.
--->
-
----
-layout: default
----
-
-::header::
 # Contribution License Agreement
 
 ::body::
+Very intimidating
 
-(gif scrolling down killedbygoogle.com)
+<v-clicks>
+
+- Bypass copyleft restrictions
+
+- Give away patent rights
+
+</v-clicks>
 
 <!---
 And then there's something known as the CLA - Contributors License Agreement,
@@ -724,6 +723,28 @@ layout: default
 ---
 
 ::header::
+# Not a great track record
+
+::body::
+
+
+killedbygoogle.com
+
+<SlidevVideo v-click="+1" autoplay controls class="h-full w-full" autoreset="click">
+  <source src="/images/killed-by-google.mov" />
+</SlidevVideo>
+
+<!---
+Chances are, we all here, have our careers tied to Flutter in one way or another
+
+And Google isn't known for keeping projects that are loved by many people alive.
+-->
+
+---
+layout: default
+---
+
+::header::
 # The Library of Alexandria
 
 ::body::
@@ -743,7 +764,6 @@ Flutter's success should depend on what makes it great - its community!
 
 ---
 layout: center
-section: "Part 3: Is Flutter open-source?"
 ---
 
 # One line fix
@@ -752,7 +772,9 @@ section: "Part 3: Is Flutter open-source?"
 
 ## Anyone could have fixed it
 
-## Provided the bug was made public
+<br/>
+
+## <span v-click="1" class="expand-text"><span>**Provided the bug was made public**</span></span>
 
 <!--
 The hard part of debugging this specific bug, was debugging it, not fixing it.
