@@ -74,7 +74,11 @@ part3Title: "Part 3: State of Flutter"
 - as an open-source project
 
 <!-- 
-In parts 1 and 2 we're going to debug and fix a very odd bug from a couple of years ago - a time before we had access to reliable AI tools - refreshing but also scary.
+In part 1 we're going to debug a very odd bug from a couple of years ago - a time before we had access to reliable AI tools - refreshing but also scary. In this case, we're going to be debugging an issue in the Flutter framework. But the thought process should be highly transferrable to other libraries and frameworks.
+
+In Part 2 we're going to debate about contributing this fix or not. What is there to win and to lose?
+
+In Part 3, it's going to be more of a personal reflection, I'm going to talk about what contributing to Flutter made me feel.
 
 Raise of hands if you've contributed to an open-source project?
 
@@ -98,13 +102,17 @@ Pushing a framework to its limits
 
 ::body::
 
+<v-clicks>
+
 # 🌍  2+ million users
 
 # 📚 4 languages
 
 # 📱 Many devices
 
-Comes with its own challenges
+<br/>Comes with its own challenges!
+
+</v-clicks>
 
 <!--
 Tide is an app-first banking app.
@@ -519,6 +527,7 @@ layout: pros-cons
 - **CI/CD complexity**
 
 ::right::
+
 <<< @/snippets/pubspec.yaml yaml
 
 <!--
@@ -641,6 +650,8 @@ Don't get me wrong, the community is amazing, the maintainers are very collabora
 The contribution guidelines are explicit and very helpful
 
 But it's clear that there is 1 big company who owns the brand and funds the project - Google. And that comes with its own risks. 
+
+Disclaimer: all my criticism in this presentation are towards Google as an organisation. Not towards any of the Flutter members or Google employees involved. They were very helpful and collaborative, what you expect from Open source projects of this scale.
 -->
 
 ---
@@ -787,7 +798,20 @@ And this was known, internally, never prioritised.
 
 Any one of us could have fixed it, had it been made public. This was all avoidable.
 
-Disclaimer: all my criticism in this presentation are towards Google as an organisation. Not towards any of the Flutter members or Google employees involved. They were very helpful and collaborative, what you expect from Open source projects of this scale.
+-->
+
+---
+layout: center
+---
+
+# What now?
+
+<!--
+Ok so now we might agree that there are some risks and disadvantages of having 1 big player driving the framework that powers most new apps pays our salaries.
+
+At the end of the day we don't have the millions of dollars such a massive project needs.
+
+But what can be done about it?
 -->
 
 ---
@@ -795,19 +819,73 @@ layout: default
 ---
 
 ::header::
-# The right direction
+# A community-owned Flutter
+Easier said than done
 
 ::body::
+getflocked.dev
+
+<v-switch transition="cross-fade" class="v-switch-crossfade">
+  <template #1>
+    <img src="/images/flock-landing-page.png" class="h-70" />
+  </template>
+  <template #2>
+    <img src="/images/flock-repo.png" class="h-70" />
+  </template>
+</v-switch>
+
+---
+layout: default
+---
+
+::header::
+# The right direction
+Walking towards a more decentralised Flutter
+
+::body::
+<v-switch transition="cross-fade" unmount class="v-switch-crossfade">
+  <template #1>
+    <img src="/images/decouple-flutter-material-cupertino.png" />
+  </template>
+  <template #2>
+    <img class="h-80" src="/images/canonical-lead-maintainer-flutter-desktop.png" />
+  </template>
+</v-switch>
 
 <!--
-Celebrate recent changes that make Flutter less dependent on Google
+But even under Google, it doesn't mean that the project is not going in the right direction
+
 Namely separating Material design from the base SDK - explain that Material had always been a first citizen and Cupertino (the iOS design system) left behind.
 
 Canonical taking charge of Flutter Desktop development.
 
-Honorable mention of React having a new home: The React Foundation
-
 #ReleaseTheFlutterFiles
+-->
+
+---
+layout: default
+---
+
+::header::
+# What is the end goal?
+... or what we should be aiming for
+
+::body::
+
+react.foundation
+
+<img src="https://react.dev/images/blog/react-foundation/react_foundation_logo.png" class="h-30" alt="React Foundation logo" />
+
+<img class="h-50" src="https://react.dev/images/blog/react-foundation/react_foundation_member_logos.png" />
+
+<!--
+What could the future reserve for Flutter?
+
+Ideally a similar goal than React,
+
+Managed by the React Foundation (part of the Linux foundation)
+
+With a decentralised Governing Board
 -->
 
 ---
