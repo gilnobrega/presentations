@@ -367,7 +367,13 @@ layout: default
 # Rule 0
 
 ::body::
-Ensure debugging is enabled for out-of-workspace dependencies
+<v-clicks>
+
+- Ensure debugging is enabled for out-of-workspace dependencies
+
+- Read Contribution guidelines
+
+</v-clicks>
 
 ---
 layout: default
@@ -448,7 +454,7 @@ section: "Part 2: Fixing"
 # Minimal Reproducible Code
 
 ::left::
-<<< @/snippets/minimal_reproducible_code.dart dart
+<<< @/snippets/minimal_reproducible_code.dart dart {all|47-69|52-56|76-85}{maxHeight:'360px'}
 
 ::right::
 
@@ -502,20 +508,16 @@ How do we actually fix it?
 -->
 
 ---
-layout: two-cols-header
+layout: default
 ---
 ::header::
 
 # Getting creative
 Multiple ways to solve a problem
 
-::left::
+::body::
 
-(Example gif showing low drag, and a lot of drag)
-
-::right::
-
-<<< @/snippets/stretching_animation_test.dart dart
+<<< @/snippets/stretching_animation_test.dart dart {all|10-17|48-65|35-37|39-44}{maxHeight:'360px'}
 
 <!--
 But there isn't just one way to make a hard to reproduce bug more easily reproducible
@@ -524,10 +526,14 @@ Sometimes you need to get more creative
 
 Later when I was writing a regression test I realised that another way to reduce velocity is by increasing drag
 
-(Explain what drag is and show examples)
-
 And this is another way to make sure your bug fix is effective
 You write a regression test that is supposed to fail in the existing code, and pass in the fixed code.
+
+In this one, we apply a very high drag,
+
+Then we assert that the overscroll notification was received at a very low velocity that should trigger the bug (under 25)
+
+Then we check that the rendered size of the boxes matches their original size (not stretched)
 -->
 
 ---
@@ -548,7 +554,7 @@ layout: pros-cons
 - Risky upgrades
 
 ::right::
-<<< @/snippets/scroll_behavior.dart dart
+<<< @/snippets/scroll_behavior.dart dart {all|1-3|5-16|18-30}{maxHeight:'360px'}
 
 <!--
 Approach A: Quick & Dirty Workaround
@@ -565,14 +571,14 @@ layout: pros-cons
 # Approach B: The Soft Fork
 
 ::pros::
-- **Clean separation**
-- **Tracks upstream updates**
-- **Easy rollback**
+- Clean separation
+- Tracks upstream updates
+- Easy rollback
 
 ::cons::
-- **Maintenance overhead**
-- **Infrastructure setup**
-- **CI/CD complexity**
+- Maintenance overhead
+- Infrastructure setup
+- CI/CD complexity
 
 ::right::
 
@@ -594,14 +600,14 @@ layout: pros-cons
 # Approach C: Upstream the Fix
 
 ::pros::
-- **Zero long-term maintenance**
-- **Improves ecosystem**
-- **No local tech debt**
+- Zero long-term maintenance
+- Improves ecosystem
+- No local tech debt
 
 ::cons::
-- **Extremely slow process**
-- **High bar of entry** (CLA, tests)
-- **Friction with maintainers**
+- Extremely slow process
+- High bar of entry (CLA, tests)
+- Friction with maintainers
 
 ::right::
 <<< @/snippets/overscroll_indicator.diff diff
@@ -623,7 +629,7 @@ part3Title: "Approach C: Upstream Fix"
 ---
 
 ::header::
-# Comparing different approaches
+# Comparing approaches
 
 ::part1::
 - **Duplicate & override** buggy code in your codebase
@@ -664,7 +670,14 @@ layout: center
 separator: false
 ---
 
-<img src="https://i.ytimg.com/vi/YINJj6DzBps/maxresdefault.jpg" alt="Several months later..."/>
+<img src="https://i.ytimg.com/vi/YINJj6DzBps/maxresdefault.jpg" class="h-100" alt="Several months later..."/>
+
+---
+layout: center
+separator: false
+---
+
+<img src="/images/pr-merged.png" />
 
 ---
 layout: center
