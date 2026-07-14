@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import SlideHeader from '../components/SlideHeader.vue'
+
+import DefaultLayout from './default.vue'
 
 const props = defineProps({
   leftRatio: {
@@ -46,20 +47,20 @@ const gridStyle = computed(() => {
 </script>
 
 <template>
-  <div class="slidev-layout two-cols-header bg-[#f8f9fa] w-full h-full px-12 py-10 flex flex-col">
-    <SlideHeader :separator="separator">
+  <DefaultLayout :separator="separator" class="two-cols-header">
+    <template #header>
       <slot name="header" />
-    </SlideHeader>
-    
-    <div class="grid gap-10 flex-1 min-h-0 text-[#374151]" :style="gridStyle">
-      
-      <div class="w-full min-w-0 min-h-0">
-        <slot name="left" />
+    </template>
+    <template #body>
+      <div class="grid gap-10 h-full w-full" :style="gridStyle">
+        <div class="w-full min-w-0 min-h-0">
+          <slot name="left" />
+        </div>
+        
+        <div class="w-full min-w-0 min-h-0">
+          <slot name="right" />
+        </div>
       </div>
-      
-      <div class="w-full min-w-0 min-h-0">
-        <slot name="right" />
-      </div>
-    </div>
-  </div>
+    </template>
+  </DefaultLayout>
 </template>
