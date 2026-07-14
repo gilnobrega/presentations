@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useNav } from '@slidev/client'
 import SlideHeader from '../components/SlideHeader.vue'
 import LawCard from '../components/LawCard.vue'
 
@@ -20,6 +22,9 @@ defineProps({
     default: true
   }
 })
+
+const nav = useNav()
+const isHighlightPhase = computed(() => nav.clicks.value >= 4)
 </script>
 
 <template>
@@ -31,21 +36,23 @@ defineProps({
     <div class="grid grid-cols-[2fr_1fr] gap-10 flex-1 min-h-0 text-[#374151]">
       <!-- Left Column: Cards -->
       <div class="w-full min-w-0 min-h-0 flex flex-col parts-cards">
-        <div v-click="1">
+        <div v-click="1" :class="{ 'highlight-a': isHighlightPhase }">
           <LawCard :title="part1Title">
             <slot name="part1" />
           </LawCard>
         </div>
-        <div v-click="2">
+        <div v-click="2" :class="{ 'dimmed': isHighlightPhase }">
           <LawCard :title="part2Title">
             <slot name="part2" />
           </LawCard>
         </div>
-        <div v-click="3">
+        <div v-click="3" :class="{ 'highlight-c': isHighlightPhase }">
           <LawCard :title="part3Title">
             <slot name="part3" />
           </LawCard>
         </div>
+        <!-- Hidden element to register click 4 -->
+        <div v-click="4" class="hidden" />
       </div>
       
       <!-- Right Column: Charts Panel -->
@@ -56,7 +63,7 @@ defineProps({
           </div>
           
           <!-- Approach A Chart -->
-          <div v-click="1" class="flex items-center gap-3 border-b border-gray-100 pb-2">
+          <div v-click="1" class="flex items-center gap-3 border-b border-gray-100 pb-2 transition-all duration-500" :class="{ 'chart-highlight-a': isHighlightPhase }">
             <div class="font-bold text-gray-800 text-sm w-4 text-center">A</div>
             <div class="flex-1 h-12">
               <svg class="w-full h-full" viewBox="0 0 160 46">
@@ -82,7 +89,7 @@ defineProps({
           </div>
 
           <!-- Approach B Chart -->
-          <div v-click="2" class="flex items-center gap-3 border-b border-gray-100 pb-2">
+          <div v-click="2" class="flex items-center gap-3 border-b border-gray-100 pb-2 transition-all duration-500" :class="{ 'chart-dimmed': isHighlightPhase }">
             <div class="font-bold text-gray-800 text-sm w-4 text-center">B</div>
             <div class="flex-1 h-12">
               <svg class="w-full h-full" viewBox="0 0 160 46">
@@ -108,7 +115,7 @@ defineProps({
           </div>
 
           <!-- Approach C Chart -->
-          <div v-click="3" class="flex items-center gap-3 pb-1">
+          <div v-click="3" class="flex items-center gap-3 pb-1 transition-all duration-500" :class="{ 'chart-highlight-c': isHighlightPhase }">
             <div class="font-bold text-gray-800 text-sm w-4 text-center">C</div>
             <div class="flex-1 h-12">
               <svg class="w-full h-full" viewBox="0 0 160 46">
@@ -208,5 +215,108 @@ defineProps({
   font-size: 5.5px !important;
   font-weight: 500 !important;
   fill: #9ca3af !important;
+}
+
+.three-approaches-layout .parts-cards > div {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.three-approaches-layout .parts-cards > div.dimmed {
+  opacity: 0.25;
+  filter: blur(0.5px) grayscale(20%);
+  transform: scale(0.98);
+}
+
+.three-approaches-layout .parts-cards > div.highlight-a {
+  transform: scale(1.02);
+  z-index: 10;
+}
+
+.three-approaches-layout .parts-cards > div.highlight-a .law-card-component {
+  border-radius: 0.5rem;
+  animation: pulse-highlight-a 1.5s infinite alternate ease-in-out;
+}
+
+.three-approaches-layout .parts-cards > div.highlight-a .law-card-title {
+  color: #ef4444 !important;
+}
+
+.three-approaches-layout .parts-cards > div.highlight-c {
+  transform: scale(1.02);
+  z-index: 10;
+}
+
+.three-approaches-layout .parts-cards > div.highlight-c .law-card-component {
+  border-radius: 0.5rem;
+  animation: pulse-highlight-c 1.5s infinite alternate ease-in-out;
+}
+
+.three-approaches-layout .parts-cards > div.highlight-c .law-card-title {
+  color: #10b981 !important;
+}
+
+.three-approaches-layout .chart-dimmed {
+  opacity: 0.25;
+  filter: grayscale(40%);
+}
+
+.three-approaches-layout .chart-highlight-a {
+  background-color: rgba(239, 68, 68, 0.03);
+  border-radius: 6px;
+  transform: scale(1.02);
+}
+
+.three-approaches-layout .chart-highlight-c {
+  background-color: rgba(16, 185, 129, 0.03);
+  border-radius: 6px;
+  transform: scale(1.02);
+}
+
+.three-approaches-layout .chart-highlight-a svg path[stroke="#ef4444"] {
+  animation: pulse-stroke-a 1.5s infinite alternate ease-in-out;
+}
+
+.three-approaches-layout .chart-highlight-c svg path[stroke="#10b981"] {
+  animation: pulse-stroke-c 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes pulse-highlight-a {
+  0% {
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.5), 0 0 10px rgba(239, 68, 68, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.85), 0 0 25px rgba(239, 68, 68, 0.45);
+  }
+}
+
+@keyframes pulse-highlight-c {
+  0% {
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.5), 0 0 10px rgba(16, 185, 129, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.85), 0 0 25px rgba(16, 185, 129, 0.45);
+  }
+}
+
+@keyframes pulse-stroke-a {
+  0% {
+    stroke-width: 2.5;
+    filter: drop-shadow(0 0 2px rgba(239, 68, 68, 0.5));
+  }
+  100% {
+    stroke-width: 3.8;
+    filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.9));
+  }
+}
+
+@keyframes pulse-stroke-c {
+  0% {
+    stroke-width: 2.5;
+    filter: drop-shadow(0 0 2px rgba(16, 185, 129, 0.5));
+  }
+  100% {
+    stroke-width: 3.8;
+    filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.9));
+  }
 }
 </style>

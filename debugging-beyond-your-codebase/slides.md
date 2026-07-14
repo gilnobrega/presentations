@@ -662,7 +662,7 @@ Approach C: Upstream Contribution
 - It is the only ethical approach because we improve the library for everyone.
 
 It's not a one-size fits all though
-And you might end up with a combination
+And you might end up with a combination: Approach A for short term gains, and Approach C for long term low maintenance.
 -->
 
 ---
