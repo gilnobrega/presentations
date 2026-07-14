@@ -1,0 +1,5 @@
+# packages/flutter/.../overscroll_indicator.dart
+    _stretchController.duration = Duration(
+-     milliseconds: (velocity * 0.02).round(),
++     milliseconds: math.max(velocity * 0.02, 50).round(),
+    );
