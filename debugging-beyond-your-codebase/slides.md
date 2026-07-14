@@ -1,18 +1,19 @@
 ---
 theme: default
 title: Debugging beyond your codebase
-info: a guide on taking control of the code you don't own
+info: A guide on taking control of the code you don't own
 author: Gil Nobrega
 layout: cover
 transition: slide-left
-background: images/cover.png
+background: https://unqork.com/wp-content/uploads/2021/06/aHViPTEwMTAwNSZjbWQ9aXRlbWVkaXRvcmltYWdlJmZpbGVuYW1lPWl0ZW1lZGl0b3JpbWFnZV82MGMyN2YyYTg2ZjM3LnBuZyZ2ZXJzaW9uPTAwMDAmc2lnPWMzMDE1ZDIyN2ZiZmVjNDg3NmM2YTc1NTZjODQwNGNj-1.png
 clickAnimation: fade-in
 aspectRatio: 16/9
 canvasWidth: 980
 ---
-qq
-# Debugging beyond your codebase
-a guide on taking control of the code you don't own
+
+## Debugging beyond your codebase
+
+A guide on taking control of the code you don't own
 
 ---
 layout: two-cols-header
@@ -50,14 +51,14 @@ Senior Mobile Engineer @ <img src="https://www.openbanking.org.uk/wp-content/upl
 Im Gil,
 I used to be a .NET developer, now I like making apps in Flutter, I dabble in KMP sometimes.
 
-I'm currently employed as a senior mobile engineer at Tide, a fintech that provides services to over a million small and medium businesses in Europe and Asia.
+I'm currently employed as a senior mobile engineer at Tide, a fintech that provides services to over 2 million small and medium businesses in Europe and Asia.
 -->
 
 ---
 layout: three-parts
 section: Intro
-part1Title: "Part 1: Debugging"
-part2Title: "Part 2: Fixing"
+part1Title: "Part 1: Debugging an odd bug"
+part2Title: "Part 2: Fixing that bug"
 part3Title: "Part 3: State of Flutter"
 ---
 
@@ -65,13 +66,13 @@ part3Title: "Part 3: State of Flutter"
 # Who is this for?
 
 ::part1::
-- Establishing a thought process for debugging a complex bug that might live outside our direct control
+Establishing a thought process for debugging a complex bug that might live outside our direct control
 
 ::part2::
-- Exploring the possible ways one could fix a bug caused by a dependency
+Exploring the possible ways one could fix a bug caused by a dependency
 
 ::part3::
-- as an open-source project
+Thoughts of a contributor on Flutter as an open-source project
 
 <!-- 
 In part 1 we're going to debug a very odd bug from a couple of years ago - a time before we had access to reliable AI tools - refreshing but also scary. In this case, we're going to be debugging an issue in the Flutter framework. But the thought process should be highly transferrable to other libraries and frameworks.
@@ -129,7 +130,7 @@ layout: center
 ## A bug affecting 1% of devices
 <br/>
 
-## <span v-click="1">may affect <span>**thousands**</span></span>
+## <span v-click="1">may affect <span>**thousands**</span> of users</span>
 
 <!--
 A bug in a dependency cannot be swept under the rug. It becomes your bug.
@@ -246,10 +247,16 @@ layout: two-cols-header
 # What do we know?
 
 ::left::
+
+<v-clicks>
+
 - Only reproduced in Android (so far?)
-- Every custom widget are stateless
+- Every custom widget is stateless
 - Stateful widgets come from Design System
 - Therefore Design System must be to blame?
+
+</v-clicks>
+
 ::right::
 
 <img src="/images/weird-stretchy-bug-final-state.png" class="h-full w-full object-contain no-shadow" />
