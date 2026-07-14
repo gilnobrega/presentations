@@ -179,30 +179,28 @@ At this point, the loyalty of the user has not been built, and a small issue can
 -->
 
 ---
-layout: default
+layout: two-cols-header
 ---
 
 ::header::
 # Debugging the Sign Up page
 
-::body::
+::left::
 
 <v-clicks>
 
 - Inspected state management
-
-
 - Asked other engineers
-
-
 - Tested on many devices
-
-
 - Impeller?
 
-<img src="https://storage.ghost.io/c/eb/aa/ebaa2665-01a8-4415-8825-69d1f0e8fd19/content/images/2025/05/works-on-my-machine-v2-2025-jon-galloway-1.png" width="250px" class="mx-auto block" />
-
 </v-clicks>
+
+<img v-click src="https://storage.ghost.io/c/eb/aa/ebaa2665-01a8-4415-8825-69d1f0e8fd19/content/images/2025/05/works-on-my-machine-v2-2025-jon-galloway-1.png" class="mx-auto block h-40 no-shadow" />
+
+::right::
+
+<img src="/images/weird-stretchy-bug-final-state.png" class="h-full w-full object-contain no-shadow" />
 
 <!--
 We've tried everything to reproduce this issue
@@ -214,6 +212,8 @@ Maybe one of them was somehow freezing the page when it lost focus?
 
 We even asked if anyone of the other 100 engineers had experienced this, on this page, or in any other page.
 
+We also tried a build with impeller and a bug without imepler and the QA engineer was able to reproduce an issue on both.
+
 Now what do you do when you can't reproduce a bug that was reported once and never again?
 
 Maybe it is a hardware issue? The QA is able to reproduce it semi-consistently in 1 device.
@@ -224,7 +224,7 @@ Maybe it is a hardware issue? The QA is able to reproduce it semi-consistently i
 layout: center
 ---
 
-# A shy bug
+# Another report
 
 <!--
 A few days later my team's technical leader happened to be testing another unrelated feature, and, while he was signing up, he managed to reproduce the issue.
@@ -279,11 +279,15 @@ Another dead end?
 
 ::left::
 
-iOS loading animation
+iOS:
+<img v-click src="https://raw.githubusercontent.com/Codelessly/FlutterLoadingGIFs/master/packages/cupertino_activity_indicator.gif" class="h-50 no-shadow" />
 
 ::right::
 
-Android loading animation
+Android:
+<img v-click src="https://raw.githubusercontent.com/Codelessly/FlutterLoadingGIFs/master/packages/circular_progress_indicator.gif" class="h-50 no-shadow" />
+
+
 
 <!--
 We debugged the design system library and we didn't find any indication that forms had anything to do with rendering the rest of the page, or any custom scroll animation.
@@ -374,7 +378,7 @@ layout: default
 
 ::body::
 
-<<< @/snippets/stretching_overscroll_indicator.dart dart {all|130-133|151-156|180|228-233|214-217|all}{maxHeight:'360px'}
+<<< @/snippets/stretching_overscroll_indicator.dart dart {all|130-133|151-156|180|228-233|214-217|217-226|219,222}{maxHeight:'360px'}
 
 <!--
 We think we found our smoking gun
@@ -406,6 +410,16 @@ At first I thought that the issue would be with the end state of the animation, 
 As I digested the code, it clicked
 The animation duration is directly dependent on the velocity
 If the velocity is smaller than 25, then it rounds to 0ms
+-->
+
+---
+layout: center
+---
+
+## What should an animation with **no duration** do?
+
+Is it even an animation?
+<!--
 
 What is a 0ms animation?
 Does an animation with 0ms make sense?
@@ -421,6 +435,7 @@ Present one line fix
 But how can we be sure that this could be causing the issue?
 
 How can we be so sure that it's not the way our own project is implemented that's causing the issue? That no other dependency or implementation is interfering with it?
+
 -->
 
 ---
