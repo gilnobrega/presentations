@@ -369,17 +369,26 @@ layout: two-cols-header
 # Ticking the basics
 
 ::left::
-<v-clicks>
+<v-click at="1">
 
 - Enable debugging for dependencies
 
-- Read Contribution guidelines
+</v-click>
 
-</v-clicks>
+<div class="zoom-container" v-click="1">
+  <img src="https://i.sstatic.net/kBVxr.jpg" class="no-shadow" :class="{ 'zoomed': $clicks >= 2 }" />
+</div>
 
 ::right::
 
-<img v-click="2" src="/images/contribute-to-flutter.png" />
+<v-click at="3">
+
+- Read Contribution guidelines
+
+</v-click>
+
+<img v-click="3" src="/images/contribute-to-flutter.png" />
+
 
 <!--
 So now we think there is an issue in one of our dependencies, potentially in the Flutter framework.
