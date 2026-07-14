@@ -313,19 +313,27 @@ layout: two-cols-header
 
 ::left::
 
+<v-click>
+
 Material 2 scroll animation
 
 GlowingOverscrollIndicator
 
 <img src="https://i.sstatic.net/LG8iP.gif" alt="Material 2 Overscroll Effect (glowing)" class="h-100 mx-auto" />
 
+</v-click>
+
 ::right::
+
+<v-click>
 
 Material 3 scroll animation
 
 StretchingOverscrollIndicator
 
 <img src="https://developer.android.com/static/develop/ui/compose/images/m3-overscroll.gif" alt="Material 3 Overscroll Effect (Stretch)" class="h-100 mx-auto" />
+
+</v-click>
 
 <!--
 What is an overscroll indicator?
@@ -749,22 +757,31 @@ Disclaimer: all my criticism in this presentation are towards Google as an organ
 -->
 
 ---
-layout: default
+layout: two-cols-header
 ---
 
 ::header::
-# Contribution License Agreement
+# Contributor License Agreement
 
-::body::
-Very intimidating
+::left::
 
 <v-clicks>
+
+- Protects Google and the project, but...
 
 - Bypass copyleft restrictions
 
 - Give away patent rights
 
 </v-clicks>
+
+::right::
+
+Very intimidating legal contract
+
+[cla.developers.google.com/clas](https://cla.developers.google.com/clas)
+
+<img src="/images/google-cla.png" />
 
 <!---
 And then there's something known as the CLA - Contributors License Agreement,
@@ -841,8 +858,7 @@ layout: default
 
 ::body::
 
-
-killedbygoogle.com
+[killedbygoogle.com](https://killedbygoogle.com)
 
 <SlidevVideo v-click="+1" autoplay controls class="h-full w-full" autoreset="click">
   <source src="/images/killed-by-google.mov" />
@@ -862,6 +878,8 @@ layout: default
 # The Library of Alexandria
 
 ::body::
+
+<img src="https://i.natgeofe.com/n/2000b450-bd56-4a9d-bd24-05b15ebf420f/HYEF9E_16x9.jpg?w=1200" class="h-full mx-auto" />
 
 <!--
 If (or when?) Google pulls the plug on Flutter, how much of these issues will be made public?
@@ -926,7 +944,7 @@ layout: default
 Easier said than done
 
 ::body::
-getflocked.dev
+[getflocked.dev](https://getflocked.dev)
 
 <v-switch transition="cross-fade" class="v-switch-crossfade">
   <template #1>
@@ -975,7 +993,7 @@ layout: two-cols-header
 
 ::left::
 
-react.foundation
+[react.foundation](https://react.foundation)
 
 <img v-click src="https://react.dev/images/blog/react-foundation/react_foundation_logo.png" class="h-30 mx-auto" alt="React Foundation logo" />
 
