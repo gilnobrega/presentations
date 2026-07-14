@@ -143,13 +143,27 @@ layout: default
 
 ::header::
 
-# An odd bug report
+# Codename: <span v-click="1" class="expand-text"><span>**Weird Stretchy Bug**</span></span>
 
 ::body::
 
-First impressions are very important.
+<v-switch transition="cross-fade" unmount class="v-switch-crossfade">
+  <template #1-3>
+    <div class="flex justify-center h-full">
+      <SlidevVideo v-click="2" autoplay controls class="h-100" autoreset="click">
+        <source src="/images/weird-stretchy-bug-demo.mp4" />
+      </SlidevVideo>
+    </div>
+  </template>
 
-[Video goes here]
+  <template #3-6>
+    <div class="grid grid-cols-3 gap-6 h-full items-center justify-items-center">
+      <img v-click="3" src="/images/weird-stretchy-bug-not-scrollable.png" class="h-full max-h-[350px] object-contain no-shadow" />
+      <img v-click="4" src="/images/weird-stretchy-bug-scrollable.png" class="h-full max-h-[350px] object-contain no-shadow" />
+      <img v-click="5" src="/images/weird-stretchy-bug-final-state.png" class="h-full max-h-[350px] object-contain no-shadow" />
+    </div>
+  </template>
+</v-switch>
 
 <!--
 
@@ -173,11 +187,22 @@ layout: default
 
 ::body::
 
+<v-clicks>
+
 - Inspected state management
+
+
 - Asked other engineers
+
+
 - Tested on many devices
 
-<img src="https://storage.ghost.io/c/eb/aa/ebaa2665-01a8-4415-8825-69d1f0e8fd19/content/images/2025/05/works-on-my-machine-v2-2025-jon-galloway-1.png" width="250px" />
+
+- Impeller?
+
+<img src="https://storage.ghost.io/c/eb/aa/ebaa2665-01a8-4415-8825-69d1f0e8fd19/content/images/2025/05/works-on-my-machine-v2-2025-jon-galloway-1.png" width="250px" class="mx-auto block" />
+
+</v-clicks>
 
 <!--
 We've tried everything to reproduce this issue
@@ -202,7 +227,7 @@ layout: center
 # A shy bug
 
 <!--
-A few days later our technical leader happened to be testing another unrelated feature, and, while he was signing up, he managed to reproduce the issue.
+A few days later my team's technical leader happened to be testing another unrelated feature, and, while he was signing up, he managed to reproduce the issue.
 
 I was very interested in learning how, and called him and asked him to share his screen
 He tried over and over again for a good 5 minutes, focusing in and out of the fields, with no success of reproducing it.
@@ -213,26 +238,21 @@ But we know that we've only been able to reproduce it in Android
 -->
 
 ---
-layout: center
----
-
-# Codename: Weird Stretchy Bug
-
----
-layout: default
+layout: two-cols-header
 ---
 
 ::header::
 
 # What do we know?
 
-::body::
+::left::
 - Only reproduced in Android (so far?)
 - Every custom widget are stateless
 - Stateful widgets come from Design System
 - Therefore Design System must be to blame?
+::right::
 
-(insert image splitting the page into components)
+<img src="/images/weird-stretchy-bug-final-state.png" class="h-full w-full object-contain no-shadow" />
 
 <!--
 So what do we know about the Sign Up page?
@@ -354,7 +374,7 @@ layout: default
 
 ::body::
 
-<<< @/snippets/stretching_overscroll_indicator.dart dart
+<<< @/snippets/stretching_overscroll_indicator.dart dart {all|130-133|151-156|180|228-233|214-217|all}{maxHeight:'360px'}
 
 <!--
 We think we found our smoking gun
