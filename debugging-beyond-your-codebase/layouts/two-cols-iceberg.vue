@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import SlideHeader from '../components/SlideHeader.vue'
+import IcebergIssues from '../components/IcebergIssues.vue'
 
 const props = defineProps({
   leftRatio: {
@@ -46,7 +47,7 @@ const gridStyle = computed(() => {
 </script>
 
 <template>
-  <div class="slidev-layout two-cols-header bg-[#f8f9fa] w-full h-full px-12 py-10 flex flex-col">
+  <div class="slidev-layout two-cols-iceberg bg-[#f8f9fa] w-full h-full px-12 py-10 flex flex-col">
     <SlideHeader :separator="separator">
       <slot name="header" />
     </SlideHeader>
@@ -58,8 +59,16 @@ const gridStyle = computed(() => {
       </div>
       
       <div class="w-full min-w-0 min-h-0">
-        <slot name="right" />
+        <slot name="right">
+          <IcebergIssues :clicks="$clicks" />
+        </slot>
       </div>
+      
+    </div>
+
+    <!-- Hidden default slot to allow mounting of Slidev click triggers -->
+    <div class="hidden">
+      <slot />
     </div>
   </div>
 </template>

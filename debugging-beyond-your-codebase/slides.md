@@ -10,7 +10,7 @@ clickAnimation: fade-in
 aspectRatio: 16/9
 canvasWidth: 980
 ---
-
+qq
 # Debugging beyond your codebase
 a guide on taking control of the code you don't own
 
@@ -310,13 +310,15 @@ Material 2 scroll animation
 
 GlowingOverscrollIndicator
 
-<img src="https://i.sstatic.net/LG8iP.gif" />
+<img src="https://i.sstatic.net/LG8iP.gif" alt="Material 2 Overscroll Effect (glowing)" class="h-100 mx-auto" />
 
 ::right::
 
 Material 3 scroll animation
 
 StretchingOverscrollIndicator
+
+<img src="https://developer.android.com/static/develop/ui/compose/images/m3-overscroll.gif" alt="Material 3 Overscroll Effect (Stretch)" class="h-100 mx-auto" />
 
 <!--
 What is an overscroll indicator?
@@ -360,20 +362,36 @@ And one thing we need to accept is that debugging becomes harder as the code bec
 -->
 
 ---
-layout: default
+layout: two-cols-header
 ---
 
 ::header::
-# Rule 0
+# Ticking the basics
 
-::body::
+::left::
 <v-clicks>
 
-- Ensure debugging is enabled for out-of-workspace dependencies
+- Enable debugging for dependencies
 
 - Read Contribution guidelines
 
 </v-clicks>
+
+::right::
+
+<img v-click="2" src="/images/contribute-to-flutter.png" />
+
+<!--
+So now we think there is an issue in one of our dependencies, potentially in the Flutter framework.
+
+In order to debug, raise an issue, and potentially to contribute back, we need to get a couple of things done.
+
+First is to ensure that the IDE is configured to pause on breakpoints in the dependencies - outside of the workspace.
+
+The second step is to get familiar with the contribution guidelines of that specific project. Smaller projects may not have a hard set of contribution guidelines, but larger projects will have them.
+
+Fortunately for us, Flutter has a very well maintained set of guidelines.
+-->
 
 ---
 layout: default
@@ -748,16 +766,17 @@ While this is not a dealbreaker for many, having to sign a legal contract with s
 -->
 
 ---
-layout: center
+layout: two-cols-iceberg
 ---
 
 ::header::
-# If no one sees it, it didn't happen
+# The Iceberg of Issues
 
-::body::
+::left::
 
-(screenshot of github)
-(iceberg image with public issues on surface, private issues )
+<img v-click class="mx-auto" src="/images/internal-stretched-state-issue.png" />
+
+<div v-after></div>
 
 <!--
 The most demotivating part of it was
@@ -768,12 +787,20 @@ Is a project really open-source if its main driver has a private list of issues?
 -->
 
 ---
-layout: default
+layout: two-cols-header
 ---
 
 ::header::
+# Handholding is mandatory
 
-::body::
+::left::
+
+<img v-click class="mx-auto" src="/images/cupertino-on-off-labels-pr.png" />
+
+
+::right::
+
+<img v-click class="mx-auto" src="/images/revert-cupertino-on-off-labels-pr.png" />
 
 <!--
 Is it safe to say that tests are part of an open-source project?
@@ -908,7 +935,7 @@ Walking towards a more decentralised Flutter
     <img src="/images/decouple-flutter-material-cupertino.png" />
   </template>
   <template #2>
-    <img class="h-80" src="/images/canonical-lead-maintainer-flutter-desktop.png" />
+    <img class="h-80 mx-auto" src="/images/canonical-lead-maintainer-flutter-desktop.png" />
   </template>
 </v-switch>
 
@@ -923,20 +950,22 @@ Canonical taking charge of Flutter Desktop development.
 -->
 
 ---
-layout: default
+layout: two-cols-header
 ---
 
 ::header::
 # What is the end goal?
 ... or what we should be aiming for
 
-::body::
+::left::
 
 react.foundation
 
-<img src="https://react.dev/images/blog/react-foundation/react_foundation_logo.png" class="h-30" alt="React Foundation logo" />
+<img v-click src="https://react.dev/images/blog/react-foundation/react_foundation_logo.png" class="h-30 mx-auto" alt="React Foundation logo" />
 
-<img class="h-50" src="https://react.dev/images/blog/react-foundation/react_foundation_member_logos.png" />
+::right::
+
+<img v-click class="h-50 mx-auto" src="https://react.dev/images/blog/react-foundation/react_foundation_member_logos.png" />
 
 <!--
 What could the future reserve for Flutter?
