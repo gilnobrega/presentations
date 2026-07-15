@@ -974,10 +974,10 @@ Easier said than done
 
 <v-switch transition="cross-fade" class="v-switch-crossfade">
   <template #1>
-    <img src="/images/flock-landing-page.png" class="h-70" />
+    <img src="/images/flock-landing-page.png" class="h-70 mx-auto" />
   </template>
   <template #2>
-    <img src="/images/flock-repo.png" class="h-70" />
+    <img src="/images/flock-repo.png" class="h-70 mx-auto" />
   </template>
 </v-switch>
 
@@ -990,6 +990,7 @@ layout: default
 Walking towards a more decentralised Flutter
 
 ::body::
+
 <v-switch transition="cross-fade" unmount class="v-switch-crossfade">
   <template #1>
     <img src="/images/decouple-flutter-material-cupertino.png" />
