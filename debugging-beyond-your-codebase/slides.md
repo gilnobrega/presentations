@@ -496,7 +496,7 @@ section: "Part 2: Fixing"
 # Minimal Reproducible Code
 
 ::left::
-<<< @/snippets/minimal_reproducible_code.dart dart {all|47-69|52-56|76-85}{maxHeight:'360px'}
+<<< @/snippets/minimal_reproducible_code.dart dart {all|47-69|52-56|61-64|76-85}{maxHeight:'360px'}
 
 ::right::
 
@@ -559,7 +559,7 @@ Multiple ways to solve a problem
 
 ::body::
 
-<<< @/snippets/stretching_animation_test.dart dart {all|10-17|48-65|35-37|39-44}{maxHeight:'360px'}
+<<< @/snippets/stretching_animation_test.dart dart {all|10-17|48-65|35-37|39-44}{maxHeight:'340px'}
 
 <!--
 But there isn't just one way to make a hard to reproduce bug more easily reproducible
