@@ -850,6 +850,23 @@ Whereas some projects have a private suite of tests (SQLite), Flutter has a priv
 -->
 
 ---
+layout: center
+---
+
+# Why should I care?
+
+<!--
+You're probably thinking, why should I care that Flutter is not really open source?
+
+All that's important is that Google is still maintaining it. Right?
+
+Well that's the problem. If you're in this meeting, you're likely interested in Flutter because you built your career with it, or you aspire to do so.
+So you probably want Flutter to succeed.
+
+However... Google doesn't have a great track record when it comes to maintaining successful projects (open source or not)
+-->
+
+---
 layout: default
 ---
 
@@ -1015,7 +1032,7 @@ With a decentralised Governing Board
 layout: center
 ---
 
-# Why should I care now?
+# Why should I care **now**?
 Addressing the elephant in the room (AI)
 <!--
 Before AI, the best mobile frameworks would rise based on their quality - what people could achieve with them - and their community, documentation
@@ -1080,4 +1097,24 @@ Made with **[Sli.dev](https://sli.dev)** framework, using Antigravity IDE
 
 <!--
 Thank you! Any questions?
+-->
+
+---
+layout: center
+---
+
+## One more thing...
+
+<br/>
+
+<v-click>
+
+# \#ReleaseThe**Flutter**Files
+
+</v-click>
+
+<!--
+If you believe that the community deserves more transparency, public issues and public tests, 
+
+Then let's start talking about it.
 -->
