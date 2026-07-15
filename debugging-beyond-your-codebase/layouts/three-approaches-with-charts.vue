@@ -36,23 +36,21 @@ const isHighlightPhase = computed(() => nav.clicks.value >= 4)
     <div class="grid grid-cols-[2fr_1fr] gap-10 flex-1 min-h-0 text-[#374151]">
       <!-- Left Column: Cards -->
       <div class="w-full min-w-0 min-h-0 flex flex-col parts-cards">
-        <div v-click="1" :class="{ 'highlight-a': isHighlightPhase }">
+        <div class="slidev-vclick-target" :class="{ 'slidev-vclick-hidden': nav.clicks.value < 1, 'highlight-a': isHighlightPhase }">
           <LawCard :title="part1Title">
             <slot name="part1" />
           </LawCard>
         </div>
-        <div v-click="2" :class="{ 'dimmed': isHighlightPhase }">
+        <div class="slidev-vclick-target" :class="{ 'slidev-vclick-hidden': nav.clicks.value < 2, 'dimmed': isHighlightPhase }">
           <LawCard :title="part2Title">
             <slot name="part2" />
           </LawCard>
         </div>
-        <div v-click="3" :class="{ 'highlight-c': isHighlightPhase }">
+        <div class="slidev-vclick-target" :class="{ 'slidev-vclick-hidden': nav.clicks.value < 3, 'highlight-c': isHighlightPhase }">
           <LawCard :title="part3Title">
             <slot name="part3" />
           </LawCard>
         </div>
-        <!-- Hidden element to register click 4 -->
-        <div v-click="4" class="hidden" />
       </div>
       
       <!-- Right Column: Charts Panel -->
@@ -63,7 +61,7 @@ const isHighlightPhase = computed(() => nav.clicks.value >= 4)
           </div>
           
           <!-- Approach A Chart -->
-          <div v-click="1" class="flex items-center gap-3 border-b border-gray-100 pb-2 transition-all duration-500" :class="{ 'chart-highlight-a': isHighlightPhase }">
+          <div class="slidev-vclick-target flex items-center gap-3 border-b border-gray-100 pb-2 transition-all duration-500" :class="{ 'slidev-vclick-hidden': nav.clicks.value < 1, 'chart-highlight-a': isHighlightPhase }">
             <div class="font-bold text-gray-800 text-sm w-4 text-center">A</div>
             <div class="flex-1 h-12">
               <svg class="w-full h-full" viewBox="0 0 160 46">
@@ -89,7 +87,7 @@ const isHighlightPhase = computed(() => nav.clicks.value >= 4)
           </div>
 
           <!-- Approach B Chart -->
-          <div v-click="2" class="flex items-center gap-3 border-b border-gray-100 pb-2 transition-all duration-500" :class="{ 'chart-dimmed': isHighlightPhase }">
+          <div class="slidev-vclick-target flex items-center gap-3 border-b border-gray-100 pb-2 transition-all duration-500" :class="{ 'slidev-vclick-hidden': nav.clicks.value < 2, 'chart-dimmed': isHighlightPhase }">
             <div class="font-bold text-gray-800 text-sm w-4 text-center">B</div>
             <div class="flex-1 h-12">
               <svg class="w-full h-full" viewBox="0 0 160 46">
@@ -115,7 +113,7 @@ const isHighlightPhase = computed(() => nav.clicks.value >= 4)
           </div>
 
           <!-- Approach C Chart -->
-          <div v-click="3" class="flex items-center gap-3 pb-1 transition-all duration-500" :class="{ 'chart-highlight-c': isHighlightPhase }">
+          <div class="slidev-vclick-target flex items-center gap-3 pb-1 transition-all duration-500" :class="{ 'slidev-vclick-hidden': nav.clicks.value < 3, 'chart-highlight-c': isHighlightPhase }">
             <div class="font-bold text-gray-800 text-sm w-4 text-center">C</div>
             <div class="flex-1 h-12">
               <svg class="w-full h-full" viewBox="0 0 160 46">

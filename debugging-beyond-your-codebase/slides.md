@@ -665,6 +665,7 @@ Approach C: Upstream Contribution
 
 ---
 layout: three-approaches-with-charts
+clicks: 4
 part1Title: "Approach A: Quick Workaround"
 part2Title: "Approach B: Soft Fork"
 part3Title: "Approach C: Upstream Fix"
