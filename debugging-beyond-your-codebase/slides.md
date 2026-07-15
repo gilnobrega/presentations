@@ -487,6 +487,13 @@ How can we be so sure that it's not the way our own project is implemented that'
 -->
 
 ---
+layout: center
+separator: false
+---
+
+<<< @/snippets/overscroll_indicator.diff diff
+
+---
 layout: two-cols-header
 rightRatio: 0.3
 section: "Part 2: Fixing"
@@ -801,6 +808,7 @@ While this is not a dealbreaker for many, having to sign a legal contract with s
 
 ---
 layout: two-cols-iceberg
+rightRatio: 0.75
 ---
 
 ::header::
@@ -808,7 +816,7 @@ layout: two-cols-iceberg
 
 ::left::
 
-<img v-click class="mx-auto" src="/images/internal-stretched-state-issue.png" />
+<img v-click class="mx-auto w-full" src="/images/internal-stretched-state-issue.png" />
 
 <div v-after></div>
 
